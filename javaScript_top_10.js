@@ -1,4 +1,4 @@
-// #1. 99 Bottles of beer on the wall
+ // #1. 99 Bottles of beer on the wall
 
 let bottles;
 
