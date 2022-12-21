@@ -1,4 +1,4 @@
- // #1. 99 Bottles of beer on the wall
+// #1. 99 Bottles of beer on the wall
 
 let bottles;
 
@@ -30,7 +30,7 @@ for (counter = 99; counter >= 1; counter = counter - 1) {
 
 // #2. FizzBuzz in Javascript
 
-for (let i = 1; i < 101; i++){
+for (let i = 1; i < 101; i++) {
     if (i % 15 == 0) console.log("FizzBuzz");
     else if (i % 3 == 0) console.log("Fizz");
     else if (i % 5 == 0) console.log("Buzz");
@@ -38,8 +38,49 @@ for (let i = 1; i < 101; i++){
 }
 
 
+// #3. Print numbers from 1 to 10 in a console
+
+for (let i = 1; i <= 10; i++) {
+    console.log(i);
+}
 
 
+// #4. Print the odd numbers less than 100 is a console
+
+for (let i = 2; i <= 100; i += 2) {
+    console.log(i);
+}
+
+
+// #4. Print the even numbers less than 100 is a console
+
+for (let i = 0; i <= 100; i += 2) {
+    console.log(i);
+}
+
+// #3: Print the multiplication table with 7
+
+for (let i = 1; i <= 10; i++) {
+    console.log("7 * " + i + " = " + 7 * i);
+}
+
+
+// #4. Print all the multiplication tables with numbers from 1 to 10
+
+for (let i = 1; i <= 10; i++) {
+    console.log("Table for number " + i);
+    printTable(i);
+}
+
+function printTable(n) {
+
+    for (let j = 1; j <= 10; j++) {
+        let row = n + " * " + j + " = " + n * j;
+        console.log(row);
+    }
+}
+
+// #5. 
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
