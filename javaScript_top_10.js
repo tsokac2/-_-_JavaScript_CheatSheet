@@ -58,7 +58,7 @@ for (let i = 0; i <= 100; i += 2) {
     console.log(i);
 }
 
-// #3: Print the multiplication table with 7
+// #3. Print the multiplication table with 7
 
 for (let i = 1; i <= 10; i++) {
     console.log("7 * " + i + " = " + 7 * i);
@@ -80,7 +80,75 @@ function printTable(n) {
     }
 }
 
-// #5. 
+// #5. Calculate the sum of numbers from 1 to 10
+
+let sum = 0;
+
+for (let i = 1; i <= 10; i++) {
+    sum += i;
+}
+
+console.log(sum);
+
+
+// #6. Calculate product of 10
+
+let prod = 1;
+
+for (let i = 1; i <= 10; i++) {
+    prod *= i;
+}
+
+console.log(prod);
+
+
+// #7. Calculate the sum of odd numbers greater than 10 and less than 30
+
+let sum = 0;
+
+for (let i = 11; i <= 30; i += 2) {
+
+    sum += i;
+}
+
+console.log(sum);
+
+// #8. Create a function that will convert from Celsius to Fahrenheit
+
+function celsiusToFahrenheit(n) {
+    return n * 1.8 + 32;
+}
+
+let r = celsiusToFahrenheit(20);
+console.log(r);
+
+
+// #9. Create a function that will convert from Fahrenheit to Celsius
+
+function fahrenheitToCelsius(n) {
+    return (n - 32) /1.8;
+}
+
+let r = fahrenheitToCelsius(68);
+console.log(r);
+
+
+// #10. Calculate the sum of numbers in an array of numbers
+
+const sumArray = (ar) => {
+    let sum = 0;
+
+    for (let i = 0; i < ar.length; i++) {
+        sum += ar[i];
+    }
+
+    return sum;
+}
+
+let ar = [2, 3, -1, 5, 7, 9, 10, 15, 95];
+let sum = sumArray(ar);
+console.log(sum);
+
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
