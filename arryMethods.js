@@ -54,11 +54,9 @@ arr.sort((a,b) => a > b ? -1:1);
 // Sort in ascending
 arr.sort((a,b) => a > b ? 1: -1);
 
-
 // # FROM 
 arr.from(string) // turning a string into an array
 arr.from("Tom"); // ["T", "o", "m"];
-
 
 // # OF
 arr.forEach(1,2,3,4,5);
@@ -69,7 +67,6 @@ arr.forEach(1,2,3,4,5);
 const numArr = ["sa", "lo", "n", "i"];
 console.log(numArr.join(","));
 // returns - sa,lo,n,i - converts arry into string
-
 
 // TO STRING
 const fruits = ["banana", "orange", "apple", "mango"];
