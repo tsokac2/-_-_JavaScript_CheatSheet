@@ -1,31 +1,51 @@
 // #1. 99 Bottles of beer on the wall
 
-let bottles;
+// # SOLUTION 1
 
-for (counter = 99; counter >= 1; counter = counter - 1) {
+const BeerSong = () => {
 
-    if (counter == 1) {
-        bottles = "botlee";
+    for (let i = 99; i >= 0; i--) {
 
-    } else {
-        bottles = "botles";
+        if(i == 1){
+            console.log(i +  " bottle of bear on the wall " +  i + " bottle of bear!");
+            console.log("Take one down and pass it around!");
+        } else if (i == 0) {
+            console.log("No more bottles of beers on the wall!");
+            console.log("Go and buy some more beers for the wall!");
+        } else {
+            console.log(i +  " bottles of bear on the wall " +  i + " bottles of bear!");
+            console.log("Take one down and pass it around!");
+        }
+       
     }
 
-    console.log(counter + " " + " bottles " + "of beer on the wall.");
+    return;
+};
+BeerSong();
 
-    if (counter < 99) {
-        console.log("");
-        console.log(counter + " " + bottles + " of beer on the wall.");
-    }
+// # SOLUTION 2
 
-    console.log(counter + " " + bottles + " of beer.");
-    console.log("Take one down.");
-    console.log("Pass it around.");
+function beerSong() {  
+    var bottles;
+    var bottlesLeft;
 
-    if (counter == 1) {
-        console.log("No more bottles of beer on the wall.");
-    }
-}
+    for (i = 99; i >= 1; i--) {
+      if (i == 1) {
+        bottles = "bottle";
+        bottlesLeft = "No bottles of beer on the wall!";
+      } else {
+        bottles = "bottles";
+        bottlesLeft = i - 1 + " bottles of beer on the wall!";
+      } 
+      
+      console.log(i+ " " + bottles + " of beer on the wall,");
+      console.log(i+ " " + bottles + " of beer,");
+      console.log("Take one down, pass it around,");
+      console.log(bottlesLeft);
+      } 
+      
+  }
+  console.log(beerSong());
 
 
 // #2. FizzBuzz in Javascript
