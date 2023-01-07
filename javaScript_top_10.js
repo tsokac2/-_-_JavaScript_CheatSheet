@@ -155,6 +155,9 @@ console.log(r);
 
 // #10. Calculate the sum of numbers in an array of numbers
 
+SOLUTION 1:
+
+const array1 = [1, 2, 3, 4];
 const sumArray = (ar) => {
     let sum = 0;
 
@@ -168,5 +171,29 @@ const sumArray = (ar) => {
 let ar = [2, 3, -1, 5, 7, 9, 10, 15, 95];
 let sum = sumArray(ar);
 console.log(sum);
+
+
+
+// #11. Double the value of each array element using Reduce Method
+
+let arr = [1,2,3,4,5];
+console.log("This is your array " + arr);
+
+let arrTimesTwo = arr.reduce((item, val) => {
+    item.push(val * 2);
+    return item;
+}, []);
+
+console.log("This is your Arry items times two " + arrTimesTwo);
+
+
+// #12.  Sum of all the elements in an array:
+
+const arr = [1,2,3,4,5];
+const arrSum = arr.reduce(
+  (item, val) => item + val, 0);
+
+console.log(arrSum);
+
 
 
