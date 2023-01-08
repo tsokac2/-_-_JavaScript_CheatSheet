@@ -206,7 +206,13 @@ console.log(rest); // [30, 40, 50, 60]
 
 document.getElementById("tag").innerHTML = rest;
 
+// #14. How would you remove and return the last element from an array in JavaScript?
 
+const arr = [1,2,3,4,5];
+const last = arr.pop();
+
+console.log(last); // 5
+console.log(arr); // [1,2,4,4]
 
 
 
