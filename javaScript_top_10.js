@@ -239,3 +239,66 @@ const clearArry = (arr) => {
 };
 
 console.log(clearArry(arr));
+
+// #16. What do you understand by the JavaScript Map Array function?
+// The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
+
+const arr = [1,2,3,4,5];
+const map1 = arr.map( i => i * 2);
+console.log(map1);
+
+// #17. How would you use arrays to swap variables in JS?
+// SOLUTION 1
+
+const arr = [1,2,3,4,5];
+
+temp = arr[1];
+arr[1] = arr[0];
+arr[0] = temp;
+
+console.log("Arr after swapping " + arr);
+
+// SOLUTION 2
+const arr = [1,2,3,4,5];
+
+[arr[0], arr[1]] = [arr[1], arr[0]];
+
+console.log("Arr after swapping: " + arr);
+
+// SOLUTION 3
+
+let a = 3;
+let b = 5;
+
+//Code to swap "a" and "b"
+// a value change to 8
+a += b;
+
+// b value changes to 3
+b = a - b;
+
+// a value changes to 5
+a -= b;
+
+
+console.log(
+  "After Swapping: a value is : "
+   + a + " and b value is :" + b
+);
+
+// #18. How would you fill static values in a given array in JS?
+// The fill() method changes all elements in an array to a static value, from a start index (default 0) to an end index (default array.length). 
+//It returns the modified array.
+
+const array1 = [1, 2, 3, 4];
+
+// Fill with 0 from position 2 until position 4
+console.log(array1.fill(0, 2, 4));
+// expected output: Array [1, 2, 0, 0]
+
+// Fill with 5 from position 1
+console.log(array1.fill(5, 1));
+// expected output: Array [1, 5, 5, 5]
+
+console.log(array1.fill(6));
+// expected output: Array [6, 6, 6, 6]
