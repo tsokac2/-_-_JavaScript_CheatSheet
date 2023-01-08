@@ -195,5 +195,18 @@ const arrSum = arr.reduce(
 
 console.log(arrSum);
 
+// #13. How would you destructure array elements in JavaScript?
+
+let a, b, rest;
+[a, b] = [10, 20];
+console.log(a + b); // 30
+[a, b, ...rest] = [10, 20, 30, 40, 50, 60];
+
+console.log(rest); // [30, 40, 50, 60]
+
+document.getElementById("tag").innerHTML = rest;
+
+
+
 
 
