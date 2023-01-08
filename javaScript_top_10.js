@@ -212,7 +212,30 @@ const arr = [1,2,3,4,5];
 const last = arr.pop();
 
 console.log(last); // 5
-console.log(arr); // [1,2,4,4]
+console.log(arr); // [1,2,3,4]
 
 
+// #15. How would you empty an array in JavaScript?
+// SOLUTION 1
+const arr = [1,2,3,4,5];
+arr.length = 0;
+console.log(arr);
 
+//SOLUTION 2
+
+const arr = [1,2,3,4,5];
+arr.splice(0, arr.length);
+console.log(arr);
+
+//SOLUTION 3
+
+const arr = [1,2,3,4,5];
+
+const clearArry = (arr) => {
+  while(arr.length > 0){
+    arr.pop();
+  }
+  return arr;
+};
+
+console.log(clearArry(arr));
