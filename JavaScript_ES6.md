@@ -163,3 +163,114 @@ However, if a value is provided, it takes precedence.
 #
 
 ### Destructuring Assignment
+
+This feature allows you to extract values from ``arrays`` or properties from ``objects`` and assign them to variables in a more concise way.
+
+#### Destructuring Arrays
+
+In this example, we declare two variables (first and second) and assign them values from the numbers array using destructuring assignment.
+
+```
+// Traditional way
+const numbers = [1, 2, 3, 4, 5];
+const first = numbers[0];
+const second = numbers[1];
+
+// Destructuring assignment
+const [first, second] = numbers;
+
+console.log(first); // Output: 1
+console.log(second); // Output: 2
+```
+
+#### Destructuring Objects
+
+In this example, we use destructuring assignment to directly extract values from the ``person`` object and assign them to variables with the same names.
+
+```
+// Traditional way
+const person = { name: 'Tomislav', age: 30, city: 'Dublin' };
+const name = person.name;
+const age = person.age;
+
+// Destructuring assignment
+const { name, age } = person;
+
+console.log(name); // Output: Tomislav
+console.log(age); // Output: 30
+```
+
+Destructuring assignment can also be used with nested structures, default values, and rest syntax, providing a versatile and powerful tool for working with complex data structures in JavaScript.
+
+#### Advance example of Destructuring Assignment
+
+**Swapping Values**
+
+Here, we use destructuring assignment to swap the values of variables a and b without the need for a temporary variable.
+
+```
+let a = 5;
+let b = 10;
+
+// Traditional way using a temporary variable
+let temp = a;
+a = b;
+b = temp;
+
+// Using destructuring assignment for swapping
+[a, b] = [b, a];
+
+console.log(a); // Output: 10
+console.log(b); // Output: 5
+
+```
+
+**Ignoring Values**
+
+In this example, we use array destructuring to ignore the first two elements of the numbers array and capture the rest in a variable called rest.
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+// Ignore the first two values
+const [, , ...rest] = numbers;
+
+console.log(rest); // Output: [3, 4, 5]
+```
+
+**Destructuring Function Parameters**
+
+In this case, the printCoordinates function takes an object as a parameter, and we use destructuring to directly extract x and y properties from the object.
+
+```
+// Without destructuring
+function printCoordinates(point) {
+  console.log(`X: ${point.x}, Y: ${point.y}`);
+}
+
+// With destructuring
+function printCoordinates({ x, y }) {
+  console.log(`X: ${x}, Y: ${y}`);
+}
+
+const coordinates = { x: 10, y: 20 };
+printCoordinates(coordinates);
+```
+
+**Destructuring with the Rest Operator:**
+
+Here, the ...remaining syntax captures the remaining elements of the array in a new array called remaining.
+
+```
+const colors = ['red', 'green', 'blue', 'yellow', 'orange'];
+
+const [primary, secondary, ...remaining] = colors;
+
+console.log(primary); // Output: red
+console.log(secondary); // Output: green
+console.log(remaining); // Output: ['blue', 'yellow', 'orange']
+```
+
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
