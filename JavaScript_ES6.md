@@ -4,6 +4,13 @@
 * **[What is ES6?](#What-is-ES6?)**
 * **[let and const Declarations](#let-and-const-Declarations)**
 * **[Arrow Functions](#Arrow-Functions)**
+* **[Template Literals](#template-literals)**
+* **[Default Parameters](#default-parameters)**
+* **[Destructuring Assignment](#destructuring-assignment)**
+
+
+
+
 
 #
 ### What is ES6?
@@ -106,3 +113,53 @@ In this example, ``addArrow`` is an arrow function that performs the same additi
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
+
+### Template Literals
+Template literals allow the embedding of expressions inside string literals. This is achieved using backticks ``(`)``, and it makes string interpolation more straightforward and readable.
+
+Here's a simple example to illustrate how template literals work:
+
+```
+// Traditional way
+const name = "Tomislav";
+const greeting = "Hello, " + name + "!";
+
+// Using template literals
+const templateGreeting = `Hello, ${name}!`;
+
+console.log(greeting); // Output: Hello, Tomislav!
+console.log(templateGreeting); // Output: Hello, Tomislav!
+```
+
+As you can see, with template literals, you can directly embed variables or expressions within ${} inside the string, making it more concise and readable. 
+
+This feature is especially useful when dealing with multiline strings or concatenating multiple variables.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Default Parameters
+ES6 enables the definition of default values for function parameters. If a parameter is not passed, the default value is used.
+
+Here's an example of how default parameters work:
+
+```
+// Function with default parameters
+const greet = (name, greeting = "Hello") => {
+    console.log(`${greeting}, ${name}!`);
+}
+
+// Calling the function without providing a value for 'greeting'
+greet("Tomislav"); // Output: Hello, Tomislav!
+
+// Calling the function with a custom 'greeting'
+greet("Tomislav", "Good morning"); // Output: Good morning, Tomislav!
+```
+
+In this example, the greeting parameter has a default value of ``"Hello."`` If the caller doesn't provide a value for greeting, the default value is used. 
+However, if a value is provided, it takes precedence.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+Destructuring Assignment
