@@ -1,8 +1,5 @@
 <h1 align="center">JavaScript - ES6</h1>
 
-### What is ES6?
-ES6 or ECMAScript 2015 is the sixth major release of the ECMAScript language.<bt/>
-To write web apps in ES6 that will support all Browsers us tools like Babel or Webpac.
 
 ### What are Babel and Webpack?
 Are tolls for developers to optimize JS apps.
@@ -38,15 +35,7 @@ Data types of the variable can change during the runtime and JavaScript will not
 ### How does JavaScript determine data types?
 By looking at the values during the runtime.
 
-### Use of ```let``` and ```const``` in JavaScript?
-Different ways of creating variables. <br/>
-Keywords```let``` and ```const```  introduced in ES6.<br/>
-```const``` - immutable variables <br/>
-```let``` - used to create mutable variables.
 
-### Explain constants in ES6?
-Also are known as immutable variables  - ```const strLength =  10;```<br/>
-Enable protection to overwrite a variable value.
 
 ### Template literals in ES6?
 Strings with embedded code and variables inside.<br/>
@@ -230,11 +219,7 @@ Are accessible through the webpage or throughout the document.
 </script>
 ```
 
-### What is ```let``` keyword?
-```let``` helps to create block-level local scope variables.
 
-### Declaring variable without keyword var.
-The variable becomes Global Variable.
 
 ### Usage of Use strict?
 Checks if the variable is defined using keywords ```var``` or ```let```<br/>
@@ -306,24 +291,9 @@ Every JavaScript object has a Prototype object.<br/>
 It is an inbuilt object provided by JavaScript. <br/>
 Prototype changing - one Object is inheriting from another object - prototype changing.
 
-### Are ```let``` variables hoisted?
-Yes, they are hoisted but they are not initialized with the value.<br/>
-Temporal Dead Zone - vars are named into the memory but they are not initialized with any value.
 
-### Let vs var?
 
-|            | ```var``` |
-| ---------- | --- |
-| **Scope**		 | Scoped to the immediate function body |
-| **Initialized Value** | Value initialized with undefined |
 
-|            | ```let``` |
-| ---------- | --- |
-| **Scope**		 | Scoped to the immediate enclosing block |
-| **Initialized Value** | Value initialized with nothing |
-
-```var``` - function scoped <br/>
-```let``` - block scoped
 
 ### Tricky questions around concatenation?
 Two strings are performing concatenation and not numeric addition
@@ -363,14 +333,7 @@ This means passing properties from a parent class to a child class.
 This means a child class can define its unique behavior and still share the same methods as the parent.
 
 
-### JavaScript concepts
-JavaScript runtime - is an engine that interprets JavaScript code
 
-| Keywords | Scope | Mutable |
-| -------- | ------| --------|
-| var | functions | yes |
-| let | block | yes |
-| const | block | no |
 
 
 Call constructor, a new object, passing to _bike_.

@@ -3,6 +3,7 @@
 ### Overview of the Section
 * **[What is ES6?](#What-is-ES6?)**
 * **[let and const Declarations](#let-and-const-Declarations)**
+* **[Arrow Functions](#Arrow-Functions)**
 
 #
 ### What is ES6?
@@ -67,6 +68,41 @@ JavaScript runtime - is an engine that interprets JavaScript code
 | ``var`` | functions | Yes |
 | ``let`` | block | Yes |
 | ``const`` | block | No |
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Arrow Functions
+
+Arrow functions provide a more concise syntax for writing function expressions. They have a shorter syntax, and the value of this is lexically scoped, simplifying function declarations.
+
+Here's a basic explanation along with a code example:
+
+```
+const functionName = (parameters) => {
+  // function body
+  return result;
+};
+```
+Arrow functions can have either a single parameter without parentheses or require parentheses for multiple parameters. 
+
+If the function body consists of a single statement, you can omit the curly braces and the return keyword.
+
+```
+// Traditional function expression
+function add(a, b) {
+  return a + b;
+}
+
+// Equivalent arrow function
+const addArrow = (a, b) => a + b;
+
+// Usage
+console.log(add(5, 3));      // Output: 8
+console.log(addArrow(5, 3)); // Output: 8
+```
+
+In this example, ``addArrow`` is an arrow function that performs the same addition as the traditional ``add`` function. The arrow function is more concise, especially when the function body is a single expression.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
