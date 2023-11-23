@@ -2,7 +2,7 @@
 
 
 ### Overview of the Section
-* **[What is ES6/?/](#Introduction)**
+* **[What is ES6?](#What-is-ES6?)**
 
 
 #
