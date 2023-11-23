@@ -4,27 +4,23 @@
 * **[What is ES6?](#What-is-ES6?)**
 * **[let and const Declarations](#let-and-const-Declarations)**
 
-
 #
 ### What is ES6?
 ECMAScript 6, also known as ES6 or ECMAScript 2015, is a major update to the JavaScript programming language. It introduced several new features and syntax enhancements to make JavaScript code more expressive and maintainable.
 #
-### 
-
-**[Back To The Top](#Overview-of-the-Section)**
 
 ### let and const Declarations
 ES6 introduced the ``let`` and ``const`` keywords for variable declarations. ``let`` allows for block-scoped variables, while const is used for constants, whose values cannot be reassigned.
+
+#### Explain constants in ES6?
+Also are known as immutable variables  - ```const strLength =  10;```<br/>
+Enable protection to overwrite a variable value.
 
 #### Use of ```let``` and ```const``` in JavaScript?
 Different ways of creating variables. <br/>
 Keywords```let``` and ```const```  introduced in ES6.<br/>
 ```const``` - immutable variables <br/>
 ```let``` - used to create mutable variables.
-
-#### Explain constants in ES6?
-Also are known as immutable variables  - ```const strLength =  10;```<br/>
-Enable protection to overwrite a variable value.
 
 #### What is ```let``` keyword?
 ```let``` helps to create block-level local scope variables.
@@ -68,6 +64,9 @@ JavaScript runtime - is an engine that interprets JavaScript code
 
 | Keywords | Scope | Mutable |
 | -------- | ------| --------|
-| var | functions | yes |
-| let | block | yes |
-| const | block | no |
+| ``var`` | functions | Yes |
+| ``let`` | block | Yes |
+| ``const`` | block | No |
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
