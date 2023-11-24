@@ -7,6 +7,12 @@
 * **[Template Literals](#template-literals)**
 * **[Default Parameters](#default-parameters)**
 * **[Destructuring Assignment](#destructuring-assignment)**
+* **[Classes](#classes)**
+* **[this keyword](#this-keyword)**
+
+
+
+
 
 
 
@@ -270,6 +276,49 @@ console.log(primary); // Output: red
 console.log(secondary); // Output: green
 console.log(remaining); // Output: ['blue', 'yellow', 'orange']
 ```
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Classes
+In JavaScript, ``classes`` are a way to define and create objects. 
+They provide a blueprint for creating objects with a set of properties and methods. 
+
+Here's a simple example of how you can create a class in JavaScript:
+
+```
+class Car {
+  // Constructor method is called when an object is created
+  constructor(make, model, year) {
+    this.make = make;
+    this.model = model;
+    this.year = year;
+  }
+
+  // Method to get a brief information about the car
+  getCarInfo() {
+    return `${this.year} ${this.make} ${this.model}`;
+  }
+
+  // Method to start the car
+  start() {
+    console.log(`${this.getCarInfo()} is starting...`);
+  }
+}
+
+// Creating an instance of the Car class
+const myCar = new Car('Toyota', 'Camry', 2022);
+
+// Accessing properties and calling methods
+console.log(myCar.getCarInfo()); // Output: 2022 Toyota Camry
+myCar.start(); // Output: 2022 Toyota Camry is starting...
+```
+In this example, the ``Car`` class has a constructor method that initializes the make, model, and year properties. 
+It also has two additional methods, ``getCarInfo`` and ``start``, which provide information about the car and simulate starting the car, respectively.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### ``this`` keyword
 
 
 **[Back To The Top](#Overview-of-the-Section)**
