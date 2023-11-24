@@ -9,12 +9,7 @@
 * **[Destructuring Assignment](#destructuring-assignment)**
 * **[Classes](#classes)**
 * **[this keyword](#this-keyword)**
-
-
-
-
-
-
+* **[Promises](#promises)**
 
 
 
@@ -315,11 +310,108 @@ myCar.start(); // Output: 2022 Toyota Camry is starting...
 In this example, the ``Car`` class has a constructor method that initializes the make, model, and year properties. 
 It also has two additional methods, ``getCarInfo`` and ``start``, which provide information about the car and simulate starting the car, respectively.
 
+You can create instances of the ``Car`` class using the ``new`` keyword and then access properties and call methods on those instances. This is a basic example, and JavaScript classes offer more features like inheritance, static methods, and more. 
+
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
 ### ``this`` keyword
 
+In JavaScript, the ``this`` keyword refers to the context in which a function is executed. The value of ``this`` is determined by how a function is called. 
+
+Let me provide you with an example to illustrate this concept:
+
+```
+// Example 1: 'this' in a global context
+function globalContextExample() {
+  console.log(this); // 'this' refers to the global object (window in a browser)
+}
+
+globalContextExample();
+
+// Example 2: 'this' in an object method
+const myObject = {
+  property: "I am a property",
+  method: function() {
+    console.log(this.property); // 'this' refers to the object that owns the method
+  }
+};
+
+myObject.method();
+
+// Example 3: 'this' in a constructor function
+function Person(name) {
+  this.name = name;
+  this.sayHello = function() {
+    console.log("Hello, my name is " + this.name);
+  };
+}
+
+const person1 = new Person("Tomislav");
+person1.sayHello();
+
+// Example 4: 'this' in an event handler
+const button = document.getElementById("myButton");
+
+button.addEventListener("click", function() {
+  console.log(this); // 'this' refers to the element that triggered the event (the button)
+});
+```
+1. In the first example, when a function is called in the global context, ``this`` refers to the global object (window in a browser). 
+2. In the second example, ``this`` inside a method of an object refers to the object itself. 
+3. In the third example, ``this`` in a constructor function refers to the instance of the object being created. 
+4. Lastly, in the fourth example, ``this`` in an event handler refers to the element that triggered the event.
+
+Understanding ``this`` is crucial in JavaScript to correctly reference the context in which a function is invoked. 
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Promises
+
+In JavaScript, promises are a way to handle asynchronous operations. They represent a value that might be available now, or in the future, or never. 
+
+Promises have three states:
+
+1. **Pending:** The initial state; the promise is neither fulfilled nor rejected.
+2. **Fulfilled:** Meaning that the operation completed successfully, and the promise has a resulting value.
+3. **Rejected:** Meaning that the operation failed, and the promise will have a reason for the failure.
+
+Here's a basic example to illustrate the concept:
+
+```
+// Function that returns a promise
+function doAsyncTask() {
+    return new Promise((resolve, reject) => {
+        // Simulating an asynchronous operation
+        setTimeout(() => {
+            const success = true; // Change this to simulate success or failure
+
+            if (success) {
+                resolve("Operation completed successfully!");
+            } else {
+                reject("Operation failed!");
+            }
+        }, 2000); // Simulating a 2-second delay
+    });
+}
+
+// Using the promise
+doAsyncTask()
+    .then((result) => {
+        console.log("Success:", result);
+    })
+    .catch((error) => {
+        console.error("Error:", error);
+    });
+```
+
+In this example, ``doAsyncTask`` is a function that returns a promise. Inside the promise, there's a simulated asynchronous operation using ``setTimeout``. If the operation is successful, it calls resolve with a success message; otherwise, it calls ``reject`` with an error message.
+
+The ``then`` method is used to handle the fulfilled state, and the ``catch`` method is used to handle the rejected state. 
+You can chain multiple ``then`` methods for more complex workflows.
+
+Promises provide a cleaner way to work with asynchronous code compared to traditional callback-based approaches, making it easier to reason about and maintain asynchronous workflows in your JavaScript code.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
