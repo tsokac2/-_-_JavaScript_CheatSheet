@@ -10,7 +10,7 @@
 * **[Classes](#classes)**
 * **[this keyword](#this-keyword)**
 * **[Promises](#promises)**
-
+* **[Modules](#modules)**
 
 
 #
@@ -415,3 +415,60 @@ Promises provide a cleaner way to work with asynchronous code compared to tradit
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
+
+### Modules
+
+In JavaScript, modules are a way to organize code into separate files, making it more modular and maintainable. 
+Each file in JavaScript is considered a module, and you can export and import functionalities between these modules.
+
+Let's go through a simple example. Suppose you have two files: mathOperations.js and main.js.
+
+``mathOperations.js``
+
+```
+// mathOperations.js
+export function add(a, b) {
+  return a + b;
+}
+
+export function subtract(a, b) {
+  return a - b;
+}
+```
+
+In this file, we have defined two functions (``add`` and ``subtract``) and exported them using the ``export`` keyword.
+
+``main.js``
+
+```
+// main.js
+import { add, subtract } from './mathOperations';
+
+// Using the exported functions
+const result1 = add(5, 3);
+const result2 = subtract(8, 4);
+
+console.log('Addition Result:', result1);
+console.log('Subtraction Result:', result2);
+```
+
+Here, we use the ``import`` statement to bring in the ``add`` and subtract functions from the ``mathOperations`` module. We can then use these functions in the ``main.js`` file.
+
+To run this example, you would typically use a module bundler like Webpack or a JavaScript runtime that supports ECMAScript modules (ESM).
+
+Here's a simple example of how you might run this using Node.js:
+
+``node --experimental-modules main.js``
+
+This enables ECMAScript module support in Node.js.
+
+This approach helps keep your code organized, promotes reusability, and makes it easier to collaborate with other developers. 
+
+Modules are an integral part of modern JavaScript development, especially with the widespread adoption of ECMAScript modules.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+Map and Set Data Structures:
+
+ES6 includes new data structures, Map and Set, providing more efficient ways to work with key-value pairs and unique values, respectively.
