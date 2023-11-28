@@ -11,6 +11,7 @@
 * **[this keyword](#this-keyword)**
 * **[Promises](#promises)**
 * **[Modules](#modules)**
+* **[Map and Set Data Structures](#map-and-set-data-structures)**
 
 
 #
@@ -469,6 +470,68 @@ Modules are an integral part of modern JavaScript development, especially with t
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-Map and Set Data Structures:
+### Map and Set Data Structures
 
 ES6 includes new data structures, Map and Set, providing more efficient ways to work with key-value pairs and unique values, respectively.
+
+#### Map
+A ``Map`` in JavaScript is a collection of key-value pairs where each key and value can be of any data type. It provides an easy way to associate values with keys and retrieve them efficiently. 
+
+Here's an example:
+
+```
+// Creating a Map
+let myMap = new Map();
+
+// Adding key-value pairs
+myMap.set('name', 'Tomislav');
+myMap.set('location', 'Dublin');
+myMap.set('role', 'API Integration Engineer');
+
+// Accessing values
+console.log(myMap.get('name')); // Output: Tomislav
+
+// Checking if a key exists
+console.log(myMap.has('role')); // Output: true
+
+// Deleting a key-value pair
+myMap.delete('location');
+
+// Iterating over the Map
+myMap.forEach((value, key) => {
+  console.log(`${key}: ${value}`);
+});
+```
+
+#### Set
+A Set is a collection of unique values in JavaScript. It doesn't allow duplicate elements, making it useful when you need to store a list of distinct items. 
+
+Here's an example:
+
+```
+// Creating a Set
+let mySet = new Set();
+
+// Adding elements
+mySet.add('Dublin');
+mySet.add('API Integration');
+mySet.add('JavaScript');
+
+// Checking if an element exists
+console.log(mySet.has('Dublin')); // Output: true
+
+// Deleting an element
+mySet.delete('JavaScript');
+
+// Iterating over the Set
+mySet.forEach(value => {
+  console.log(value);
+});
+```
+
+In these examples, I used the ``Map`` to store information with specific keys (e.g., name, location, role), and the ``Set`` to store a unique list of elements. 
+
+Both data structures provide efficient ways to manage and retrieve data based on your use case.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
