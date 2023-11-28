@@ -1,6 +1,16 @@
 <h1 align="center">JavaScript - ES6</h1>
 
 
+### New features in ES6?
+- Block - Scope - Supports variables, const, functions
+- Arrow Functions
+- Template Literals
+- Enhanced Regular Expressions
+- Enhanced Object Properties
+- Modules, Classes, Iterators, Generators
+- Support Map/Set & WeakMap/WeakSet
+
+
 ### What are Babel and Webpack?
 Are tolls for developers to optimize JS apps.
 
@@ -81,38 +91,7 @@ console.log(sum.apply(null, numbers));
 
 ```
 
-### What is set in ES6?
-The ```Set``` object lets you store unique values of any type, whether primitive values or object references.
-Sets are the collections that deal with single objects or single values. <br/>
-Set is the collection of values similar to arrays, but it does not contain any duplicates.
 
-```Set``` objects are collections of values.<br/>
-A value in the ```Set``` may only occur once; it is unique in the ```Set```'s collection.<br/>
-You can iterate through the elements of a set in insertion order.
-
-**Performance** <br/>
-The Set has method checks if a value is in a Set object, using an approach that is, on average, quicker than testing most of the elements that have previously been added to the Set object.
-
-
-```
-const mySet1 = new Set()
-
-mySet1.add(1)           // Set(1) { 1 }
-mySet1.add(5)           // Set(2) { 1, 5 }
-mySet1.add(5)           // Set(2) { 1, 5 }
-mySet1.add('some text') // Set(3) { 1, 5, 'some text' }
-const o = {a: 1, b: 2}
-mySet1.add(o)
-
-mySet1.add({a: 1, b: 2})   // o is referencing a different object, so this is okay
-
-mySet1.has(1)              // true
-mySet1.has(3)              // false, since 3 has not been added to the set
-mySet1.has(5)              // true
-mySet1.has(Math.sqrt(25))  // true
-mySet1.has('Some Text'.toLowerCase()) // true
-mySet1.has(o)       // true
-```
 
 ### What is WeakMap in ES6?
 A WeakMap is a collection of key/value pairs whose keys must be objects, with values of any arbitrary JavaScript type, and which does not create strong references to its keys.<br/>
@@ -136,14 +115,7 @@ console.log(gen.next().value);
 // expected output: 20
 ```
 
-### New features in ES6?
-- Block - Scope - Supports variables, const, functions
-- Arrow Functions
-- Template Literals
-- Enhanced Regular Expressions
-- Enhanced Object Properties
-- Modules, Classes, Iterators, Generators
-- Support Map/Set & WeakMap/WeakSet
+
 
 
 ### Explain array and object destructing in ES6.
@@ -160,6 +132,9 @@ let [a, ...b] = c;
 console.log(a,b); 
 // 100[200, 300, 400]
 ```
+
+
+
 
 ### How to create classes in ES6?
 Using the ```class``` keyword
