@@ -2,7 +2,7 @@
 
 ### Overview of the Section
 * **[Regular expressions](#Regular-expressions)**
-* **[return statement](#return-keyword)**
+* **[return statement](#return-statement)**
 * **[Enhanced Object Properties](#enhanced-object-properties)**
 * **[Why is JavaScript a dynamic language](#why-is-JavaScript-a-dynamic-language)**
 * **[How does JavaScript determine data types](#how-does-JavaScript-determine-data-types)**
