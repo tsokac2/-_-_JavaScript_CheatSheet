@@ -4,6 +4,7 @@
 * **[AWS](#aws)**
 * **[Azure](#azure)**
 * **[PaaS SaaS IaaS](#paas-saas-iaas)**
+* **[Boomi](#boomi)**
 
 
 #
@@ -64,6 +65,7 @@ This service allows you to automate workflows and integrate services, systems, a
 - Salesforce
 - Microsoft 365 (formerly Office 365)
 - Zoom
+- DraftKings Inc.
 
 #### IaaS (Infrastructure as a Service)
 - Amazon Web Services (AWS) Elastic Compute Cloud (EC2)
@@ -75,6 +77,25 @@ These examples showcase the diversity and versatility of PaaS, SaaS, and IaaS so
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### Boomi
+
+Boomi is a cloud-based integration platform as a service **(iPaaS)** that helps organizations connect applications, data, and devices. It is a powerful tool that can be used to automate processes, improve data quality, and gain insights from data. Boomi was founded in 2000 and is headquartered in Berwyn, Pennsylvania.
+
+Boomi's ``iPaaS`` platform is based on a cloud-native architecture, which makes it easy to deploy and manage. Boomi also offers a variety of pre-built connectors and templates, which can help organizations quickly and easily connect their applications.
+
+Boomi is a popular choice for organizations that need to integrate a wide range of applications and data sources.
+
+Here are some of the key benefits of using Boomi:
+
+- **Rapid integration:** Boomi's drag-and-drop interface and pre-built connectors make it easy to connect applications quickly and easily.
+- **Cloud-native architecture:** Boomi's cloud-native architecture makes it easy to deploy and manage.
+- **Scalability:** Boomi can scale to meet the needs of organizations of all sizes.
+- **Security:** Boomi is a secure platform that meets the needs of even the most demanding organizations.
+
+If you are looking for a powerful and easy-to-use iPaaS platform, Boomi is a great option.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
