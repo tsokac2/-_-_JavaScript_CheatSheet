@@ -52,3 +52,29 @@ This service allows you to automate workflows and integrate services, systems, a
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
+
+### PaaS SaaS IaaS
+
+#### PaaS (Platform as a Service)
+- Heroku
+- Google App Engine
+- Microsoft Azure App Service
+
+#### SaaS (Software as a Service)
+- Salesforce
+- Microsoft 365 (formerly Office 365)
+- Zoom
+
+#### IaaS (Infrastructure as a Service)
+- Amazon Web Services (AWS) Elastic Compute Cloud (EC2)
+- Microsoft Azure Virtual Machines
+- Google Cloud Platform (GCP) Compute Engine
+
+These examples showcase the diversity and versatility of PaaS, SaaS, and IaaS solutions available in the market, each catering to different aspects of application development, software delivery, and infrastructure management.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
