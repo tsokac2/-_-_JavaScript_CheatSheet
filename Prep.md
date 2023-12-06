@@ -1,16 +1,6 @@
 <h1 align="center">JavaScript - ES6</h1>
 
 
-### New features in ES6?
-- Block - Scope - Supports variables, const, functions
-- Arrow Functions
-- Template Literals
-- Enhanced Regular Expressions
-- Enhanced Object Properties
-- Modules, Classes, Iterators, Generators
-- Support Map/Set & WeakMap/WeakSet
-
-
 ### What are Babel and Webpack?
 Are tolls for developers to optimize JS apps.
 
@@ -39,59 +29,6 @@ npm -v
 npm install --save-dev babel-cli
 ```
 
-### Why is JavaScript a dynamic language?
-Data types of the variable can change during the runtime and JavaScript will not complain about it.
-
-### How does JavaScript determine data types?
-By looking at the values during the runtime.
-
-
-
-### Template literals in ES6?
-Strings with embedded code and variables inside.<br/>
-Done by using backtick
-```
-let a = "Hello";
-let b = "John";
-let c = `${a} ${b}`
-console.log(c); // Hello John;
-```
-
-Template literals:
-```
-const a = 5;
-const b = 10;
-
-console.log(`Fifteen is ${a + b} and
-not ${2 * a + b}.`);
-
-// "Fifteen is 15 and
-// not 20."
-```
-
-### Spread operator in ES6?
-A new way to manipulate an array and object in ES6.
-
-```
-let a = [7,8,9];
-let b = [1,2,3, ...a, 10];
-console.log(b); // [1,2,3,7,8,9,10]
-
-function sum(x, y, z) {
-  return x + y + z;
-}
-
-const numbers = [1, 2, 3];
-
-console.log(sum(...numbers));
-// expected output: 6
-
-console.log(sum.apply(null, numbers));
-// expected output: 6
-
-```
-
-
 
 ### What is WeakMap in ES6?
 A WeakMap is a collection of key/value pairs whose keys must be objects, with values of any arbitrary JavaScript type, and which does not create strong references to its keys.<br/>
@@ -113,55 +50,6 @@ console.log(gen.next().value);
 
 console.log(gen.next().value);
 // expected output: 20
-```
-
-
-
-
-### Explain array and object destructing in ES6.
-Allows to extract data from array and objects into separate variables
-
-```
-let fullName = ["John", "Doe"];
-let [first-name, last-name] = fullName;
-consol.log(first-name, last-name); 
-//John Doe
-
-let c = [100,200,300,400];
-let [a, ...b] = c;
-console.log(a,b); 
-// 100[200, 300, 400]
-```
-
-
-
-
-### How to create classes in ES6?
-Using the ```class``` keyword
-
-```
-class Rectangle {
-  constructor(height, width) {
-    this.height = height;
-    this.width = width;
-  }
-
-  // Getter
-  get area() {
-    return this.calcArea();
-  }
-
-  // Method
-  calcArea() {
-    return this.height * this.width;
-  }
-}
-
-const square = new Rectangle(10, 10);
-
-console.log(square.area); 
-// 100
-
 ```
 
 ### What are typeof functions?
