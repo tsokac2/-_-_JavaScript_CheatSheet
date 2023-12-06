@@ -8,7 +8,7 @@
 * **[Agile environment](#agile-environment)**
     * **[Scrum](#agile-environment)**
     * **[Kanban](#agile-environment)**
-    * **[Extreme Programming](#extreme-programming)**
+    * **[Extreme Programming or XP](#extreme-programming-or-xp)**
 * **[Stakeholders](#stakeholders)**
 
 
@@ -121,7 +121,7 @@ A popular Agile framework that uses short sprints (typically 1-4 weeks) to deliv
 #### Kanban
 A visual method for managing workflow and limiting work in progress (WIP).
 
-#### Extreme Programming (XP)
+#### Extreme Programming or XP
 A set of practices that emphasize close collaboration, frequent testing, and rapid feedback.
 
 Benefits of an Agile environment:
