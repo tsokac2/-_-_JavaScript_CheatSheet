@@ -12,6 +12,7 @@
 * **[Stakeholders](#stakeholders)**
 * **[Agility](#agility)**
 * **[Scalability](#scalability)**
+* **[MVP](#mvp)**
 
 #
 ### AWS
@@ -188,6 +189,23 @@ Agile businesses are able to:
 In the context of business, scalability refers to a company's ability to adapt and grow in response to increasing demand or changing market conditions. 
 
 It encompasses the ability to add resources or infrastructure without compromising efficiency or performance. Scalable businesses can handle increased workloads without significant disruptions to their operations or customer experience.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### MVP
+
+Minimum Viable Product (MVP)
+
+**MVP** stands for Minimum Viable Product. It is a version of a product with just enough features to satisfy early customers and provide feedback to inform future product development. 
+
+The goal of an MVP is to release the product to users as soon as possible to gather feedback and learn what features are most important to them. This allows the product development team to focus their efforts on the features that are most valuable to users and iterate on the product quickly and efficiently.
+
+Here are some of the benefits of using an MVP:
+
+- **Reduced risk:** By releasing a product with only the core features, the team can reduce the risk of failure. If the product is not successful, the team has not wasted a lot of time and money on development.
+- **Increased feedback:** By releasing a product to users early on, the team can get feedback on what is important to them. This feedback can then be used to improve the product and make it more successful.
+- **Faster iteration:** By releasing a product with only the core features, the team can iterate on the product more quickly. This means that the team can get the product to market faster and start generating revenue sooner.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
