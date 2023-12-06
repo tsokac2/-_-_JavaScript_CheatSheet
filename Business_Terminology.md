@@ -5,10 +5,14 @@
 * **[Azure](#azure)**
 * **[PaaS SaaS IaaS](#paas-saas-iaas)**
 * **[Boomi](#boomi)**
+* **[Agile environment](#agile-environment)**
+    * **[Scrum](#agile-environment)**
+    * **[Kanban](#agile-environment)**
+    * **[Extreme Programming](#extreme-programming)**
+* **[Stakeholders](#stakeholders)**
 
 
 #
-
 ### AWS
 
 Amazon Web Services (AWS) is a comprehensive and widely used cloud computing platform provided by Amazon. 
@@ -96,6 +100,74 @@ If you are looking for a powerful and easy-to-use iPaaS platform, Boomi is a gre
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
+
+### Agile environment
+An Agile environment is a collaborative and flexible work setting that embraces change and continuous improvement. 
+It emphasizes teamwork, adaptivity, and the ability to quickly deliver value to customers.
+
+Key characteristics of an Agile environment:
+
+- **Adaptability:** Agile teams are able to adapt to changing requirements and priorities without disrupting the overall project flow.
+- **Collaboration:** Agile encourages collaboration among team members, breaking down silos and fostering a sense of shared ownership.
+- **Continuous improvement:** Agile teams are constantly seeking ways to improve their processes and deliver better results.
+- **Customer focus:** Agile puts the customer at the center of everything, prioritizing their needs and feedback.
+
+
+Examples of Agile practices:
+
+#### Scrum
+A popular Agile framework that uses short sprints (typically 1-4 weeks) to deliver incremental value.
+
+#### Kanban
+A visual method for managing workflow and limiting work in progress (WIP).
+
+#### Extreme Programming (XP)
+A set of practices that emphasize close collaboration, frequent testing, and rapid feedback.
+
+Benefits of an Agile environment:
+
+- **Increased productivity:** Agile teams can deliver products and services faster and more efficiently.
+- **Improved quality:** Agile's focus on continuous improvement leads to higher quality products.
+- **Greater customer satisfaction:** Agile's emphasis on customer feedback results in products that better meet customer needs.
+- **Enhanced employee engagement:** Agile's collaborative and empowering approach can lead to more engaged and satisfied employees.
+
+Examples of companies that use Agile environments:
+
+- Spotify
+- Netflix
+- Google
+- Amazon
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Stakeholders
+
+Stakeholders are individuals or groups that have an interest in or are affected by a particular project, organization, or decision. 
+They can be internal, such as employees or shareholders, or external, such as customers or suppliers. 
+
+Stakeholders can have a positive or negative impact on the success of a project or organization.
+
+Examples of stakeholders:
+
+For a company:
+
+- **Internal stakeholders:** Employees, shareholders, managers
+- **External stakeholders:** Customers, suppliers, competitors, government, community
+
+For a government project:
+
+- **Internal stakeholders:** Government officials, project managers, contractors
+- **External stakeholders:** Taxpayers, citizens, special interest groups
+
+For a non-profit organization:
+
+- **Internal stakeholders:** Employees, volunteers, board of directors
+- **External stakeholders:** Donors, beneficiaries, government, community
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
