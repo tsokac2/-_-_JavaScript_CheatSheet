@@ -10,7 +10,8 @@
     * **[Kanban](#agile-environment)**
     * **[Extreme Programming or XP](#extreme-programming-or-xp)**
 * **[Stakeholders](#stakeholders)**
-
+* **[Agility](#agility)**
+* **[Scalability](#scalability)**
 
 #
 ### AWS
@@ -150,17 +151,17 @@ Stakeholders can have a positive or negative impact on the success of a project 
 
 Examples of stakeholders:
 
-For a company:
+#### For a company:
 
 - **Internal stakeholders:** Employees, shareholders, managers
 - **External stakeholders:** Customers, suppliers, competitors, government, community
 
-For a government project:
+#### For a government project:
 
 - **Internal stakeholders:** Government officials, project managers, contractors
 - **External stakeholders:** Taxpayers, citizens, special interest groups
 
-For a non-profit organization:
+#### For a non-profit organization:
 
 - **Internal stakeholders:** Employees, volunteers, board of directors
 - **External stakeholders:** Donors, beneficiaries, government, community
@@ -168,6 +169,25 @@ For a non-profit organization:
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### Agility
+In the context of business, agility refers to an organization's ability to quickly adapt to changes and seize opportunities in a rapidly evolving market. 
+
+It's about being nimble, responsive, and resourceful in the face of uncertainty.
+
+Agile businesses are able to:
+- Respond rapidly to customer needs
+- Embrace innovation
+- Streamline processes
+- Empower employees
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Scalability
+
+In the context of business, scalability refers to a company's ability to adapt and grow in response to increasing demand or changing market conditions. 
+
+It encompasses the ability to add resources or infrastructure without compromising efficiency or performance. Scalable businesses can handle increased workloads without significant disruptions to their operations or customer experience.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
