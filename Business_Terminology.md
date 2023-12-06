@@ -1,1 +1,1 @@
-<h1 align="center">Business terms encompass a broad spectrum of terminology used in the corporate world</h1>
+<h1 align="center">Business terms encompass terminology</h1>
