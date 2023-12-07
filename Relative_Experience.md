@@ -1,6 +1,5 @@
 <h1 align="center">Cases Based on Relative Experience</h1>
 
-
 #
 ### Past projects
 
@@ -10,12 +9,60 @@
 
 
 ### Team work
+- Explain testing new endpoint within Airbnb
+    - access issue
+    - test cases
+    - reported errors
+    - documentation updates
 
-Can you point to examples where you’ve found creative solutions to solve customer problems?
-Transaction ID issue - AIRBNB_BANK - reach out to 4 different teams with the same issue, explaining partner issues in detail by including feedback from the previous team.
+- Exertis Ireland
+    - New hire onboarding proccess
+    - Monthly server updates  - cheking the critical part - testing case in sandbox enviromet
+    - Disaster recovery cases - montly or quartaly tesing with cross-functionl teams members
+    - 
+
+
+### Can you point to examples where you’ve found creative solutions to solve customer problems?
+
+- Transaction ID issue - AIRBNB_BANK
+- check the previouse cases
+- found a team member with that similar case and aked for advice
+- base on her report I have rechout the the team that might be responsibel for this issue
+- team then push me to another - I have file new report base on my collegue notse
+- team then push me to another - I have file new report base on the team 1 notes
+- team then push me to another - I have file new report base on the team 2 notes
+- team then push me to another the last team has confirmed that that ID is being generated from a Bank point of view and is not on our end. 
+- reach out to 4 different teams with the same issue, explaining partner issues in detail by including feedback from the previous team.
 
 #
 ### Conflicts
+- Listing calendar issue with Veeve partner for multiple listings ID - a critical issue since the partner is losing revenue.
+- Test from my point of view.
+- Realized that I can't reproduce the same issue.
+- There is a possibility that the issue is on their side.
+- Before sending feedback to the partner, check with the team for a second opinion.
+- The team has confirmed that my testing was correct and advises pushing the issues further to the engineering team.
+- When back to the partner, explaining that I need more time and escalate the case to the engineering team.
+- The engineering team comes back to me with a note that my testing was correct and that the listing should be available for booking.
+- Tested yet again and made necessary communication to the partner.
+- The partner reported that the issue is still present.
+- Reported back to the engineering team; the engineering team reported that the issue is fixed, and there is an issue on the partner's side.
+- Before I check with the partner again, I asked in the channel if there is a similar case with other partners.
+- Two team members reported the same issue but with different properties.
+- When back to the engineering team with a full report, explaining in very detail step what the issue is, and that different partners and their properties were affected.
+- Since the issue was critical for my partner and several different partners, two of my team members jumped into that communication between me and the engineering team.
+- The engineering team reported that they had an internal incident that affected the property calendar, and it was fixed.
+- I suggested if there are any other factors that can affect the calendar and cause this issue.
+- The engineering team confirmed that there is another team who pushed recent updates.
+- The engineering team then confirmed that another team's updates caused this issue.
+- I have advised a partner that we are working on the fix as a first priority.
+- The partner manager reached out to me urgently for updates on this issue.
+- I have written him my full report and from where the issue is coming and when the partner can expect the fix.
+- The engineering team sent me an update that the fix was deployed from both sides.
+- Before updating the partner, I have tested myself and confirmed the fix.
+- I updated the partner and other two team members with the fix.
+- When the dust settled, I have created a short Confluence guide for similar case scenarios with testing, steps, and scenarios.
+- I have learned that if I made a detailed report from the start of the communication, the issue could be fixed much sooner.
 
 
 Handling Difficult Situations or Conflicts:

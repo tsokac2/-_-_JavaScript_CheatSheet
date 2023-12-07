@@ -34,3 +34,19 @@ Knowledge of PaaS/SaaS/IaaS technologies like Azure or AWS.
 ### Join Our Team
 
 We’re a publicly traded (NASDAQ: DKNG) technology company headquartered in Boston. As a regulated gaming company, you may be required to obtain a gaming license issued by the appropriate state agency as a condition of employment. Don’t worry, we’ll guide you through the process if this is relevant to your role.
+
+
+### DraftKings Daily Fantasy Sports DFS
+Platform that allows users to compete for real money against other players by creating teams of professional athletes from various leagues. The goal is to assemble a team of players who will perform well in their respective sports and accumulate the most points based on their real-world performance.
+
+### DraftKings Sportsbook - online betting
+DraftKings Sportsbook is a legal and regulated online sportsbook that offers a wide variety of betting options on major sporting events. It is one of the most popular sportsbooks in the United States,
+
+### DraftKings iGaming - Casino
+DraftKings iGaming refers to the online casino and sports betting products offered by DraftKings, a leading digital sports entertainment company. DraftKings iGaming provides a variety of casino games, including slots, table games, and live dealer games, as well as sports betting options on a wide range of sporting events.
+
+### DraftKings Marketplace
+Customers can seamlessly buy and sell digital collectibles across sports, entertainment, and culture on the secondary market using their existing DraftKings account.
+
+### DK Network
+DraftKings Network is a multi-platform content destination for passionate sports fans and bettors. It provides real-time sports betting news and analysis, exclusive analysis from top experts, unique shows with sports celebrities, and a vibrant community of fans to engage with.
