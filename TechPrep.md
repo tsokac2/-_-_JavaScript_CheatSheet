@@ -415,9 +415,9 @@ In summary, the regular expression /\d+someText$/ will successfully match a stri
 	The defer attribute in a JavaScript <script> tag specifies that the script is executed when the page has finished parsing. 
 	Here's how it works:
 
-    1. When a script tag has the defer attribute, the browser continues to build the Document Object Model (DOM) without pausing. This is similar to the async attribute. 
-    2. However, unlike async scripts, defer scripts guarantee the execution order. They will execute in the order they are declared in the file. 
-    3. The script starts downloading immediately but only executes after the HTML parsing is complete and in the order of their appearance in the page. 
+    1. When a script tag has the defer attribute, the browser continues to build the Document Object Model (DOM) without pausing. This is similar to the async attribute.
+    2. However, unlike async scripts, defer scripts guarantee the execution order. They will execute in the order they are declared in the file.
+    3. The script starts downloading immediately but only executes after the HTML parsing is complete and in the order of their appearance in the page.
 	More info here: https://airbnb.stackenterprise.co/questions/69274
 
 ### 5 What does DNS do?
@@ -462,8 +462,8 @@ Explains that is’s a cookie set by a script loaded from a 3rd party domain
 TOP Answer
 Explains that an inner join returns only rows on the main table where…
 
-* Inner Join (or simply Join): An inner join returns only the rows where there is a match between the columns being joined in both tables. If there is a row in the first table that does not have a corresponding match in the second table, it is not included in the result set. 
-* Left Join (or Left Outer Join): A left join returns all the rows from the first (left) table and any matching rows from the second table. If there is no match, the result for the second table's fields is NULL. Essentially, it includes all records from the first table regardless if there is a matching record in the second table. 
+* Inner Join (or simply Join): An inner join returns only the rows where there is a match between the columns being joined in both tables. If there is a row in the first table that does not have a corresponding match in the second table, it is not included in the result set.
+* Left Join (or Left Outer Join): A left join returns all the rows from the first (left) table and any matching rows from the second table. If there is no match, the result for the second table's fields is NULL. Essentially, it includes all records from the first table regardless if there is a matching record in the second table.
 
 
 
