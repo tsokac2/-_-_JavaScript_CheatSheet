@@ -13,6 +13,7 @@
 * **[Agility](#agility)**
 * **[Scalability](#scalability)**
 * **[MVP](#mvp)**
+* **[Websites for tech news](#websites-for-tech-news)**
 
 #
 ### AWS
@@ -206,6 +207,23 @@ Here are some of the benefits of using an MVP:
 - **Reduced risk:** By releasing a product with only the core features, the team can reduce the risk of failure. If the product is not successful, the team has not wasted a lot of time and money on development.
 - **Increased feedback:** By releasing a product to users early on, the team can get feedback on what is important to them. This feedback can then be used to improve the product and make it more successful.
 - **Faster iteration:** By releasing a product with only the core features, the team can iterate on the product more quickly. This means that the team can get the product to market faster and start generating revenue sooner.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Websites for tech news
+
+#### TechCrunch
+#### https://www.theverge.com/tech
+TechCrunch is a well-established technology media property that covers a wide range of tech-related topics. Known for its in-depth articles, analysis, and breaking news, TechCrunch is a go-to source for staying informed about the latest trends, startup news, and industry developments.
+
+#### The Verge
+#### https://www.theverge.com/tech 
+The Verge is a general technology news website that covers a wide range of topics, from gadgets and software to gaming and social media. The Verge has a reputation for its in-depth reporting and its willingness to take on controversial topics. 
+
+### Ars Technica
+#### https://arstechnica.com/
+Ars Technica is a highly respected source for technology news and analysis. What sets it apart is its in-depth and detailed articles that explore the technical aspects of various topics. Whether it's hardware, software, or the latest scientific breakthroughs, Ars Technica provides comprehensive coverage.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
