@@ -140,34 +140,64 @@ Symantec Endpoint Protection (SEP) provides a security solution to safeguard ser
 
 #
 
-Interview questions:
-Walk me through your CV/ Which one of your most recent roles is most similar to this position/ Tell me about your current role and how it will bring value to this role? -  just talk about your path
-What is your understanding of the role? - support role for Business API WA/EMS/IG - user education, checking backend, reporting bugs to developers, collecting data from customers, and based on that data what can be implemented on the next migration cycle
-Why are you interested in this role? - focus my support skills in one direction to grow in strength - FB is a great place to work, learn new skills and build up current ones
-What do you know about Facebook? - social network giant - the birthplace of React.js - Mark Zuckenberg
-What is your favorite Facebook product and why,  and how would you improve it? FB business manager - a great tool for targeting your audience - TO IMPROVE make it cheaper - take % of total income on the first month
-Tell me about a time you failed. What happened? Tell me about a time a project didn’t get the expected results? 3rd project - MongoDB  - only Pass - didn't define secure Token on DB
-What are your main strengths and weaknesses?  - Strength - A very good listener, very organized and precise  - Weaknesses - sometimes too precise - if you told me to paint to walls in your room and I know that you will ask to paint the rest 2, I will do that without asking you which sometimes can lead to time waste for other requests or task -  which can lead to miss opportunities
-Examples of working in a team - there is a 4 of us in the team at my current position - explain who is doing what and how are you supporting each other - new starter example 
-How do you deal with pressure? trying to organize my work asps and fix the issues step by step
-How do you manage your time - preparing a daily checklist according to the priorities, focusing on work, focusing on wellbeing, reading - researching
-How did you feel when you helped someone on your team? as I contributed to the team and overall department  - make the connection much stronger with teammates which is important to future challenges
-How have you used creativity to solve a problem? - sit back and think about the problem for a little longer, why does this happen, what is the source, reason - roll out in my head previous scenarios for possible solutions, quickly understand if I'm stuck who can be my next escalation point - solution will follow.
-How have you worked as a team to solve a problem? - organize quick calls and from experience, you know who has which skills set, then organize work accordingly.
-Describe the personality of a manager who you’d never want to work for - I'm pretty flexible, but if a manager is not giving constructive feedback then is very difficult to grow, and corporate.
-Are there any duties you absolutely hate doing? - monthly reporting, basically pulling data from the consoles and organizing for higher management - not very fun, but a good moment to relax in my head and think about new ideas or plans.
-Are you able to remain productive while working from home? - 100% you see here in Ireland we have that chit-chats with work colleagues and they are healthy, but also they can put you off the track, from home you don't have that and I can start early, plan my day  - while in the office in the current position users are constantly dropping to my desk with the issue, so some times is difficult to finish the day with clean slay.
-If you had a chance to ask Mark Zuckerberg anything, what would you ask? Why would you choose that question? - Hey Mark were you really working 18h like it was shown in the film and if yes what was your secret to stay focused for that long?
-How would your last manager describe you? What about your past colleagues? - very productive and precise, colleagues well we are still keeping in touch, so probably I did something good.
-Imagine your best possible workday. What did you do during that day? Why was it amazing? - get up in the morning, organize my day, everything that was on the schedule was accomplished - ex. fixed difficult user/client issues, learn new coding tricks and how to implement them in ongoing/current projects and understand them, when to the gym, and nice dinner with friends. 
-If you were given a set of words, how would you calculate the average number of letters in the words? - code a JavaScript function with charAt method and for loop total - the average number of letters in English is 5-6 - count all letters and divided by 5  or 6.
-Facebook has restrictions for users under the age of 13. How would you go about identifying users younger than 13? - check the content and photos they are posting to assess their age.
-Do you prefer to work as part of a team or independently? - team
-Describe the use of hashtags on Facebook, as well as how they can be abused. - for following certain topics easily - they can be modified into a song with a completely different meaning and insults
-Tell me about a time you worked as part of a cross-functional team. - working now at the moment - SAP developers, warehouse stock controllers, IT Operations, and also in a hospitality industry
-How would you recommend combating hate speech on social media? - educate users to not accept friend invites from people that they don't know, or before joining a group to check the group history rating, feedback on what to expect there, organize a free session with the experts that will explain how to avoid that situation
-If you were given a new product, how would you define the target market and position the product for success? - all depending on the product and what is the endgame - take those inputs into consideration and target end-users
-What is the most challenging problem you ever had to solve at work? - roll out Symantec anti-virus across 250 remote users in 48h - Broadcom announced dashboard migration and end-client-software migration -  I was on holiday when I come back I was left with 48h to roll out 250 users with no clue about the new cloud console and new product.
-Describe your proudest achievement. What about your biggest defeat? - landing my first IT job here in Ireland - Defeat: not getting promoted to Team Lead again in the hospitality industry after great feedback at the end of the summer season
-Which of your traits will make you a strong team leader? Why? -  well organized, great listener, willing to help, support, and understand
+### Interview questions:
+- Walk me through your CV/ Which one of your most recent roles is most similar to this position/ Tell me about your current role and how it will bring value to this role? -  just talk about your path
+- **What is your understanding of the role?**
+    - support role for Business API WA/EMS/IG - user education, checking backend, reporting bugs to developers, collecting data from customers, and based on that data what can be implemented on the next migration cycle
+- **Why are you interested in this role?**
+    - focus my support skills in one direction to grow in strength - FB is a great place to work, learn new skills and build up current ones
+- **What do you know about Facebook?** 
+    - social network giant - the birthplace of React.js - Mark Zuckenberg
+- **What is your favorite Facebook product and why,  and how would you improve it?**
+    -  FB business manager - a great tool for targeting your audience - TO IMPROVE make it cheaper - take % of total income on the first month
+- **Tell me about a time you failed. What happened? Tell me about a time a project didn’t get the expected results? 3rd project**
+     - MongoDB  - only Pass - didn't define secure Token on DB
+- **What are your main strengths and weaknesses?**
+  - **Strength** - A very good listener, very organized and precise
+  - **Weaknesses** - sometimes too precise - if you told me to paint to walls in your room and I know that you will ask to paint the rest 2, I will do that without asking you which sometimes can lead to time waste for other requests or task -  which can lead to miss opportunities
+- **Examples of working in a team**
+     - there is a 4 of us in the team at my current position - explain who is doing what and how are you supporting each other - new starter example 
+- **How do you deal with pressure?**
+    - trying to organize my work asps and fix the issues step by step
+- **How do you manage your time**
+     - preparing a daily checklist according to the priorities, focusing on work, focusing on wellbeing, reading - researching
+- **How did you feel when you helped someone on your team?**
+    - as I contributed to the team and overall department  - make the connection much stronger with teammates which is important to future challenges
+- **How have you used creativity to solve a problem?**
+     - sit back and think about the problem for a little longer, why does this happen, what is the source, reason - roll out in my head previous scenarios for possible solutions, quickly understand if I'm stuck who can be my next escalation point - solution will follow.
+- **How have you worked as a team to solve a problem?**
+     - organize quick calls and from experience, you know who has which skills set, then organize work accordingly.
+- **Describe the personality of a manager who you’d never want to work for**
+     - I'm pretty flexible, but if a manager is not giving constructive feedback then is very difficult to grow, and corporate.
+- **Are there any duties you absolutely hate doing?**
+     - monthly reporting, basically pulling data from the consoles and organizing for higher management - not very fun, but a good moment to relax in my head and think about new ideas or plans.
+- **Are you able to remain productive while working from home?**
+     - 100% you see here in Ireland we have that chit-chats with work colleagues and they are healthy, but also they can put you off the track, from home you don't have that and I can start early, plan my day  - while in the office in the current position users are constantly dropping to my desk with the issue, so some times is difficult to finish the day with clean slay.
+- **If you had a chance to ask Mark Zuckerberg anything, what would you ask? Why would you choose that question?**
+     - Hey Mark were you really working 18h like it was shown in the film and if yes what was your secret to stay focused for that long?
+- **How would your last manager describe you? What about your past colleagues?**
+     - very productive and precise, colleagues well we are still keeping in touch, so probably I did something good.
+- **Imagine your best possible workday. What did you do during that day? Why was it amazing?**
+     - get up in the morning, organize my day, everything that was on the schedule was accomplished - ex. fixed difficult user/client issues, learn new coding tricks and how to implement them in ongoing/current projects and understand them, when to the gym, and nice dinner with friends. 
+- **If you were given a set of words, how would you calculate the average number of letters in the words?**
+     - code a JavaScript function with charAt method and for loop total - the average number of letters in English is 5-6 - count all letters and divided by 5  or 6.
+- **Facebook has restrictions for users under the age of 13. How would you go about identifying users younger than 13?**
+     - check the content and photos they are posting to assess their age.
+- **Do you prefer to work as part of a team or independently?**
+     - team
+- **Describe the use of hashtags on Facebook, as well as how they can be abused.**
+     - for following certain topics easily - they can be modified into a song with a completely different meaning and insults
+- **Tell me about a time you worked as part of a cross-functional team.**
+     - working now at the moment - SAP developers, warehouse stock controllers, IT Operations, and also in a hospitality industry
+- **How would you recommend combating hate speech on social media?** 
+    - educate users to not accept friend invites from people that they don't know, or before joining a group to check the group history rating, feedback on what to expect there, organize a free session with the experts that will explain how to avoid that situation
+- **If you were given a new product, how would you define the target market and position the product for success?**
+     - all depending on the product and what is the endgame - take those inputs into consideration and target end-users
+- **What is the most challenging problem you ever had to solve at work?** 
+    - roll out Symantec anti-virus across 250 remote users in 48h - Broadcom announced dashboard migration and end-client-software migration -  I was on holiday when I come back I was left with 48h to roll out 250 users with no clue about the new cloud console and new product.
+- **Describe your proudest achievement. What about your biggest defeat?**
+     - landing my first IT job here in Ireland - 
+     - Defeat: not getting promoted to Team Lead again in the hospitality industry after great feedback at the end of the summer season
+- **Which of your traits will make you a strong team leader? Why?**
+     -  well organized, great listener, willing to help, support, and understand
 
