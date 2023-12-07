@@ -8,18 +8,18 @@
 - Symantec integration (SEP)
 
 
-### Team work
-- Explain testing new endpoint within Airbnb
-    - access issue
-    - test cases
-    - reported errors
-    - documentation updates
+### Teamwork
+1. **Airbnb**
+    - Explain testing new endpoints within Airbnb:
+        - Access issues
+        - Test cases
+        - Reported errors
+        - Documentation updates
 
-- Exertis Ireland
-    - New hire onboarding proccess
-    - Monthly server updates  - cheking the critical part - testing case in sandbox enviromet
-    - Disaster recovery cases - montly or quartaly tesing with cross-functionl teams members
-    - 
+2. **Exertis Ireland**
+    - New hire onboarding process
+    - Monthly server updates - checking the critical parts - testing cases in a sandbox environment
+    - Disaster recovery cases - monthly or quarterly testing with cross-functional team members.
 
 
 ### Can you point to examples where you’ve found creative solutions to solve customer problems?
