@@ -32,7 +32,13 @@ Symantec Endpoint Protection (SEP) security solution to secure servers, desktops
     - Trigger specific actions based on security events.
 
 8. **Monitoring and Maintenance**
-    - 
+    - Set up monitoring tools to keep track of the integration's performance and health. 
+    - Create weekly and monthly automate reports for the higher managment view
+    - Establish a maintenance plan to address any issues.
+
+9. **Documentation**
+    -  Document your integration process.
+    - This documentation is valuable for reference and for sharing knowledge with other team members.
 
 #
 ### Airbnb - Partner Integration
