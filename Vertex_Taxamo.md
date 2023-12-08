@@ -1,5 +1,11 @@
 <h1 align="center">Taxamo</h1>
 
+### My Questions for the team:
+1. The first day, the first week if I'm successful, expectations after the first month?
+2. How did you start with Vertex and What is the best part of working for DraftKings?
+3. What is happening after this meeting? Next step and feedback?
+
+
 ### What is a Taxamo a Vertex Inc.
 Taxamo, now a Vertex Inc. company, is a global provider of tax technology solutions that help businesses comply with VAT, GST, and US sales tax regulations. 
 
