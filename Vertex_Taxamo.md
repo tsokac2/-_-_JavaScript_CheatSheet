@@ -100,3 +100,22 @@ A good API has comprehensive and up-to-date documentation that clearly explains 
     - User-Centric Approach: Tailor test cases to meet the needs of specific product areas, ensuring effective communication with stakeholders.
 
 #
+###  `readme` Powered Documentation
+readme Powered Documentation is a platform that transforms static API documentation into interactive and engaging developer hubs. 
+
+It provides a rich set of features that make it easy for developers to find the information they need and get started using your APIs.
+
+#
+### Can you point to examples where you’ve found creative solutions to solve customer problems?
+
+- Transaction ID issue - AIRBNB_BANK
+- check the previouse cases
+- found a team member with that similar case and aked for advice
+- base on her report I have rechout the the team that might be responsibel for this issue
+- team then push me to another - I have file new report base on my collegue notse
+- team then push me to another - I have file new report base on the team 1 notes
+- team then push me to another - I have file new report base on the team 2 notes
+- team then push me to another the last team has confirmed that that ID is being generated from a Bank point of view and is not on our end. 
+- reach out to 4 different teams with the same issue, explaining partner issues in detail by including feedback from the previous team.
+
+#
