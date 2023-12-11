@@ -592,3 +592,6 @@ In this example, the provided function will be executed for each element in the 
 Remember, forEach is a great choice when you want to perform an operation on each element of an array without creating a new array. 
 
 If you need to transform the elements and create a new array, you might consider using methods like ``map()``.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
