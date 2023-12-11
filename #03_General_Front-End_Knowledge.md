@@ -107,7 +107,7 @@ This process is essential because computers and networking devices use IP(Intern
 
 #### In DNS, what is the TTL attribute?
 
-	"Time to Live" - It is time until the record is re-resolved - specifies the amount of time the record is allowed to be cached by a DNS resolver.
+**"Time to Live"** - It is time until the record is re-resolved - specifies the amount of time the record is allowed to be cached by a DNS resolver.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
