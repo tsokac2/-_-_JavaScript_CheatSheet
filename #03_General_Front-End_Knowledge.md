@@ -12,6 +12,7 @@
 * **[TLS and SSL](#tls-and-ssl)**
 * **[1st party cookie](#1st-party-cookie)**
 * **[3rd party cookie](#3rd-party-cookie)**
+* **[SQL left and inner join](#SQL-left-and-inner-join)**
 
 
 ### 
@@ -138,7 +139,7 @@ Way to secure connection between the computers
 
 
 ### 3rd party cookie
-#### 9 What is a 3rd party cookie?
+#### What is a 3rd party cookie?
 
 Explains that is’s a cookie set by a script loaded from a 3rd party domain
 
@@ -149,7 +150,7 @@ Explains that is’s a cookie set by a script loaded from a 3rd party domain
 #
 
 ### SQL left and inner join
-#### 10 In SQL, what is the difference between an inner and left join?
+#### In SQL, what is the difference between an inner and left join?
 
 - **Inner Join (or simply Join):** An inner join returns only the rows where there is a match between the columns being joined in both tables. If there is a row in the first table that does not have a corresponding match in the second table, it is not included in the result set.
 - **Left Join (or Left Outer Join):** A left join returns all the rows from the first (left) table and any matching rows from the second table. If there is no match, the result for the second table's fields is NULL. Essentially, it includes all records from the first table regardless if there is a matching record in the second table.
@@ -224,8 +225,6 @@ Notices the repeated reference to the word fuse in the attributes and search by 
     Find the “date-fuse” attribute - probably custom created by the some internal framework
     On the network settings filter by “JS”, clear the console and refresh the page
     Find fuse.js and block the script - the ads should not load
-
-
 
 ### Of the total data downloaded, how much is attribute ti ads?
 
