@@ -287,8 +287,7 @@ Here is a table summarizing the key differences between Babel and Webpack:
 | ---------- | ---------------- | -------------|
 | Purpose	 |	Transpiles modern JavaScript code 				| Compiles and bundles JavaScript code and other assets   |
 | What it does		     |	Converts modern JavaScript features into code that can be understood by older browsers  			| Combines multiple files into a single, bundled file; optimizes code; handles dependencies|
-| When to use it			 | md  			| >= 768px |
-| large			 | When you are using modern JavaScript features that are not yet supported by all browsers  				| When you need to bundle your JavaScript code, CSS, images, and fonts into a single file; when you need to optimize your code; when you need to handle dependencies |
+| When to use it			 | When you are using modern JavaScript features that are not yet supported by all browsers   			| When you need to bundle your JavaScript code, CSS, images, and fonts into a single file; when you need to optimize your code; when you need to handle dependencies |
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
