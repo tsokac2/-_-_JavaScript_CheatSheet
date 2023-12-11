@@ -302,3 +302,56 @@ console.log(array1.fill(5, 1));
 
 console.log(array1.fill(6));
 // expected output: Array [6, 6, 6, 6]
+
+
+//#19.
+class ReservationSystem {
+    constructor() {
+      this.reservations = [];
+    }
+  
+    // Method to reserve a spot
+    Reserve() {
+      if (this.reservations.length === 0) {
+        // If no reservations, assign reservation number 1
+        this.reservations.push(1);
+      } else {
+        // Find the lowest available reservation number
+        let nextReservationNumber = 1;
+        while (this.reservations.includes(nextReservationNumber)) {
+          nextReservationNumber++;
+        }
+        this.reservations.push(nextReservationNumber);
+      }
+  
+      // Return the reservation number
+      return this.reservations[this.reservations.length - 1];
+    }
+  
+    // Method to cancel a reservation
+    Cancel(reservationNumber) {
+      const index = this.reservations.indexOf(reservationNumber);
+      if (index !== -1) {
+        // Remove the reservation if found
+        this.reservations.splice(index, 1);
+        return true; // Cancellation successful
+      } else {
+        return false; // Reservation not found
+      }
+    }
+  }
+  
+  // Example Usage:
+  const reservationSystem = new ReservationSystem();
+  
+  const reservation1 = reservationSystem.Reserve();
+  console.log(`Reservation 1: ${reservation1}`);
+  
+  const reservation2 = reservationSystem.Reserve();
+  console.log(`Reservation 2: ${reservation2}`);
+  
+  const cancellationResult = reservationSystem.Cancel(reservation1);
+  console.log(`Cancellation of Reservation 1: ${cancellationResult}`);
+  
+  const reservation3 = reservationSystem.Reserve();
+  console.log(`Reservation 3: ${reservation3}`);
