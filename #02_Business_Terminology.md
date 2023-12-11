@@ -260,20 +260,21 @@ In summary, the virtual DOM is a fundamental concept in modern JavaScript framew
 
 **Babel** and **Webpack** are two essential tools for modern JavaScript development. They play complementary roles in building complex and performant web applications.
 
+#### Babel
 - **Babel** is a JavaScript compiler that transforms modern JavaScript code into code that can be understood by older browsers. This is necessary because many modern JavaScript features are not yet fully supported by all browsers. 
 - **Babel** allows you to write code that is more expressive and maintainable, while still ensuring that it can be executed by the widest range of users.
 
-Here are some of the things that Babel can do:
+Here are some of the things that **Babel** can do:
 
 - **Transpile ES2023+ features to ES5:** This allows you to use the latest JavaScript features without worrying about whether or not they will be supported by older browsers.
 - **Handle new language features:** Babel can also handle other new language features, such as class syntax, arrow functions, and modules.
 - **Optimize code:** Babel can also optimize your code by removing unused code, inlining functions, and using other techniques to make your code smaller and faster.
 
-
+#### Webpack
 **Webpack** is a build tool that takes your JavaScript code and other assets (such as CSS, images, and fonts) and turns them into a single, bundled file that can be served by your web server. 
 This makes it easier to deploy and manage your code, and it can also improve the performance of your application by reducing the number of requests that need to be made by the browser.
 
-Here are some of the things that Webpack can do:
+Here are some of the things that **Webpack** can do:
 
 - **Bundle your code:** Webpack can bundle all of your JavaScript code, CSS, images, and fonts into a single file. This makes it easier to deploy your application, and it can also improve the performance of your application by reducing the number of requests that need to be made by the browser.
 - **Optimize your code:** Webpack can optimize your code by minifying it, removing unused code, and inlining functions. This can make your code smaller and faster.
@@ -281,7 +282,7 @@ Here are some of the things that Webpack can do:
 
 **Babel** and **Webpack** are often used together, as Babel can be integrated into Webpack to handle the transpilation of your code. This can save you from having to configure two separate tools, and it can also make it easier to manage your build process.
 
-Here is a table summarizing the key differences between Babel and Webpack:
+Here is a table summarizing the key differences between **Babel** and **Webpack**:
 
 | Feature |		Babel |	Webpack |
 | ---------- | ---------------- | -------------|
