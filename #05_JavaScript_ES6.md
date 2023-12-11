@@ -535,3 +535,25 @@ Both data structures provide efficient ways to manage and retrieve data based on
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
+
+
+### What is WeakMap in ES6?
+A WeakMap is a collection of key/value pairs whose keys must be objects, with values of any arbitrary JavaScript type, and which does not create strong references to its keys.<br/>
+That is, an object's presence as a key in a WeakMap does not prevent the object from being garbage collected.
+
+### Generator functions in ES6?
+The ```function*``` declaration (```function``` keyword followed by an asterisk) defines a generator function, which returns a Generator object.
+
+```
+function* generator(i) {
+  yield i;
+  yield i + 10;
+}
+
+const gen = generator(10);
+
+console.log(gen.next().value);
+// expected output: 10
+
+console.log(gen.next().value);
+// expected output: 20
