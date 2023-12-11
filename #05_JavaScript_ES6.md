@@ -12,6 +12,8 @@
 * **[Promises](#promises)**
 * **[Modules](#modules)**
 * **[Map and Set Data Structures](#map-and-set-data-structures)**
+* **[WeakMap in ES6](#weakmap-in-es6)**
+* **[Generator functions in ES6](#generator-functions-in-es6)**
 
 
 #
@@ -536,24 +538,157 @@ Both data structures provide efficient ways to manage and retrieve data based on
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### WeakMap in ES6
+WeakMap is a data structure introduced in ES6 that allows you to store key-value pairs. 
+However, unlike regular JavaScript objects, WeakMaps have a unique property: the keys in a WeakMap are not strongly referenced, which means they can be garbage collected if there are no other references to them. 
 
-### What is WeakMap in ES6?
-A WeakMap is a collection of key/value pairs whose keys must be objects, with values of any arbitrary JavaScript type, and which does not create strong references to its keys.<br/>
-That is, an object's presence as a key in a WeakMap does not prevent the object from being garbage collected.
+This key feature makes WeakMaps useful for storing data associated with objects without preventing those objects from being collected when they are no longer needed.
+
+#### Key Characteristics of WeakMaps:
+
+- **Weak Keys:** WeakMaps only allow objects or non-registered symbols as keys. These keys are not strongly referenced, which means they can be garbage collected if there are no other references to them.
+
+- **Arbitrary Values:** WeakMaps can store values of any arbitrary JavaScript type. This flexibility allows you to store data of various forms within a WeakMap.
+
+- **Efficient Memory Management:** WeakMaps contribute to efficient memory management by allowing the garbage collector to reclaim unused objects, even if they are still referenced by WeakMap entries.
+
+#### Applications of WeakMaps:
+
+- **Cacheing Data:** WeakMaps are often used for caching data that is associated with objects. Since the keys can be garbage collected, the cache can be cleaned up automatically when the associated objects are no longer needed.
+
+- **Memoization:** WeakMaps can be employed for memoization – a technique that caches the results of expensive calculations to avoid repeated computation. This reduces memory consumption and improves performance.
+
+- **WeakMap-Based Algorithms:** WeakMaps are used in various algorithms, such as weakly referenced sets and sets of unique elements. These algorithms leverage the weak key property to efficiently manage collections of objects.
+
+#### Example Usage of WeakMap:
+
+Consider a function that creates a WeakMap to store the size of each object in a collection:
+```
+function calculateObjectSizes(objects) {
+  const objectSizes = new WeakMap();
+
+  for (const object of objects) {
+    objectSizes.set(object, calculateSize(object));
+  }
+
+  return objectSizes;
+}
+```
+In this example, the ``objectSizes`` WeakMap will hold the size of each object in the objects array. Since the keys are objects, they will be garbage collected when the objects array is no longer referenced.
+
+**WeakMaps** offer a unique approach to storing key-value pairs while ensuring that associated objects can be garbage collected when they are no longer needed. 
+
+This feature makes them valuable tools for memory management, caching, and various algorithms that rely on weakly referenced data structures.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
 ### Generator functions in ES6?
-The ```function*``` declaration (```function``` keyword followed by an asterisk) defines a generator function, which returns a Generator object.
+
+Generator functions are a powerful feature introduced in ES6 that allows you to write iterative code in a more concise and readable way. 
+
+Unlike regular functions, generator functions can be paused and resumed multiple times, making them ideal for tasks like processing large data sets or performing asynchronous operations.
+
+#### Syntax
+
+Generator functions are defined using the ``function* keyword``, followed by the function name and parentheses. The parentheses can contain any number of parameters, just like regular functions.
 
 ```
-function* generator(i) {
-  yield i;
-  yield i + 10;
+function* myGeneratorFunction(param1, param2) {
+  // Generator code goes here
+}
+```
+
+#### Yield Expression
+The ``yield`` keyword is used to pause the execution of the generator function and return a value to the caller. The value returned by ``yield`` is stored in the value property of the object returned by the ``next()`` method, which is used to resume the generator function's execution.
+
+```
+function* myGeneratorFunction() {
+  for (let i = 0; i < 5; i++) {
+    yield i; // Yield the current iteration value
+  }
 }
 
-const gen = generator(10);
+const generator = myGeneratorFunction();
 
-console.log(gen.next().value);
-// expected output: 10
+for (let value of generator) {
+  console.log(value); // Output: 0 1 2 3 4
+}
+```
 
-console.log(gen.next().value);
-// expected output: 20
+#### Yield Multiple Values
+
+The ``yield*`` syntax can be used to yield multiple values from a generator function. This is particularly useful for iterating over nested data structures.
+```
+function* myGeneratorFunction() {
+  const data = [1, 2, 3];
+  for (const value of data) {
+    yield* value; // Recursively yield values from nested data
+  }
+}
+
+for (let value of myGeneratorFunction()) {
+  console.log(value); // Output: 1 2 3
+}
+```
+
+#### Generator Usage Examples
+
+Generator functions are often used for tasks like iterating over arrays, processing asynchronous data, or implementing coroutines. Here are a few examples:
+
+#### Iterating over an array:
+```
+function* myGeneratorFunction(array) {
+  for (const value of array) {
+    yield value;
+  }
+}
+
+const array = ['foo', 'bar', 'baz'];
+
+for (let value of myGeneratorFunction(array)) {
+  console.log(value); // Output: foo bar baz
+}
+```
+#### Processing asynchronous data:
+```
+function* fetchData(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    yield* data; // Recursively yield values from nested data
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+const url = 'https://jsonplaceholder.typicode.com/todos/1';
+
+for (let item of fetchData(url)) {
+  console.log(item); // Output: { id: 1, title: ... }
+}
+```
+#### Implementing coroutines:
+
+Coroutines are asynchronous subroutines that can suspend and resume execution at certain points. Generator functions are a good way to implement coroutines in JavaScript.
+
+```
+function* myCoroutine() {
+  while (true) {
+    const input = yield; // Read input from the caller
+    console.log('Processing input:', input);
+  }
+}
+
+const coroutine = myCoroutine();
+
+coroutine.next('Hello, world!'); // Output: Processing input: Hello, world!
+coroutine.next('Another message'); // Output: Processing input: Another message
+```
+
+``Generator functions`` are a powerful tool for writing concise, readable, and efficient asynchronous code in JavaScript. 
+
+They provide a more natural way to represent iterative processes and handle asynchronous operations, and they can help to prevent Callback Hell and other common pitfalls of asynchronous programming.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
