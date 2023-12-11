@@ -268,8 +268,14 @@ Select the ``Elements Tab`` in the dev console
 
 
 ### Can you return a better error in the case where the array is empty? 
-
-
+#### Solution:
+```
+   if ((numbers.length === 0)) {
+        return `Invalid input`;
+    } else if(isNaN(average)){
+        return 'Enter valid numbers!';
+    }
+```
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
