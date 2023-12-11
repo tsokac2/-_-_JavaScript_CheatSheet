@@ -269,17 +269,7 @@ Select the ``Elements Tab`` in the dev console
 
 ### Can you return a better error in the case where the array is empty? 
 
-TOP Answer
-Write better error message in the empty array.
-Replace ‘description’ parameter with the following:
 
-let examples = 
-
-[
- 	{ params: [1,2,3,4,5], descriptions: ‘Numbers array' },
- 	{ params: [], descriptions: 'Invalid input. Please provide an array of valid numbers.' },
- 	{ params: [“a”, “b”, “c”], descriptions: 'Invalid input. Invalid array with strings’ }
-]
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
