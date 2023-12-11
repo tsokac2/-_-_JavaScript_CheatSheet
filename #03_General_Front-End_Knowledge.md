@@ -6,10 +6,14 @@
 * **[HTML and DOM](#HTML-and-DOM)**
 * **[Regular expression](#regular-expression)**
 * **[async attribute](#async-attribute)**
-* **[async attribute](#async-attribute)**
+* **[defer attribute](#defer-attribute)**
+* **[DNS](#dns)**
+* **[MAC address](#mac-address)**
+* **[TLS and SSL](#tls-and-ssl?)**
 
 
 
+### 
 
 #
 
@@ -75,11 +79,11 @@ In summary, the regular expression /\d+someText$/ will successfully match a stri
 
 
 ### async attribute
-#### What does it mean when <script> element in javascript has an “async” attribute?
+#### What does it mean when ``<script>`` element in javascript has an “async” attribute?
 When a ``<script>`` element has an ``async`` attribute, it means that the script will be executed asynchronously with the rest of the page..
 When the browser encounters a script with the async attribute, it doesn't stop parsing the page. It continues to build the Document Object Model (DOM).
 
-### async attribute
+### defer attribute
 #### 4 What does it mean when ``<script>`` element in javascript has ``defer`` attribute?
 
 The defer attribute in a JavaScript ``<script>`` tag specifies that the script is executed when the page has finished parsing. 
@@ -93,29 +97,39 @@ More info here: https://airbnb.stackenterprise.co/questions/69274
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### DNS
+#### Domain Name System 
 
-### 5 What does DNS do?
+Translates human-readable domain names, like ``www.example.com``, into machine-readable IP addresses, such as ``192.168.1.1``. 
+This process is essential because computers and networking devices use IP(Internet Protocol) addresses to identify each other on the internet.
 
-	Domain Name System 
+``DNS`` makes it easier for us to navigate the web because it's easier for people to remember names like “publift.com” rather than IP addresses like ``172.217.5.238.``
 
-	Translates human-readable domain names, like www.example.com, into machine-readable IP addresses, such as 192.168.1.1. 
-	This process is essential because computers and networking devices use IP(Internet Protocol) addresses to identify each other on the internet.
-
-	DNS makes it easier for us to navigate the web because it's easier for people to remember names like “publift.com” rather than IP addresses like 172.217.5.238.
-
-#### 6 In DNS, what is the TTL attribute?
+#### In DNS, what is the TTL attribute?
 
 	"Time to Live" - It is time until the record is re-resolved - specifies the amount of time the record is allowed to be cached by a DNS resolver.
 
-### 7 What is a MAC address?
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
-	Media Access Control address, is a unique identifier assigned to a network interface controller (NIC) 
-	Identifier of a network controller  - Digital fingerprint for your device's networking equipment - phone, laptop, desktop, printer etc
+### MAC address?
 
-### 8 What is TLS/SSL?
+- Media Access Control address, is a unique identifier assigned to a network interface controller (NIC) 
+- Identifier of a network controller  - Digital fingerprint for your device's networking equipment - phone, laptop, desktop, printer etc
 
-	Way to secure connection between the computers
-	TLS-Transport Layer Security, and its predecessor, SSL-Secure Sockets Layer, are cryptographic protocols designed to provide communications security over a network.
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### TLS and SSL?
+
+Way to secure connection between the computers
+**TLS-Transport Layer Security**, and its predecessor, **SSL-Secure Sockets Layer**, are cryptographic protocols designed to provide communications security over a network.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
 
 ### 9 What is a first party cookie?
 
