@@ -13,9 +13,16 @@
 * **[1st party cookie](#1st-party-cookie)**
 * **[3rd party cookie](#3rd-party-cookie)**
 * **[SQL left and inner join](#SQL-left-and-inner-join)**
-
-
-### 
+* **[DevTools Data Downloaded](#devtools-data-downloaded)**
+* **[DevTools block jQuery](#devtools-block-jquery)**
+* **[DevTools cookies set by a script](#devtools-cookies-set-by-a-script)**
+* **[Initial HTML download](#initial-HTML-download)**
+* **[DOM for a webpage](#dom-for-a-webpage)**
+* **[Script for the ads](#script-for-the-ads)**
+* **[Initial HTML download](#initial-HTML-download)**
+* **[JavaScript Debugging Q1](#javascript-debugging-Q1)**
+* **[JavaScript Debugging Q2](#javascript-debugging-Q2)**
+* **[JavaScript Debugging Q3](#javascript-debugging-Q3)**
 
 #
 
@@ -79,7 +86,6 @@ In summary, the regular expression /\d+someText$/ will successfully match a stri
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-
 ### async attribute
 #### What does it mean when ``<script>`` element in javascript has an “async” attribute?
 When a ``<script>`` element has an ``async`` attribute, it means that the script will be executed asynchronously with the rest of the page..
@@ -108,14 +114,12 @@ This process is essential because computers and networking devices use IP(Intern
 ``DNS`` makes it easier for us to navigate the web because it's easier for people to remember names like “publift.com” rather than IP addresses like ``172.217.5.238.``
 
 #### In DNS, what is the TTL attribute?
-
 **TTL "Time to Live"** - It is time until the record is re-resolved - specifies the amount of time the record is allowed to be cached by a DNS resolver.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
 ### MAC address?
-
 - Media Access Control address, is a unique identifier assigned to a network interface controller (NIC) 
 - Identifier of a network controller  - Digital fingerprint for your device's networking equipment - phone, laptop, desktop, printer etc
 
@@ -166,111 +170,101 @@ Explains that is’s a cookie set by a script loaded from a 3rd party domain
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
+
+### DevTools Data Downloaded
+#### How much data is downloaded when you visit any website?
+
+To get the total amount of data transferred during page load, look at the bottom of the Network tab, where it shows the total data transferred and the time it took to load.
+
+### DevTools block jQuery
+#### Can you block the jQuery script from loading?
+
+Open the network tab, finds ``jquery`` and blocks it
+
+1. Find the script file you want to block in the list of network requests and click on it. Scripts can generally be found under the "JS" type.
+2. In the panel that opens at the bottom, select the "Headers" tab.
+3. Right-click on the "Request URL" and choose "Block request URL".
+
+### DevTools cookies set by a script
+#### How do you view the cookies set by a script?
+Open Applications Tab
+
+1. In the side menu under the "Application" tab, look for "Cookies" under the "Storage" section.
+2. Click on "Cookies" and it will display a dropdown with the list of sources of cookies. The first one, corresponding to your domain, is generally the site you're currently on. The others are third party cookies.
+
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### How much data is downloaded when you visit any website?
+### Initial HTML download
+#### Show the initial HTML download for website in devTools
 
-TOP Answer
-Opens dev tools, looks at transfer data
+Open the ``Network Tab``, scroll to the top, pick the first item, Select ``Doc`` - check for the “www.website.com”  - click ``Preview Alternatively``, view page source
 
-	To get the total amount of data transferred during page load, look at the bottom of the Network tab, where it shows the total data transferred and the time it took to load.
+- In the ``"Network" tab``, look for a column labeled ``"Type"`` or similar. Click on it to sort the resources by type.
+- Locate the resource that corresponds to the HTML document. It's often labeled as ``"document"`` or ``"text/html"``.
+- Right click - View Page Source
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### DOM for a webpage
+#### Show the DOM for a webpage in the devTools
+
+Select the ``Elements Tab`` in the dev console
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Script for the ads
+#### By examining the DOM, how can we figure out wich script on the page is ultimately responsible for loading the ads?
+
+- Notice the repeated reference to the word ``fuse`` in the attributes and search by the fuse word in the ``Network Tab``.
+- Right click on the ad ``“Inspect”``
+- Find a parent element
+- Find the ``“date-fuse”`` attribute - probably custom created by the some internal framework
+- On the network settings filter by “JS”, clear the console and refresh the page
+- Find fuse.js and block the script - the ads should not load
+
+#### Of the total data downloaded, how much is attribute ti ads?
+
+- Realise that resources might be cached  - disk cache
+- Check the size table for the specific script - (disk cache) 
+- Disk caching is a mechanism used by web browsers to store copies of resources locally on a user's device after they have been downloaded from the web server for the first time.
 
 
-### Can you block the jQuery script from loading?
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
-Opens the network tab, finds jquery and blocks it
+### JavaScript Debugging Q1
+#### Make the heading Blue rather that Red? 
+#### Direct link: https://codepen.io/pen?template=767058178534e5314e043c25dff541d3 
 
-    1. Find the script file you want to block in the list of network requests and click on it. Scripts can generally be found under the "JS" type.
-    2. In the panel that opens at the bottom, select the "Headers" tab.
-    3. Right-click on the "Request URL" and choose "Block request URL".
-
-### How do you view the cookies set by a script?
-
-TOP Answer
-Opens Applications Tab
-
-    1. In the side menu under the "Application" tab, look for "Cookies" under the "Storage" section.
-    2. Click on "Cookies" and it will display a dropdown with the list of sources of cookies. The first one, corresponding to your domain, is generally the site you're currently on. The others are third party cookies.
-
-### Show the initial HTML download for website in devTools
-
-TOP Answer
-Opens the Network Tab, scrolls to the top, pick the first item, Select Doc - check for the “www.ozbargain.com.au”  - click Preview
-Alternatively, view page source
-
-    * In the "Network" tab, look for a column labeled "Type" or similar. Click on it to sort the resources by type.
-    * Locate the resource that corresponds to the HTML document. It's often labeled as "document" or "text/html."
-    * Right click - View Page Source
-
-### Show the DOM for a webpage in the devTools
-
-TOP Answer
-Select the Elements Tab in the dev console
-
-### How do you find an item in the DOM corresponding to an element on the page
-
-TOP Answer
-Uses the CHROME selector to highlight an element
-
-	Open your browser's Developer Tools and navigate to the "Elements" or "Inspector" tab.
-
-### By examining the DOM, how can we figure out wich script on the page is ultimately responsible for loading the ads?
-
-TOP Answer
-Notices the repeated reference to the word fuse in the attributes and search by the fuse word in the Network Tab.
-
-    Right click on the ad “Inspect”
-    Find a parent element
-    Find the “date-fuse” attribute - probably custom created by the some internal framework
-    On the network settings filter by “JS”, clear the console and refresh the page
-    Find fuse.js and block the script - the ads should not load
-
-### Of the total data downloaded, how much is attribute ti ads?
-
-TOP Answer
-Realise that resources might be cached  - disk cache
-
-	Check the size table for the specific script - (disk cache) - Disk caching is a mechanism used by web browsers to store copies 
-	of resources locally on a user's device after they have been downloaded from the web server for the first time.
-
-Direct link: https://codepen.io/pen?template=767058178534e5314e043c25dff541d3 
-
-### Make the heading Blue rather that Red?
-
-Best answer - create class .head
-
+- Best answer - create class .head
+```
 .head {
   color:blue;
 }
+```
 
-______________________
-
+### JavaScript Debugging Q1 
 ### Can you explain why the first paragraph is no appearing?
 
+- check for the display:none for each class in that element
+- In ``CSS``, the display: none; property-value combination is used to hide an element from the document layout. 	
+- When an element is marked with ``display: none;``, it is completely removed from the flow of the webpage. 
+- This means it takes up no space, unlike with ``visibility: hidden;``, where the element is rendered invisible but still takes up space in the layout.
+- Unlike ``visibility: hidden;``, ``display: none;`` cannot be overridden with ``CSS`` pseudoclasses like ``:hover``. 
+- This makes ``display: none;`` useful for permanently hiding elements on the page.
 
- 	- check for the display:none for each class in that element
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
-	In CSS, the display: none; property-value combination is used to hide an element from the document layout. 	
-	When an element is marked with display: none;, it is completely removed from the flow of the webpage. 
+### JavaScript Debugging Q2
+#### Can you fix the bug causing the numbers array to not calculate?
+#### Direct link for Code-pen: https://codepen.io/pen?template=e93926064823a1fd6a0a8cbbbd571755
 
-	This means it takes up no space, unlike with visibility: hidden;, where the element is rendered invisible but still takes up space in the layout.
-
-	Unlike visibility: hidden;, display: none; cannot be overridden with CSS pseudoclasses like :hover. 
-
-	This makes display: none; useful for permanently hiding elements on the page.
-
-Direct link for Code-pen:  https://codepen.io/pen?template=e93926064823a1fd6a0a8cbbbd571755
-
-
-### Can you fix the bug causing the numbers array to not calculate?
-
-TOP Answer
-Confidently diagnoses and fixes the bounds check 
-
-for (let i = 0; i <= numbers.length; i++) {
-
-For loop is counting the [i] index numbers of the array not a actual length of the army items?
+- Bug line: ``for (let i = 0; i <= numbers.length; i++) // remove "=" from the condition`` 
+- For loop is counting the [i] index numbers of the array not a actual length of the army items?
 
 
 ### Can you return a better error in the case where the array is empty? 
@@ -287,23 +281,23 @@ let examples =
  	{ params: [“a”, “b”, “c”], descriptions: 'Invalid input. Invalid array with strings’ }
 ]
 
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
-Direct link for Code-pen:  https://codepen.io/pen?template=06afadeed8a0194c8bac3d19b9351d05 
+### JavaScript Debugging Q3
+#### Can you find and fix the bug in the calculator?
+#### Direct link for Code-pen:  https://codepen.io/pen?template=06afadeed8a0194c8bac3d19b9351d05 
 
-### Can you find and fix the bug in the calculator?
+- Code line with issue: ``document.form.textview.value = num;``
+- Solution: ``document.form.textview.value += num; // add the “+” after =``
 
-TOP Answer
-Is able to confidently fix the problem without a google search
+#### Can you extend the calculator to allow the entry of opening and closing brackets? 
+- Lay out the buttons neatly and without prompting 
 
-Code line with issue: document.form.textview.value = num;
-Solution: document.form.textview.value += num; // add the “+” after =
-
-### Can you extend the calculator to allow the entry of opening and closing brackets? 
-
-TOP Answer
-Lay out the buttons neatly and without prompting 
-
-### Can you give an example of a math expression where brackets change the result?
+#### Can you give an example of a math expression where brackets change the result?
 
 TOP Answer
 Enters a suitable expression in the calculator input field  - e.g. 3*(5+3)
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
