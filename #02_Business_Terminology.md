@@ -225,7 +225,7 @@ TechCrunch is a well-established technology media property that covers a wide ra
 #### https://www.theverge.com/tech 
 The Verge is a general technology news website that covers a wide range of topics, from gadgets and software to gaming and social media. The Verge has a reputation for its in-depth reporting and its willingness to take on controversial topics. 
 
-### Ars Technica
+#### Ars Technica
 #### https://arstechnica.com/
 Ars Technica is a highly respected source for technology news and analysis. What sets it apart is its in-depth and detailed articles that explore the technical aspects of various topics. Whether it's hardware, software, or the latest scientific breakthroughs, Ars Technica provides comprehensive coverage.
 
