@@ -2,7 +2,7 @@
 
 ### My Questions for the team:
 1. The first day, the first week if I'm successful, expectations after the first month?
-2. How did you start with Vertex and What is the best part of working for DraftKings?
+2. How did you start with Vertex and What is the best part of working for Vertex?
 3. What is happening after this meeting? Next step and feedback?
 
 
