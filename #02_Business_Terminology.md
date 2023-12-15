@@ -301,5 +301,44 @@ A variable is a named location in memory that stores a value. Variables are the 
 
 ![Variables](https://github.com/tsokac2/-_-_JavaScript_CheatSheet/blob/main/src/01.png)
 
+#### Data Types
+Data types specify the type of data that a variable can store. There are many different data types, including integers, floating-point numbers, characters, strings, and Boolean values. The data type of a variable determines what operations can be performed on it. For example, you can only perform arithmetic operations on integer variables. 
+
+![Data Types](https://github.com/tsokac2/-_-_JavaScript_CheatSheet/blob/main/src/02.png)
+
+#### Control Structures
+
+Control structures allow programmers to control the flow of execution of a program. The most common control structures are if-else statements, for loops, and while loops. If-else statements allow you to execute different code paths based on the value of a condition. For loops and while loops allow you to repeatedly execute code until a condition is met. 
+
+![Control Structures](https://github.com/tsokac2/-_-_JavaScript_CheatSheet/blob/main/src/03.png)
+
+**[Back To The Top](#Overview-of-the-Section)**
+
+#### Operators
+
+Operators are symbols that perform operations on data. There are many different operators, including arithmetic operators ``(+, -, *, /)``, comparison operators ``(==, !=, <, >, <=, >=)``, and logical operators ``(&&, ||, !, ^)``. Operators allow you to manipulate data in your programs. 
+
+![Operators](https://github.com/tsokac2/-_-_JavaScript_CheatSheet/blob/main/src/04.png)
+
+#### Functions
+
+Functions are reusable blocks of code that perform a specific task. Functions can take input parameters and return output values. Functions allow you to modularize your code and make it easier to reuse code in different parts of your program. 
+
+![Functions](https://github.com/tsokac2/-_-_JavaScript_CheatSheet/blob/main/src/05.png)
+
+#### Object-Oriented Programming (OOP)
+
+Object-oriented programming is a programming paradigm that models real-world objects as software objects. 
+
+OOP is based on the concepts of classes, objects, inheritance, polymorphism, and encapsulation. Classes are blueprints for creating objects. Objects are instances of classes. Inheritance allows you to create new classes that inherit the properties and methods of existing classes. 
+
+Polymorphism allows you to create objects of different classes that can respond to the same message in different ways. Encapsulation is the practice of hiding the internal implementation of a class from other classes.
+
+![Object-Oriented Programming](https://github.com/tsokac2/-_-_JavaScript_CheatSheet/blob/main/src/06.png)
+
+#### Debugging
+
+Debugging is the process of finding and fixing errors in code. Errors can be caused by a variety of factors, such as syntax errors, logic errors, and runtime errors. There are many different debugging tools available, including debuggers, linters, and code checkers.
+
 **[Back To The Top](#Overview-of-the-Section)**
 #
