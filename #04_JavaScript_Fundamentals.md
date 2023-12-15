@@ -11,17 +11,14 @@
 * **[Explain hoisting](#explain-hoisting)**
 * **[Function and a methods](#function-and-a-methods)**
 * **[Inheritance in JavaScript](#inheritance-in-javaScript)**
-* **[JavaScript window.onload](#javascript-window.onload)**
+* **[window onload](#window-onload)**
+* **[Variables scoping](#variables-scoping)**
 * **[For loop](#for-loop)**
-
-
-### 
-### For loop in JavaScript
-### Assignment operator in JavaScript
-### p.textContent in JavaScript
-document.body.appendChild in JavaScript
-Bounds check in coding
-### forEach method
+* **[Assignment operator](#assignment-operator)**
+* **[textContent](#textContent)**
+* **[appendChild](#appendChild)**
+* **[Bounds check in coding](#bounds-check-in-coding)**
+* **[forEach method](#foreach-method)**
 
 
 #
@@ -244,7 +241,7 @@ console.log(student1.greet());  // Output: Hello, my name is John
 #
 
 
-### JavaScript window.onload 
+### window onload 
 #### What is meaning of this line in JavaScript: ``window.onload = printResult;``
 
 In JavaScript, the line window.onload = printResult; is used to assign the printResult function to the onload event of the window object. 
@@ -258,7 +255,6 @@ Here's a breakdown of the line:
 ``= printResult;`` : This assigns the printResult function to the onload event, meaning that printResult will be executed when the page finishes loading.
 
 If you have the printResult function defined elsewhere in your JavaScript code, it will be called once the entire page has loaded.
-
 
 ### Variables scoping
 #### Explain variables scoping - ``let`` vs. ``var`` and vs ``const`` with examples in JavaScript?
@@ -314,7 +310,7 @@ It's generally recommended to use ``const`` by default and only use ``let`` when
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### For loop in JavaScript
+### For loop
 The ``for`` loop in JavaScript is used to repeatedly execute a block of code as long as a specified condition is true. 
 It consists of three parts: initialization, condition, and increment/decrement.
 
@@ -358,7 +354,7 @@ The for loop is flexible, and you can combine different types of conditions, inc
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### Assignment operator in JavaScript
+### Assignment operator
 #### What is the meaning of ``+=`` in JavaScript
 
 ``+=`` is an assignment operator that adds the value on the right-hand side of the operator to the variable on the left-hand side and then assigns the result to the variable. 
@@ -376,7 +372,7 @@ console.log(x); // Output: 8
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### p.textContent in JavaScript
+### textContent
 #### What is the meaning of ``p.textContent`` in JavaScript?
 
 ``p.textContent`` refers to the text content of an HTML element represented by the variable ``p``. 
@@ -401,7 +397,7 @@ This is a common technique when you want to dynamically change the text content 
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### document.body.appendChild in JavaScript
+### appendChild
 #### What is the meaning of ``document.body.appendChild(p);`` in JavaScript?
 The code document.body.appendChild(p); is used to append an HTML element to the end of the ``<body>`` element in a web page. 
 
