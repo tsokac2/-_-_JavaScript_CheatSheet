@@ -299,6 +299,7 @@ Here is a table summarizing the key differences between **Babel** and **Webpack*
 
 A variable is a named location in memory that stores a value. Variables are the most basic building blocks of programming, and they are used to store data that can be used later in the program. For example, you might declare a variable called name to store the name of a user. 
 
+![Variables](https://github.com/tsokac2/-_-_JavaScript_CheatSheet/blob/main/src/01.png)
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
