@@ -12,7 +12,7 @@
 * **[Function and a methods](#function-and-a-methods)**
 * **[Inheritance in JavaScript](#inheritance-in-javaScript)**
 * **[JavaScript window.onload](#javascript-window.onload)**
-* **[JavaScript window.onload](#javascript-window.onload)**
+* **[For loop](#for-loop)**
 
 
 ### 
