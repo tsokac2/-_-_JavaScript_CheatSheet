@@ -16,7 +16,6 @@
 * **[Virtual DOM](#virtual-dom)**
 * **[Babel and Webpack](#babel-and-webpack)**
 * **[Code programming concepts](#code-programming-concepts)**
-* **[Websites for tech news](#websites-for-tech-news)**
 
 
 #
@@ -294,7 +293,11 @@ Here is a table summarizing the key differences between **Babel** and **Webpack*
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### Code programming concepts.
+### Code programming concepts
+
+#### Variables
+
+A variable is a named location in memory that stores a value. Variables are the most basic building blocks of programming, and they are used to store data that can be used later in the program. For example, you might declare a variable called name to store the name of a user. 
 
 
 **[Back To The Top](#Overview-of-the-Section)**
