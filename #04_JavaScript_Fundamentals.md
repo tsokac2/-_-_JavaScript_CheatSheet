@@ -5,7 +5,23 @@
 * **[return statement](#return-statement)**
 * **[Enhanced Object Properties](#enhanced-object-properties)**
 * **[Why is JavaScript a dynamic language](#why-is-JavaScript-a-dynamic-language)**
-* **[How does JavaScript determine data types](#how-does-JavaScript-determine-data-types)**
+* **[Datatypes in JavaScript](#datatypes-in-javaScript)**
+* **[Undefined data type](#undefined-data-type)**
+* **[null and undefined](#null-and-undefined)**
+* **[Explain hoisting](#explain-hoisting)**
+* **[Function and a methods](#function-and-a-methods)**
+* **[Inheritance in JavaScript](#inheritance-in-javaScript)**
+* **[JavaScript window.onload](#javascript-window.onload)**
+* **[JavaScript window.onload](#javascript-window.onload)**
+
+
+### 
+### For loop in JavaScript
+### Assignment operator in JavaScript
+### p.textContent in JavaScript
+document.body.appendChild in JavaScript
+Bounds check in coding
+### forEach method
 
 
 #
@@ -123,238 +139,113 @@ The method ``greet`` is defined using the concise method syntax, which is a shor
 #
 
 ### Why is JavaScript a dynamic language
-Data types of the variable can change during the runtime and JavaScript will not complain about it.
+JavaScript is considered a dynamic language because its type system is dynamically checked. 
+This means that the type of a variable is not determined until the program is running, and can change throughout the program's execution. 
 
-### How does JavaScript determine data types?
-By looking at the values during the runtime.
+### Datatypes in JavaScript
+- **Primitive:** ``string``, ``number``, ``null``, ``undefined``, ``bolean``, ``big int``, ``symbol``
+- **Objects:** ``new Object()``
 
-
-### What are typeof functions?
-Use ```typeof()``` function - find a better example and explanation
-
-### Different datatypes in JavaScript?
-Primitive: **string**, **number**, **null**, **undefined**, **bolean**, **big int**, **symbol**
-Objects: **new Object()**
-
-### Explain the undefined data type.
+### Undefined data type
 The Variable is declared but there is no value assigned to the variable.
 
-### What is null?
-Variable with no value or data.<br/>
-Intentional absence of data.
+### null and undefined
+- ``undefined``: variable is created but the value is not defined.
+- ``null``: variable is created and the value is null - indicating an absence of data.
 
-### Difference between null and undefined?
-**undefined** - var is created but the value is not defined.<br/>
-**null** - variable is created and the value is null - indicating an absence of data.
-
-### Explain hoisting.
+### Explain hoisting
 The mechanism where variables and functions declaration is moved to the top of the scope before code executes.
 
-### Global variables.
-Are accessible through the webpage or throughout the document.
+**[Back To The Top](#Overview-of-the-Section)**
+#
+### Function and a methods
+#### Difference between function and a method in JavaScript
+In JavaScript, the terms ``function`` and ``method`` are often used interchangeably, but there is a subtle difference between the two.
+
+#### Function
+
+A function is a block of code that performs a specific task. It takes some input, performs some operations, and produces some output. Functions can be defined without any association with an object. 
+They are independent entities that can be called directly or passed as arguments to another function.
+
+#### Method
+
+A method is a special type of function that is associated with an object. It belongs to a class or instance of a class and operates on the data and properties of that object. When you call a method on an object, the method gets access to the object's properties and can modify or access them as needed.
+
+In essence, a method is a function that has a special relationship with an object. It belongs to the object's scope and can directly interact with the object's data.
+
+#### Key Differences
+
+Here's a table summarizing the key differences between functions and methods:
+
+| Feature |		Function |	Method |
+| ---------- | ---------------- | -------------|
+| Scope		 |	Independent 				| Belongs to an object  |
+| Calling syntax	     |	Called directly or passed as an argument  			| Called on an object |
+| Access to object data			 | No direct access  			| Direct access to object properties |
+
+### Code Examples:
+
 ```
-<script>
-	var x = 10;
-	function myFunc() {}
-</script>
-```
+// Function
+function greet(name) {
+  console.log(`Hello, ${name}`);
+}
 
+greet('Bard'); // Output: Hello, Bard
 
-
-### Usage of Use strict?
-Checks if the variable is defined using keywords ```var``` or ```let```<br/>
-```
-"use strict";
-var x = 1;
-```
-
-```
-function myStrictFunction() {
-
-  // Function-level strict mode syntax
-
-  "use strict";
-  function nested() {
-    return "And so am I!";
+// Method
+class Person {
+  constructor(name) {
+    this.name = name;
   }
-  return `Hi! I'm a strict mode function! ${nested()}`;
+
+  sayHi() {
+    console.log(`Hi, my name is ${this.name}`);
+  }
 }
 
-function myNotStrictFunction() {
-  return "I'm not strict.";
-}
-
+const person = new Person('Alice');
+person.sayHi(); // Output: Hi, my name is Alice
 ```
-The ```"use strict"``` directive can only be applied to the body of functions with simple parameters.
-
-### What are closures?
-Closures are functions inside functions and it makes normal functions stateful.<br/>
-**Stateful** functions are the building blocks of applications;<br/>
-They are atomic units of isolation, distribution, and persistence.<br/>
-As objects, they encapsulate the state of a single entity (e.g., a specific user, device, or session) and encode its behavior.
-
-### Why do we need closures?
-Helps to avoid global variables.<br/>
-Creating self-contained functions and self-contained states.<br/>
-To create - self-contained Modules - self-contained state.<br/>
-**Closures:** https://javascript.info/closure
-
-### Tricky questions around concatenation?
-Two strings are performing concatenation and not numeric addition
-```
-x = "10";
-y = "10";
-x+y = "1010"
-```
-
-
-### What is IIFE?
-_Immediately Invoked Function Expression_ <br/>
-It is an anonymous function that gets immediately invoked.
-
-### IIFE vs normal functions?
-A normal function simply includes a declaration and a definition but an IIFE is declaration, definition and invocation at the same time.<br/>
-As the name says Immediately Invoked Function Execution.
-
-### What are Design patterns?
-These are time-tested solutions.
-
-### Most used design pattern in JavaScript?
-- Module design pattern or the Module revealing pattern.
-- Self-contained independent components
-- Provide Encapsulation and Abstraction
-- Module PAttern = IIFE + CLOSURES
-- Logical grouping
-- Better structure code
-
-### Various ways to create JavaScript objects?
-Literal - ```let obj = {name: "Tom"};``` <br/>
-```Object.create();``` <br/>
-Constructor - functions <br/>
-Classes - ES6
-
-### Can we do inheritance in JavaScript?
-It is done by using an object inheritance prototype object.<br/>
-Every JavaScript object has a Prototype object.<br/>
-It is an inbuilt object provided by JavaScript. <br/>
-Prototype changing - one Object is inheriting from another object - prototype changing.
-
-
-### Object-oriented design.
-Process of planning a system of interacting objects to solve the software problem.<br/>
-
-**4 Main Pillars of OOD**
-#### Abstraction
-Only show necessary details to the user - convert string to lowercase letters by using ```.toLowerCase()```
-
-#### Encapsulation
-This means wrapping up data and methods together into a single unit-like class.
-
-#### Inheritance
-This means passing properties from a parent class to a child class.
-
-#### Polymorphism
-This means a child class can define its unique behavior and still share the same methods as the parent.
-
-Call constructor, a new object, passing to _bike_.
-
-```const bike = new Bike();``` - immutable variable
-
-// attempt to point to the new instance of Bike
-
-```bike = new Bike(1,2);```
-
-// error 
-
-### Basic regular expressions in JavaScript
-
-#### Matching Digits:
-```
-var digitRegex = /\d/;
-var result = digitRegex.test("Hello123");
-// Result: true (as it matches the digit '1')
-```
-- /\d/ matches any digit (0-9).
-- test method checks if the pattern is present in the given string.
-- In the example, it returns true because the digit '1' is present in "Hello123".
-
-#### Matching Word Characters:
-```
-var wordRegex = /\w/;
-var result = wordRegex.test("Hello123");
-// Result: true (as it matches the letter 'H')
-```
-- ``/\w/`` matches any word character (alphanumeric + underscore).
-- In the example, it returns true as it matches the first character ``'H'`` in ``"Hello123"``.
-
-#### Matching Whitespaces:
-```
-var spaceRegex = /\s/;
-var result = spaceRegex.test("Hello 123");
-// Result: true (as it matches the space character)
-```
-- ``/\s/`` matches any whitespace character (spaces, tabs, line breaks).
-- In the example, it returns true because there is a space between ``'Hello'`` and ``'123'``.
-
-#### Matching a Specific Word:
-```
-var specificWordRegex = /hello/;
-var result = specificWordRegex.test("Hello World");
-// Result: false (case-sensitive, doesn't match 'Hello')
-```
-- ``/hello/`` matches the exact string 'hello' in a case-sensitive manner.
-- In the example, it returns false because it doesn't match the capitalized ``'Hello'``.
-
-#### Matching Email Format:
-```
-var emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-var result = emailRegex.test("test@example.com");
-// Result: true (as it matches the email format)
-```
-- ````/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/``` checks for a basic email format.
-- It starts ``(^)`` with one or more word characters, followed by ``'@'``, domain name, dot, and 2 to 3 letters.
-- In the example, it returns true as ``"test@example.com"`` matches the pattern.
-
-#### Matching Repetition:
-```
-var repetitionRegex = /\d{3}/;
-var result = repetitionRegex.test("Hello123");
-// Result: true (as it matches three consecutive digits '123')
-```
-- ``/\d{3}/`` matches exactly three consecutive digits.
-- In the example, it returns true because '123' appears in the string.
-
-#### Matching Anything (Wildcard):
-```
-var wildcardRegex = /./;
-var result = wildcardRegex.test("Hello123");
-// Result: true (as it matches any character)
-```
-- ``.`` matches any single character (except newline).
-- In the example, it returns true as ``'H'`` (the first character) matches the pattern.
-
-#### Matching the Start of a String:
-```
-var startRegex = /^Hello/;
-var result = startRegex.test("Hello World");
-// Result: true (as it matches the start of the string)
-```
-- ``/^Hello/`` matches the string that starts with ``'Hello'``.
-- In the example, it returns true because ``"Hello World"`` starts with ``'Hello'``.
-
-#### Matching the End of a String:
-```
-var endRegex = /World$/;
-var result = endRegex.test("Hello World");
-// Result: true (as it matches the end of the string)
-```
-- ``/World$/`` matches the string that ends with ``'World'``.
-- In the example, it returns true because "Hello World" ends with ``'World'``.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### JavaScript window.onload - What is meaning of this line in JavaScript: ``window.onload = printResult;``
+### Inheritance in JavaScript
+#### Can we do inheritance in JavaScript
+Yes, JavaScript supports inheritance through a mechanism called prototype chaining. 
+This means that a child object inherits the properties and methods of its parent object. 
+
+The prototype chain is a linked list of objects, where each object's proto property points to the object that it inherits from. This allows objects to inherit properties and methods from multiple ancestors.
+
+Example of inheritance in JavaScript using prototype chaining:
+
+```
+function Person(name) {
+  this.name = name;
+}
+
+Person.prototype.greet = function() {
+  console.log(`Hello, my name is ${this.name}`);
+};
+
+function Student(name, major) {
+  Person.call(this, name); // Invoke the constructor of the parent class (Person)
+  this.major = major;
+}
+
+Student.prototype = Object.create(Person.prototype); // Inherit properties and methods from Person
+Student.prototype.constructor = Student; // Set the constructor of the instance to Student
+
+const student1 = new Student('John', 'Computer Science');
+console.log(student1.greet());  // Output: Hello, my name is John
+```
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+
+### JavaScript window.onload 
+#### What is meaning of this line in JavaScript: ``window.onload = printResult;``
 
 In JavaScript, the line window.onload = printResult; is used to assign the printResult function to the onload event of the window object. 
 
@@ -369,12 +260,13 @@ Here's a breakdown of the line:
 If you have the printResult function defined elsewhere in your JavaScript code, it will be called once the entire page has loaded.
 
 
-### Explain variables scoping - let vs. var and vs const  with examples in JavaScript?
+### Variables scoping
+#### Explain variables scoping - ``let`` vs. ``var`` and vs ``const`` with examples in JavaScript?
 Variable scoping is a crucial concept in JavaScript that defines the accessibility and lifespan of variables within a program. 
 
-In JavaScript, there are three keywords used for variable declaration: var, let, and const. Each of these has different scoping rules.
+In JavaScript, there are three keywords used for variable declaration: ``var``, ``let``, and ``const``. Each of these has different scoping rules.
 
-``var`` :
+1. ``var`` :
 
 - Variables declared with ``var`` are function-scoped, meaning they are only accessible within the function in which they are declared.
 - If a variable is declared with var outside any function, it becomes a global variable.
@@ -389,7 +281,7 @@ function example() {
 }
 ```
 
-``let`` :
+2. ``let`` :
 - Variables declared with ``let`` are block-scoped, meaning they are limited to the block (enclosed by curly braces) in which they are defined.
 - ``let`` variables are not hoisted to the top of their scope. They are only accessible after the point of declaration.
 
@@ -403,7 +295,7 @@ function example() {
 }
 ```
 
-``const`` :
+3. ``const`` :
 - Variables declared with const are also block-scoped.
 - ``const`` variables must be assigned a value at the time of declaration, and their value cannot be reassigned.
 
@@ -418,11 +310,12 @@ function example() {
 In summary, ``var`` has function scope, ``let`` and ``const`` have block scope. ``let`` allows reassignment, while ``const`` does not. 
 
 It's generally recommended to use ``const`` by default and only use ``let`` when you know the variable will be reassigned. This helps in writing more robust and predictable code.
+
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### ``for`` loop in JavaScript
-The for loop in JavaScript is used to repeatedly execute a block of code as long as a specified condition is true. 
+### For loop in JavaScript
+The ``for`` loop in JavaScript is used to repeatedly execute a block of code as long as a specified condition is true. 
 It consists of three parts: initialization, condition, and increment/decrement.
 
 Here is the basic syntax of a for loop:
@@ -465,7 +358,8 @@ The for loop is flexible, and you can combine different types of conditions, inc
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### What is the meaning of ``+=`` in JavaScript?
+### Assignment operator in JavaScript
+#### What is the meaning of ``+=`` in JavaScript
 
 ``+=`` is an assignment operator that adds the value on the right-hand side of the operator to the variable on the left-hand side and then assigns the result to the variable. 
 It is a shorthand for performing addition and assignment in a single step.
@@ -482,7 +376,8 @@ console.log(x); // Output: 8
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### What is the meaning of ``p.textContent`` in JavaScript?
+### p.textContent in JavaScript
+#### What is the meaning of ``p.textContent`` in JavaScript?
 
 ``p.textContent`` refers to the text content of an HTML element represented by the variable ``p``. 
 This is commonly used when working with the Document Object Model (DOM) to manipulate the text content of an HTML element.
@@ -506,7 +401,8 @@ This is a common technique when you want to dynamically change the text content 
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### What is the meaning of ``document.body.appendChild(p);`` in JavaScript?
+### document.body.appendChild in JavaScript
+#### What is the meaning of ``document.body.appendChild(p);`` in JavaScript?
 The code document.body.appendChild(p); is used to append an HTML element to the end of the ``<body>`` element in a web page. 
 
 Let's break down the code:
@@ -533,7 +429,9 @@ In this example:
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
-### What is the meaning of the "bounds check" in coding and JavaScript?
+
+### Bounds check in coding
+#### What is the meaning of the "bounds check" in coding and JavaScript?
 
 In programming, a "bounds check" refers to the practice of verifying whether an index or a variable falls within the acceptable range of values before attempting to access or modify the corresponding memory location.
 
@@ -553,13 +451,12 @@ if (indexToCheck >= 0 && indexToCheck < myArray.length) {
     console.log("Index out of bounds");
 }
 ```
-
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### ``forEach()`` method
+### forEach method
 
-In JavaScript, the forEach method is used to iterate over elements in an array.
+In JavaScript, the ``forEach`` method is used to iterate over elements in an array.
 It executes a provided function once for each array element. 
 
 The basic syntax is as follows:
