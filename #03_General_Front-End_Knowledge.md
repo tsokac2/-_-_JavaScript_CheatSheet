@@ -17,9 +17,9 @@
 * **[DevTools block jQuery](#devtools-block-jquery)**
 * **[DevTools cookies set by a script](#devtools-cookies-set-by-a-script)**
 * **[Initial HTML download](#initial-HTML-download)**
+* **[Load Balancer](#load-balancer)**
 * **[DOM for a webpage](#dom-for-a-webpage)**
 * **[Script for the ads](#script-for-the-ads)**
-* **[Initial HTML download](#initial-HTML-download)**
 * **[JavaScript Debugging Q1](#javascript-debugging-Q1)**
 * **[JavaScript Debugging Q2](#javascript-debugging-Q2)**
 * **[JavaScript Debugging Q3](#javascript-debugging-Q3)**
@@ -191,6 +191,19 @@ Open Applications Tab
 
 1. In the side menu under the "Application" tab, look for "Cookies" under the "Storage" section.
 2. Click on "Cookies" and it will display a dropdown with the list of sources of cookies. The first one, corresponding to your domain, is generally the site you're currently on. The others are third party cookies.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### Load Balancer
+
+A load balancer is a crucial component of modern web infrastructure, responsible for distributing incoming traffic across multiple servers. This approach enhances the performance, reliability, and scalability of web applications by ensuring that no single server is overwhelmed with requests.
+
+1. **Traffic Distribution:** A load balancer acts as a central point of entry for incoming traffic, diverting requests to multiple backend servers based on predefined rules or algorithms. This prevents any single server from becoming overloaded, ensuring consistent response times and preventing performance degradation.
+
+2. **Fault Tolerance:** By spreading traffic across multiple servers, load balancers mitigate the impact of server failures. If a server encounters issues, the load balancer can automatically redirect requests to healthy servers, ensuring that users can continue accessing the application without disruption.
+
+3. **Scalability:** Load balancers play a crucial role in enabling horizontal scaling, where additional servers can be added to the pool to handle increasing traffic demands. This dynamic approach ensures that the application can adapt to changing user loads without compromising performance.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
