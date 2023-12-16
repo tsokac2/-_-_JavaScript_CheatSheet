@@ -78,13 +78,44 @@ console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
+### Find
 
+The ``find`` method in JavaScript is used to search for an element in an array that satisfies a provided testing function. Once the element is found, it returns the first matching element, otherwise, it returns ``undefined``. 
 
-// # FIND
-arr.find((item) => {
-    return item.name === "Book";
+Here's a breakdown of how it works:
+```
+// Example array
+const numbers = [1, 2, 3, 4, 5];
+
+// Function to test if an element is even
+const isEven = (number) => number % 2 === 0;
+
+// Using find to get the first even number
+const firstEven = numbers.find(isEven);
+
+console.log(firstEven); // Output: 2
+```
+
+In this example, the ``isEven`` function tests if a number is even. The ``find`` method then iterates through the ``numbers`` array and returns the first element that satisfies the condition, which is ``2`` in this case.
+
+It's important to note that if no element satisfies the condition, the ``find`` method returns ``undefined``. Additionally, the ``find`` method does not modify the original array.
+
+#### Example:
+```
+const fruits = ["apple", "banana", "orange", "grape", "melon"];
+
+const firstRedFruit = fruits.find(function(fruit) {
+  return fruit.startsWith('o');
 });
-// item with the name: "Book" from the array of objects
+
+console.log(firstRedFruit); // Output: apple
+```
+In this example, the callback function is checking if the current element starts with the letter ``"o"``. Since the first element, ``"orange"``, starts with ``"o"``, the ``find()`` method returns ``"orange"`` immediately without iterating through the rest of the array.
+
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
 
 // # FOR-EACH
 arr.forEach((item) => {
