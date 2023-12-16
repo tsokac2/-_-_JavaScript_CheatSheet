@@ -43,18 +43,42 @@ The result will be:
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### Map
 
+The ``map`` method is a fundamental function in JavaScript that is used to transform elements of an array. It applies a provided function to each element of the array and returns a new array containing the results. 
+ 
+This is useful when you want to create a modified version of an existing array without modifying the original one.
 
+Here's a simple explanation along with a code example:
 
+```
+// Original array
+const numbers = [1, 2, 3, 4, 5];
 
-// # FILTER
-const arr = [1,2,3,4];
-arr.filter((item) => item.price <= 100);
-// returns all items less than 100
+// Using the map method to square each number
+const squaredNumbers = numbers.map(function (num) {
+  return num * num;
+});
 
-// # MAP - creates anew array - apply some
-arr.map((item) => item.name);
-// all items with the name atribute from the array of objects
+// Output
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+```
+
+In this example, the ``map`` method is applied to the ``numbers`` array. The provided function takes each element ``(num)`` and returns its square. The result is a new array ``(squaredNumbers)`` containing the squared values.
+
+You can also use arrow functions for conciseness:
+
+```
+const numbers = [1, 2, 3, 4, 5];
+
+const squaredNumbers = numbers.map(num => num * num);
+
+console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
+```
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
 
 // # FIND
 arr.find((item) => {
