@@ -4,6 +4,9 @@
 * **[Filter](#filter)**
 * **[Map](#map)**
 * **[Find](#find)**
+* **[forEach](#forEach)**
+* **[some](#some)**
+
 
 #
 ### Filter
@@ -114,16 +117,50 @@ console.log(firstRedFruit); // Output: apple
 ```
 In this example, the callback function is checking if the current element starts with the letter ``"o"``. Since the first element, ``"orange"``, starts with ``"o"``, the ``find()`` method returns ``"orange"`` immediately without iterating through the rest of the array.
 
+**[Back To The Top](#Overview-of-the-Section)**
+#
+### forEach
+
+The ``forEach`` method is a built-in function in JavaScript that allows you to iterate over elements of an array. It is particularly useful for executing a provided function once for each element in the array, in order. The primary advantage of using ``forEach`` is its simplicity and readability.
+
+Here's a basic example of how forEach works:
+
+```
+// Sample array
+let numbers = [1, 2, 3, 4, 5];
+
+// Using forEach to iterate over each element
+numbers.forEach(function (element) {
+  console.log(element);
+});
+```
+
+In this example, the ``forEach`` method is called on the ``numbers`` array. It takes a callback function as its argument, and this function is executed for each element in the array. The ``element`` parameter represents the current element being processed.
+
+The output of the above code will be:
+```
+1
+2
+3
+4
+5
+```
+You can also use an arrow function for conciseness:
+``numbers.forEach(element => console.log(element));``
+
+The ``forEach`` method is beneficial when you want to perform an action on each element of an array without the need for an explicit loop. It simplifies the code and makes it more expressive.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+### some
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
 
-// # FOR-EACH
-arr.forEach((item) => {
-    console.log(item.price);
-});
-// all prices from the array of objects
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
 // # SOME:
 arr.some((item) => {
