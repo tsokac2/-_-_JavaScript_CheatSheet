@@ -2,6 +2,8 @@
 
 ### Overview of the Section
 * **[Filter](#filter)**
+* **[Map](#map)**
+* **[Find](#find)**
 
 #
 ### Filter
