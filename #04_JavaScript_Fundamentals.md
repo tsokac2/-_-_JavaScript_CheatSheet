@@ -18,8 +18,6 @@
 * **[textContent](#textContent)**
 * **[appendChild](#appendChild)**
 * **[Bounds check in coding](#bounds-check-in-coding)**
-* **[forEach method](#foreach-method)**
-
 
 #
 ### Regular expressions
@@ -447,44 +445,5 @@ if (indexToCheck >= 0 && indexToCheck < myArray.length) {
     console.log("Index out of bounds");
 }
 ```
-**[Back To The Top](#Overview-of-the-Section)**
-#
-
-### forEach method
-
-In JavaScript, the ``forEach`` method is used to iterate over elements in an array.
-It executes a provided function once for each array element. 
-
-The basic syntax is as follows:
-```
-array.forEach(function(currentValue, index, array) {
-  // code to be executed for each element
-});
-```
-
-Let me break down the parameters:
-
-- ``currentValue`` : The current element being processed in the array.
-- ``index`` : The index of the current element.
-- ``array`` : The array on which forEach was called.
-
-Here's a simple example to illustrate its usage:
-
-```
-// Sample array
-const numbers = [1, 2, 3, 4, 5];
-
-// Using forEach to log each element and its index
-numbers.forEach(function(number, index) {
-  console.log(`Element at index ${index}: ${number}`);
-});
-```
-
-In this example, the provided function will be executed for each element in the numbers array. It will log the element and its corresponding index.
-
-Remember, forEach is a great choice when you want to perform an operation on each element of an array without creating a new array. 
-
-If you need to transform the elements and create a new array, you might consider using methods like ``map()``.
-
 **[Back To The Top](#Overview-of-the-Section)**
 #
