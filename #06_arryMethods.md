@@ -1,3 +1,52 @@
+<h1 align="center">JavaScript array methods' </h1>
+
+### Overview of the Section
+* **[Filter](#filter)**
+
+#
+### Filter
+
+The ``filter`` method in JavaScript is a powerful array method that allows you to create a new array containing elements that pass a certain condition. 
+It does not modify the original array but instead returns a new one.
+
+Here's a breakdown of how the filter method works, along with a code example:
+
+``let newArray = array.filter(callback(element[, index, array])[, thisArg]);``
+
+- ``array``: The original array.
+- ``callback``: Function is a predicate, to test each element of the array. Return true to keep the element, ``false`` otherwise. It accepts three arguments:
+    - ``element``: The current element being processed in the array.
+    - ``index (optional)``: The index of the current element being processed in the array.
+    - ``array (optional)``: The array filter was called upon.
+    - ``thisArg (optional)``: Object to use as this when executing callback.
+
+#### Example:
+Let's say you have an array of numbers, and you want to filter out the even ones:
+
+```
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const oddNumbers = numbers.filter(function (number) {
+  return number % 2 !== 0;
+});
+
+console.log(oddNumbers);
+```
+In this example, the ``filter`` method is used to create a new array ``(oddNumbers)`` that only contains the odd numbers from the original array. The callback function checks whether each number is odd ``(number % 2 !== 0)``, and if it is, the number is included in the new array.
+
+The result will be:
+
+```
+[1, 3, 5, 7, 9]
+```
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+
+
+
+
 // # FILTER
 const arr = [1,2,3,4];
 arr.filter((item) => item.price <= 100);
