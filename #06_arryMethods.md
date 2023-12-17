@@ -202,16 +202,43 @@ In this example, ``originalArray`` remains unchanged, and ``map()`` creates a ne
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### some
+The ``some()`` method is a built-in function in JavaScript that is used to test whether at least one element in an array passes a provided function's test. 
 
+It returns a **Boolean** value, true if any element satisfies the condition, and false otherwise.
+
+Here's a breakdown of how the ``some()`` method works:
+
+```
+array.some(callback(element, index, array), thisArg);
+```
+
+- ``callback``: The function to test for each element.
+- ``element``: The current element being processed in the array.
+- ``index``: The index of the current element.
+- ``array``: The array that some() is being applied to.
+- ``thisArg (optional)``: Object to use as this when executing the callback function.
+
+Example:
+
+```
+// Array of numbers
+const numbers = [1, 2, 3, 4, 5];
+
+// Check if at least one element is greater than 3
+const isGreaterThanThree = numbers.some(function(element) {
+  return element > 3;
+});
+
+console.log(isGreaterThanThree); // Output: true
+```
+
+In this example, the ``some()`` method iterates over each element in the numbers array. The provided callback function checks if the current element is greater than 3. Since there is at least one element (4 and 5) that satisfies this condition, the ``some()`` method returns true.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-// # SOME:
-arr.some((item) => {
-    return item.price <= 100;
-});
-// returns "true" or "false" if any/some items price is less then 100
+
 
 // # EVERY:
 arr.every((item) => {
