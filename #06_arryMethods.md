@@ -5,8 +5,8 @@
 * **[Map](#map)**
 * **[Find](#find)**
 * **[forEach](#forEach)**
+* **[forEach vs map](#foreach-vs-map)**
 * **[some](#some)**
-
 
 #
 ### Filter
@@ -152,7 +152,52 @@ The ``forEach`` method is beneficial when you want to perform an action on each 
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
-### some
+### forEach vs map
+
+#### ``forEach()`` Method:
+
+The ``forEach()`` method is used to iterate over elements in an array. It executes a provided function once for each array element and does not create a new array. 
+
+It is mainly used when you want to perform an operation on each element of the array without changing the array itself.
+
+Here's an example of using ``forEach()``:
+
+```
+const originalArray = [1, 2, 3, 4];
+const modifiedArray = [];
+
+originalArray.forEach((element) => {
+  // Perform some operation on each element
+  modifiedArray.push(element * 2);
+});
+
+console.log("Original Array:", originalArray);
+console.log("Modified Array:", modifiedArray);
+```
+In this example, ``originalArray`` remains unchanged, and the ``modifiedArray`` is created separately to store the modified values.
+
+#### ``map()`` Method:
+
+The ``map()`` method, on the other hand, is used to create a new array with the results of calling a provided function on every element in the array. It is specifically designed for transforming each element of the array and returning a new array based on those transformations.
+
+Here's an example of using ``map()``:
+
+```
+const originalArray = [1, 2, 3, 4];
+
+const modifiedArray = originalArray.map((element) => {
+  // Perform some operation on each element
+  return element * 2;
+});
+
+console.log("Original Array:", originalArray);
+console.log("Modified Array:", modifiedArray);
+```
+In this example, ``originalArray`` remains unchanged, and ``map()`` creates a new array ``(modifiedArray)`` with the doubled values of each element in ``originalArray``.
+
+#### Summary:
+- ``forEach()`` is used for iterating over elements and performing an operation without creating a new array.
+- ``map()`` is used for transforming each element and creating a new array with the results of those transformations.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
