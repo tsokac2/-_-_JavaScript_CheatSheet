@@ -43,9 +43,7 @@ In this example, the ``filter`` method is used to create a new array ``(oddNumbe
 
 The result will be:
 
-```
-[1, 3, 5, 7, 9]
-```
+``[1, 3, 5, 7, 9]``
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
@@ -211,9 +209,7 @@ It returns a **Boolean** value, true if any element satisfies the condition, and
 
 Here's a breakdown of how the ``some()`` method works:
 
-```
-array.some(callback(element, index, array), thisArg);
-```
+``array.some(callback(element, index, array), thisArg);``
 
 - ``callback``: The function to test for each element.
 - ``element``: The current element being processed in the array.
