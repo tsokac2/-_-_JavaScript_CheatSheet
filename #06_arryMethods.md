@@ -293,6 +293,16 @@ The ``reduce()`` method is a built-in JavaScript method used to apply a reducer 
 
 The ``reduce()`` method is often used to perform cumulative operations on arrays, such as calculating the ``sum``, ``product``, or ``average`` of the elements. It's also useful for transforming arrays into a single value, such as creating a string representation of the elements or converting an array of objects to an array of their properties.
 
+#### Syntax:
+
+``array.reduce(callbackFunction [, initialValue]);``
+
+#### Parameters:
+
+- callbackFunction: A callback function that takes two arguments: the current accumulator value and the current element of the array. It should return the updated accumulator value.
+
+- initialValue: (Optional) An initial value to be used as the starting point for the accumulator. If not provided, the first element of the array will be used as the initial value.
+
 #### Example:
 ```
 const numbers = [1, 2, 3, 4];
