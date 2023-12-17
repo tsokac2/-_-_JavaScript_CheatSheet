@@ -266,15 +266,32 @@ console.log(allGreaterThan10); // Output: true
 ```
 In this example, the ``isGreaterThan10`` function checks if each element in the ``numbers`` array is greater than 10. Since all elements meet this condition, the ``every()`` method returns true.
 
+The ``every()`` method is commonly used to validate input data, check for specific properties or values within an array, or perform actions based on whether a condition applies to all elements.
+
+```
+const numbers = [1, 2, 3, 4];
+
+// Check if all elements are positive
+const areAllPositive = numbers.every(number => number > 0);
+console.log(areAllPositive); // Output: true
+
+// Check if any element is odd
+const hasAnyOddNumber = numbers.every(number => number % 2 === 0);
+console.log(hasAnyOddNumber); // Output: false
+```
+
+#### Common Use Cases:
+
+- **Validating input data**: Check if all values in an array of user inputs meet specific criteria.
+
+- **Filtering arrays**: Iterate over an array and remove elements that don't meet a specified condition.
+
+- **Performing actions based on conditions**: Execute specific actions if all or none of the array elements satisfy a condition.
+
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
 
-// # EVERY:
-arr.every((item) => {
-    return item.price <= 100l
-});
-// returns if every items price is less then 100 return "true" or "false"
 
 // # REDUCE:
 arr.reduce((curentTotal, item) => {
