@@ -475,19 +475,43 @@ fruitsDescending.sort(function (a, b) {
 });
 console.log(fruitsDescending); // Output: ['orange', 'grape', 'banana', 'apple']
 ```
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### from
+
+The ``from()`` method in JavaScript is used to create a new array instance from an iterable object or array-like object. It can be called on various objects such as arrays, strings, or even on the arguments object. The purpose is to convert these iterable objects into a proper array.
+
+Here is a simple code example to illustrate the usage of the ``from()`` method:
+
+```
+// Example 1: Converting a string to an array
+const str = 'Hello, World!';
+const strArray = Array.from(str);
+console.log(strArray);
+// Output: ['H', 'e', 'l', 'l', 'o', ',', ' ', 'W', 'o', 'r', 'l', 'd', '!']
+
+// Example 2: Using a mapping function
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = Array.from(numbers, x => x * x);
+console.log(squaredNumbers);
+// Output: [1, 4, 9, 16, 25]
+
+// Example 3: Using on the arguments object
+function exampleFunction() {
+  const argsArray = Array.from(arguments);
+  console.log(argsArray);
+}
+
+exampleFunction(1, 'hello', true);
+// Output: [1, 'hello', true]
+```
+In the first example, the ``from()`` method is used to convert each character of the string ``str`` into an element of the ``strArray``. In the second example, a mapping function is provided to square each element of the ``numbers`` array. Lastly, the third example shows the usage of ``from()`` on the ``arguments`` object within a function.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
 
-// # SORT
-arr.sort();
-
-// Sort in descending
-arr.sort((a,b) => a > b ? -1:1);
-
-// Sort in ascending
-arr.sort((a,b) => a > b ? 1: -1);
 
 // # FROM 
 arr.from(string) // turning a string into an array
