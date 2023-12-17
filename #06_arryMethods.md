@@ -7,6 +7,8 @@
 * **[forEach](#forEach)**
 * **[forEach vs map](#foreach-vs-map)**
 * **[some](#some)**
+* **[every](#every)**
+
 
 #
 ### Filter
@@ -238,6 +240,34 @@ In this example, the ``some()`` method iterates over each element in the numbers
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### every
+
+The ``every()`` method is a built-in function in JavaScript that tests whether all elements in an array pass a provided function. 
+
+It returns a **Boolean** value, indicating whether all elements meet the specified condition.
+
+The ``every()`` method iterates through each element in the array. If the provided callback function returns true for every element, ``every()`` returns true; otherwise, it returns false.
+
+Here's an example to illustrate:
+
+```
+// Function to check if all elements are greater than 10
+function isGreaterThan10(element) {
+  return element > 10;
+}
+
+// Array to test
+const numbers = [15, 20, 25, 30];
+
+// Using every() to check if all numbers are greater than 10
+const allGreaterThan10 = numbers.every(isGreaterThan10);
+
+console.log(allGreaterThan10); // Output: true
+```
+In this example, the ``isGreaterThan10`` function checks if each element in the ``numbers`` array is greater than 10. Since all elements meet this condition, the ``every()`` method returns true.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
 
 // # EVERY:
