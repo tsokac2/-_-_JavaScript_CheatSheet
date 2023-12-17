@@ -8,7 +8,7 @@
 * **[forEach vs map](#foreach-vs-map)**
 * **[some](#some)**
 * **[every](#every)**
-
+* **[reduce](#reduce)**
 
 #
 ### Filter
@@ -291,14 +291,44 @@ console.log(hasAnyOddNumber); // Output: false
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+#### reduce
+
+The ``reduce()`` method is a built-in JavaScript method used to apply a reducer function to each element of an array, accumulating the results and returning a single value. It iteratively combines the current accumulator value with the current element of the array, updating the accumulator as it moves through the array.
+
+The ``reduce()`` method is often used to perform cumulative operations on arrays, such as calculating the ``sum``, ``product``, or ``average`` of the elements. It's also useful for transforming arrays into a single value, such as creating a string representation of the elements or converting an array of objects to an array of their properties.
+
+#### Example:
+```
+const numbers = [1, 2, 3, 4];
+
+// Calculate the sum of the numbers
+const sum = numbers.reduce((accumulator, number) => accumulator + number, 0);
+console.log(sum); // Output: 10
+
+// Convert an array of objects to an array of names
+const fruits = [
+    { name: 'apple', color: 'red' },
+    { name: 'orange', color: 'orange' },
+    { name: 'banana', color: 'yellow' },
+];
+const fruitNames = fruits.reduce((names, fruit) => names.concat(fruit.name), []);
+console.log(fruitNames); // Output: ["apple", "orange", "banana"]
+```
+
+#### Common Use Cases:
+
+- **Calculating cumulative values**: Sum, product, average, minimum, maximum.
+
+- **Transforming arrays to a single value**: String concatenation, property extraction, object creation.
+
+- **Filtering or modifying elements based on a condition**: Keep only elements that satisfy a condition, apply a transformation to each element.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
 
-// # REDUCE:
-arr.reduce((curentTotal, item) => {
-    return item.price + curentTotal;
-}, 0);
-// starts at 0 + price.item =[0] price.item
-// returns a sum of all price.items
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
 // # INCLUDES
 const arrIncludes = [1,2,3,4,5];
