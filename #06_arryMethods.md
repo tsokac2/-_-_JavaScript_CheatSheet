@@ -9,6 +9,11 @@
 * **[some](#some)**
 * **[every](#every)**
 * **[reduce](#reduce)**
+* **[includes](#includes)**
+* **[filter vs includes](#filter-vs-includes)**
+* **[sort](#sort)**
+
+
 
 #
 ### Filter
@@ -332,16 +337,148 @@ console.log(fruitNames); // Output: ["apple", "orange", "banana"]
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### includes
+
+The ``includes()`` method is a built-in JavaScript method used to determine whether a specific value exists within an array. It iterates through the array elements and checks if the specified value is present. The method returns ``true`` if the value is found, and ``false`` if it is not found.
+
+The ``includes()`` method is commonly used to check for the existence of specific values within an array, validate user inputs, or perform actions based on the presence or absence of certain elements.
+
+#### Syntax:
+``array.includes(value);``
+
+#### Parameters:
+- ``value``: The value to be searched for within the array.
+
+#### Example:
+```
+const numbers = [1, 2, 3, 4];
+
+// Check if the array includes the value 3
+const isThreePresent = numbers.includes(3);
+console.log(isThreePresent); // Output: true
+
+// Check if the array includes the value 5
+const isFivePresent = numbers.includes(5);
+console.log(isFivePresent); // Output: false
+```
+#### Common Use Cases:
+
+- **Validating user inputs**: Check if user input matches a required value or pattern.
+
+- **Searching for specific elements**: Find and retrieve elements based on their values.
+
+- **Filtering based on presence/absence**: Filter arrays to include or exclude elements based on their existence.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-// # INCLUDES
-const arrIncludes = [1,2,3,4,5];
-arr.includes(3);
-// returns true
-arr.includes(7);
-// returns false - arrIncludes is not including number 7 as an item
+### filter vs includes
+
+**Example 1**: Using ``filter()`` to extract even numbers from an array:
+```
+const numbers = [1, 2, 3, 4, 5];
+
+// Filter the array to include only even numbers
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+console.log(evenNumbers); // Output: [2, 4]
+```
+
+**Example 2**: Using ``includes()`` to check for the presence of a specific value:
+```
+const fruits = ['apple', 'orange', 'banana'];
+
+// Check if the array includes the value 'banana'
+const hasBanana = fruits.includes('banana');
+console.log(hasBanana); // Output: true
+
+// Check if the array includes the value 'grape'
+const hasGrape = fruits.includes('grape');
+console.log(hasGrape); // Output: false
+```
+
+#### Key Differences:
+
+- **Purpose**: ``filter()`` extracts elements based on criteria, while ``includes()`` checks for the presence of a specific value.
+
+- **Result**: ``filter()`` returns a new array containing the filtered elements, while ``includes()`` returns a boolean value (true or false).
+
+- **Operation**: ``filter()`` iterates through the array and creates a new array, while ``includes()`` iterates through the array and checks for the presence of a specific value.
+
+#### Use Cases:
+
+- **filter()**: Extracting specific elements, creating filtered subsets, modifying arrays based on criteria.
+
+- **includes()**: Checking for the existence of values, validating user inputs, making decisions based on element presence.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+### sort
+
+The ``sort()`` method in JavaScript is used to arrange the elements of an array in ascending or descending order based on their Unicode values. 
+
+The default sorting order is lexicographic (dictionary) for strings and ascending numerical for numbers. It's an in-place method, meaning it modifies the original array.
+
+Here's a simple example of how the ``sort()`` method works:
+
+```
+// Example with numbers
+let numbers = [4, 2, 8, 1, 6];
+numbers.sort();
+console.log(numbers); // Output: [1, 2, 4, 6, 8]
+
+// Example with strings
+let fruits = ['banana', 'apple', 'orange', 'grape'];
+fruits.sort();
+console.log(fruits); // Output: ['apple', 'banana', 'grape', 'orange']
+
+// Example with a custom sorting function for numbers in descending order
+let customSort = function (a, b) {
+  return b - a;
+};
+
+numbers.sort(customSort);
+console.log(numbers); // Output: [8, 6, 4, 2, 1]
+```
+
+In the first example, the default lexicographic sorting is applied to numbers and strings. In the second example, a custom sorting function is used to sort numbers in descending order.
+
+Keep in mind that when sorting numbers, using a custom comparison function is essential to ensure correct results. The function should return a negative value if a should be sorted before b, a positive value if b should be sorted before a, and 0 if they are equal.
+
+#### Sorting in Ascending Order
+```
+// Example with numbers
+let numbersAscending = [4, 2, 8, 1, 6];
+numbersAscending.sort();
+console.log(numbersAscending); // Output: [1, 2, 4, 6, 8]
+
+// Example with strings
+let fruitsAscending = ['banana', 'apple', 'orange', 'grape'];
+fruitsAscending.sort();
+console.log(fruitsAscending); // Output: ['apple', 'banana', 'grape', 'orange']
+```
+In these examples, the default behavior of ``sort()`` is applied, resulting in ascending order for both numbers and strings.
+
+#### Sorting in Descending Order:
+```
+// Example with numbers
+let numbersDescending = [4, 2, 8, 1, 6];
+numbersDescending.sort(function (a, b) {
+  return b - a;
+});
+console.log(numbersDescending); // Output: [8, 6, 4, 2, 1]
+
+// Example with strings
+let fruitsDescending = ['banana', 'apple', 'orange', 'grape'];
+fruitsDescending.sort(function (a, b) {
+  return b.localeCompare(a);
+});
+console.log(fruitsDescending); // Output: ['orange', 'grape', 'banana', 'apple']
+```
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
 
 // # SORT
 arr.sort();
