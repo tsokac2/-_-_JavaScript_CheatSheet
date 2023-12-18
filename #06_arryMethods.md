@@ -13,6 +13,7 @@
 * **[filter vs includes](#filter-vs-includes)**
 * **[sort](#sort)**
 * **[of](#of)**
+* **[join](#join)**
 
 
 
@@ -533,12 +534,31 @@ It's worth noting that the ``of()`` method is useful when you want to create an 
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
+### join
 
+The ``join()`` method in JavaScript is used to concatenate the elements of an array into a string. It takes an optional parameter, which is the separator, and returns a string that consists of the array elements joined with the specified separator.
 
-// # JOIN
-const numArr = ["sa", "lo", "n", "i"];
-console.log(numArr.join(","));
-// returns - sa,lo,n,i - converts arry into string
+Here's an example to illustrate the usage of the ``join()`` method:
+
+```
+// Define an array of fruits
+const fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
+
+// Use the join() method with a comma as the separator
+const joinedString = fruits.join(', ');
+
+// Display the result
+console.log(joinedString);
+```
+
+In this example, the ``join(', ')`` call takes each element in the fruits array and concatenates them into a string, separated by a comma and a space. The output would be:
+
+``Apple, Banana, Orange, Mango``
+
+If you don't provide a separator to the ``join()`` method, it uses a comma by default. The original array remains unchanged; the ``join()`` method returns a new string.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
 // TO STRING
 const fruits = ["banana", "orange", "apple", "mango"];
