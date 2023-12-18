@@ -18,7 +18,7 @@
 * **[toString](#toString)**
 
 #
-### Filter
+### filter
 
 The ``filter`` method in JavaScript is a powerful array method that allows you to create a new array containing elements that pass a certain condition. 
 It does not modify the original array but instead returns a new one.
@@ -55,7 +55,7 @@ The result will be:
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-### Map
+### map
 
 The ``map`` method is a fundamental function in JavaScript that is used to transform elements of an array. It applies a provided function to each element of the array and returns a new array containing the results. 
  
@@ -90,7 +90,7 @@ console.log(squaredNumbers); // Output: [1, 4, 9, 16, 25]
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
-### Find
+### find
 
 The ``find`` method in JavaScript is used to search for an element in an array that satisfies a provided testing function. Once the element is found, it returns the first matching element, otherwise, it returns ``undefined``. 
 
