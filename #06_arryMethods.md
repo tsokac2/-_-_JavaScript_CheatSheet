@@ -14,8 +14,7 @@
 * **[sort](#sort)**
 * **[of](#of)**
 * **[join](#join)**
-
-
+* **[toString](#toString)**
 
 #
 ### Filter
