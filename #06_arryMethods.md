@@ -12,6 +12,7 @@
 * **[includes](#includes)**
 * **[filter vs includes](#filter-vs-includes)**
 * **[sort](#sort)**
+* **[of](#of)**
 
 
 
@@ -510,17 +511,29 @@ In the first example, the ``from()`` method is used to convert each character of
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
+### of
 
+The ``of()`` method in JavaScript is a static method that is part of the ``Array`` object. It is used to create a new array instance with a variable number of arguments, where each argument becomes an element of the new array. This method was introduced in ``ECMAScript 6 (ES6)``.
 
+Here's an example of how the ``of()`` method works:
 
-// # FROM 
-arr.from(string) // turning a string into an array
-arr.from("Tom"); // ["T", "o", "m"];
+```
+// Using of() to create an array
+const newArray = Array.of(1, 2, 3, "four", 5.5, true);
 
-// # OF
-arr.forEach(1,2,3,4,5);
-// [1,2,3,4,5]
-// turning numbers into array
+// Displaying the created array
+console.log(newArray);
+```
+
+In this example, the ``Array.of()`` method is used to create a new array called ``newArray``. It takes six arguments (numbers, a string, and a boolean), and each argument becomes an element in the array. The resulting array, newArray, looks like this:
+
+``[1, 2, 3, "four", 5.5, true]``
+
+It's worth noting that the ``of()`` method is useful when you want to create an array with a specific set of elements, especially if some of the elements are non-numeric or of different types.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
 
 // # JOIN
 const numArr = ["sa", "lo", "n", "i"];
