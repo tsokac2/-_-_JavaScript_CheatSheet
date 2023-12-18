@@ -3,6 +3,8 @@
 ### Overview of the Section
 * **[push](#push)**
 * **[pop](#pop)**
+* **[unshift](#unshift)**
+* **[shift](#shift)**
 * **[filter](#filter)**
 * **[map](#map)**
 * **[find](#find)**
@@ -43,7 +45,32 @@ numbers.pop(); // numbers is now [1, 2]
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
+### unshift
+Similar to ``push()`` and ``pop()``, but they operate on the beginning of the array. 
+The ``unshift()`` method inserts one or more elements to the beginning of an array,
 
+Example usage:
+
+```
+const numbers = [1, 2, 3];
+
+numbers.unshift(0); // numbers is now [0, 1, 2, 3]
+```
+
+
+### shift
+``shift()`` method removes the first element from an array.
+
+Example usage:
+
+```
+const numbers = [1, 2, 3];
+
+numbers.shift(); // numbers is now [2, 3]
+```
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
 ### filter
 
