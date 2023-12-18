@@ -1,9 +1,10 @@
 <h1 align="center">JavaScript array methods' </h1>
 
 ### Overview of the Section
-* **[Filter](#filter)**
-* **[Map](#map)**
-* **[Find](#find)**
+* **[push](#filter)**
+* **[filter](#filter)**
+* **[map](#map)**
+* **[find](#find)**
 * **[forEach](#forEach)**
 * **[forEach vs map](#foreach-vs-map)**
 * **[some](#some)**
