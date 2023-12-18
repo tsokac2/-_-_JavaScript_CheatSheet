@@ -541,21 +541,23 @@ The ``join()`` method in JavaScript is used to concatenate the elements of an ar
 Here's an example to illustrate the usage of the ``join()`` method:
 
 ```
-// Define an array of fruits
-const fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
+// Example array
+const fruits = ["apple", "banana", "orange", "grape"];
 
-// Use the join() method with a comma as the separator
-const joinedString = fruits.join(', ');
+// Using join() without a separator
+const joinedWithoutSeparator = fruits.join();
+console.log("Joined without separator:", joinedWithoutSeparator);
+// Output: Joined without separator: apple,banana,orange,grape
 
-// Display the result
-console.log(joinedString);
+// Using join() with a custom separator
+const joinedWithSeparator = fruits.join(" | ");
+console.log("Joined with separator:", joinedWithSeparator);
+// Output: Joined with separator: apple | banana | orange | grape
 ```
 
-In this example, the ``join(', ')`` call takes each element in the fruits array and concatenates them into a string, separated by a comma and a space. The output would be:
+In the first example, the ``join()`` method is called without a separator, so the default comma is used to concatenate the array elements into a string. In the second example, a custom separator ``(" | ")`` is provided, resulting in a string where array elements are joined by the specified separator.
 
-``Apple, Banana, Orange, Mango``
-
-If you don't provide a separator to the ``join()`` method, it uses a comma by default. The original array remains unchanged; the ``join()`` method returns a new string.
+The ``join()`` method is useful for creating readable and formatted strings from array elements, especially when dealing with data that needs to be presented in a specific way.
 
 **[Back To The Top](#Overview-of-the-Section)**
 #
