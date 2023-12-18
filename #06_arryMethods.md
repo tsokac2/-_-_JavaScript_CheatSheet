@@ -567,9 +567,39 @@ The ``join()`` method is useful for creating readable and formatted strings from
 **[Back To The Top](#Overview-of-the-Section)**
 #
 
-// TO STRING
-const fruits = ["banana", "orange", "apple", "mango"];
-console.log(fruits.toString());
-// returns - banana, orange, apple, mango - turning array into string
+### toString
+The ``toString()`` method in JavaScript is a method that is present in the prototype of every object in the language. It is used to convert an object to a string. The ``toString()`` method is automatically called when an object is to be represented as a text value or when an object is referred to in a manner in which a string is expected.
+
+Here is a simple code example to illustrate the ``toString()`` method:
+
+```
+// Define a custom object constructor
+function Car(brand, model, year) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+}
+
+// Add a toString() method to the prototype of the object
+Car.prototype.toString = function() {
+    return `${this.year} ${this.brand} ${this.model}`;
+};
+
+// Create an instance of the Car object
+var myCar = new Car("Toyota", "Camry", 2022);
+
+// Call the toString() method on the object
+var carString = myCar.toString();
+
+// Output the result
+console.log(carString); // Output: "2022 Toyota Camry"
+```
+
+In this example, we have a ``Car`` object with properties for the brand, model, and year. The ``toString()`` method is added to the prototype of the object, and it returns a string representation of the car, including its year, brand, and model. When the ``toString()`` method is called on the myCar instance, it returns the formatted string, which is then logged to the console.
+
+The ``toString()`` method is often used implicitly, such as when an object is concatenated with a string or when it is used in template literals. If a custom ``toString()`` method is not defined for an object, the default implementation provided by ``Object.prototype.toString()`` is used, which returns a string indicating the object's type.
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
 
 
