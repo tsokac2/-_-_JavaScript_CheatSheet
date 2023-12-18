@@ -1,7 +1,8 @@
 <h1 align="center">JavaScript array methods' </h1>
 
 ### Overview of the Section
-* **[push](#filter)**
+* **[push](#push)**
+* **[pop](#pop)**
 * **[filter](#filter)**
 * **[map](#map)**
 * **[find](#find)**
@@ -18,6 +19,32 @@
 * **[toString](#toString)**
 
 #
+
+### push
+
+The ``push()`` method adds one or more elements to the end of an array, while the.
+
+#### Example usage:
+
+```
+const numbers = [1, 2, 3];
+numbers.push(4); // numbers is now [1, 2, 3, 4]
+```
+#
+### pop
+
+``pop()`` method removes the last element from an array.
+
+```
+const numbers = [1, 2, 3];
+numbers.pop(); // numbers is now [1, 2]
+```
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
+
+
 ### filter
 
 The ``filter`` method in JavaScript is a powerful array method that allows you to create a new array containing elements that pass a certain condition. 
