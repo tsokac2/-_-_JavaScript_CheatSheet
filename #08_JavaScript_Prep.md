@@ -195,3 +195,118 @@ class Cat extends Animal {
 const fluffy = new Cat();
 fluffy.speak(); // Outputs "Some generic sound"
 ```
+
+### What is the difference between the ``instanceof`` and ``isPrototypeOf`` operators in JavaScript?
+
+Both operators are used to check if an object is an instance or prototype of another object, respectively.
+
+#### Example using instanceof:
+```
+class Car {}
+
+const myCar = new Car();
+console.log(myCar instanceof Car); // Outputs true
+```
+
+#### Example using isPrototypeOf:
+```
+function Vehicle() {}
+function Car() {}
+
+Car.prototype = Object.create(Vehicle.prototype);
+
+const myCar = new Car();
+console.log(Vehicle.prototype.isPrototypeOf(myCar)); // Outputs true
+```
+
+## ReactJS
+
+### What is ReactJS?
+ReactJS is a JavaScript library for building user interfaces, focusing on creating reusable UI components.
+
+### What are the key features of ReactJS?
+- ``Component-Based``: UIs are built using components.
+- ``Virtual DOM``: Efficiently updates and renders components.
+- ``Declarative Syntax``: Describes how the UI should look based on the application state.
+- ``React Native``: Allows building mobile applications using React.
+
+### What is JSX?
+``JSX`` is a syntax extension for JavaScript that looks similar to XML or HTML. It allows you to write HTML elements and components in a more concise and readable way.
+``const element = <h1>Hello, React!</h1>;``
+
+### What is the difference between a functional component and a class component in ReactJS?
+Functional components are stateless and defined as functions, while class components have state and lifecycle methods.
+
+#### Functional Component:
+```
+const Greet = (props) => {
+    return <h1>Hello, {props.name}!</h1>;
+};
+```
+#### Class Component:
+```
+class Greet extends React.Component {
+    render() {
+        return <h1>Hello, {this.props.name}!</h1>;
+    }
+}
+```
+
+### What is state in ReactJS?
+
+``State`` in React represents the local state of a component, allowing it to manage and update data.
+
+#### Example:
+
+```
+class Counter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            count: 0
+        };
+    }
+
+    render() {
+        return (
+            <div>
+                <p>Count: {this.state.count}</p>
+            </div>
+        );
+    }
+}
+```
+
+### What are props in ReactJS?
+
+Props (short for properties) are used to pass data from a parent component to a child component.
+
+### Example:
+```
+const WelcomeMessage = (props) => {
+    return <h1>Welcome, {props.name}!</h1>;
+};
+
+const App = () => {
+    return <WelcomeMessage name="Tomislav" />;
+};
+```
+
+### What is a Difference between State and Props:
+- ``State``: Managed within a component and can be updated. Used for internal component state.
+- ``Props``: Received from a parent component and cannot be modified by the child component.
+
+### Why Should We Not Update State Directly?
+Updating state directly can lead to unexpected behavior. Always use ``setState()`` to update state, as it ensures proper handling of state changes.
+
+### What is the purpose of a callback function as an argument of ``setState()``?
+The callback function in ``setState()`` is invoked after the state is updated, making it useful for performing actions that depend on the updated state.
+
+#### Example:
+```
+this.setState({ count: this.state.count + 1 }, () => {
+    console.log("Count updated:", this.state.count);
+});
+```
+
+### 
