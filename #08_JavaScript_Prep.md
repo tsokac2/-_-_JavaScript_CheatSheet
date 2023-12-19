@@ -12,4 +12,38 @@ console.log("Middle");
 console.log("End");
 ```
 
-### 
+#### Example of Asynchronous Code using Callbacks:
+```
+console.log("Start");
+
+setTimeout(() => {
+    console.log("Middle");
+}, 1000);
+
+console.log("End");
+```
+
+### What is the difference between a function and a method in JavaScript?
+
+In JavaScript, a ``function`` is a standalone block of code, while a ``metho``d`` is a function that belongs to an object.
+
+#### Function Example:
+```
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet("Tomislav"));
+```
+
+#### Method Example:
+```
+const person = {
+    name: "Tomislav",
+    greet: function() {
+        return `Hello, ${this.name}!`;
+    }
+};
+
+console.log(person.greet());
+```
