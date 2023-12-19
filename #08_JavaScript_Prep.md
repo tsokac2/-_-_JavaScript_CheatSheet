@@ -309,4 +309,42 @@ this.setState({ count: this.state.count + 1 }, () => {
 });
 ```
 
-### 
+### What is the difference between HTML and React event handling?
+React event handling is similar to HTML event handling but uses camelCase naming conventions and passes a function reference rather than a string.
+#### HTML Event Handling:
+``<button onclick="handleClick()">Click me</button>``
+
+#### React Event Handling:
+``<button onClick={handleClick}>Click me</button>``
+
+### What are the different lifecycle methods of a React component?
+
+- ``componentDidMount``: Called after the component is rendered.
+- ``componentDidUpdate``: Called after the component is updated.
+- ``componentWillUnmount``: Called before the component is removed.
+
+### What is context in ReactJS?
+Context provides a way to pass data through the component tree without having to pass props manually at every level.
+
+### What is the difference between ReactJS and React Native?
+
+- ``ReactJS``: Used for building web applications, providing a ``virtual DOM`` for efficient updates.
+- ``React Native``: Used for building mobile applications, allowing developers to use React to write native mobile apps.
+
+### What are some of the best practices for writing ReactJS code?
+- ``Component Organization``: Divide your application into small, reusable components.
+- ``State Management``: Use stateful components only where necessary; consider using state management libraries like Redux for complex state.
+- ``Lifecycle Methods``: Understand and use lifecycle methods appropriately for managing component behavior.
+- ``Immutability``: Avoid directly mutating state; use immutability principles to update state.
+- ``Conditional Rendering``: Use conditional rendering to display components based on conditions.
+- ``Key Prop``: When rendering lists, provide a unique key prop to each item for efficient updates.
+
+### How do you test ReactJS components?
+- ``Unit Testing``: Test individual components in isolation using tools like ``Jest`` and ``React Testing Library``.
+- ``Integration Testing``: Test the interaction between multiple components or the entire application.
+- ``Snapshot Testing``: Use snapshot testing to capture a component's output and detect unexpected changes.
+- ``Mocking``: Mock external dependencies or APIs to isolate component testing.
+
+### What is a Virtual DOM in ReactJS?
+
+The Virtual DOM (Document Object Model) is a concept in ReactJS that represents an in-memory, lightweight copy of the actual DOM in a web browser. It acts as an intermediary between the React components and the actual browser DOM.
