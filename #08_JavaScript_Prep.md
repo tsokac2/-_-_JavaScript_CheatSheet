@@ -47,3 +47,58 @@ const person = {
 
 console.log(person.greet());
 ```
+
+### Prototype Chain in JavaScript
+The prototype chain is a mechanism for object inheritance in JavaScript. Each object has a prototype, and if a property or method is not found on the object, JavaScript looks for it in the object's prototype chain.
+#### Example:
+```
+function Animal(name) {
+    this.name = name;
+}
+
+Animal.prototype.sound = function() {
+    return "Some generic sound";
+};
+
+const cat = new Animal("Fluffy");
+console.log(cat.sound()); // Outputs "Some generic sound"
+```
+
+### How do you handle errors in JavaScript?
+
+In JavaScript, errors can be handled using ``try``, ``catch``, and ``finally`` blocks.
+
+#### Example:
+```
+try {
+    // Code that may throw an error
+    const result = someUndefinedVariable + 10;
+} catch (error) {
+    // Handle the error
+    console.error("An error occurred:", error.message);
+} finally {
+    // Code that runs regardless of whether there was an error
+    console.log("Execution completed.");
+}
+```
+
+### What are closures in JavaScript?
+
+A ``closure`` is a function that has access to variables from its outer (enclosing) scope, even after that scope has finished executing.
+
+```
+function outerFunction() {
+    const outerVariable = "I am from the outer function";
+  
+    function innerFunction() {
+        console.log(outerVariable);
+    }
+  
+    return innerFunction;
+}
+
+const closureExample = outerFunction();
+closureExample(); // Outputs "I am from the outer function"
+```
+
+### What is the difference between the ``this`` keyword in a function declaration and an arrow function?
