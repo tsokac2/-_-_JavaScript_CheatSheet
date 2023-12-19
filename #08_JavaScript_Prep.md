@@ -107,7 +107,7 @@ innerFunc();
 
 ### What is the difference between the ``this`` keyword in a function declaration and an arrow function?
 
-In a regular function, ``this`` refers to the object that called the function, while in an arrow function, ````this`` retains the value of the enclosing context.
+In a regular function, ``this`` refers to the object that called the function, while in an arrow function, ``this`` retains the value of the enclosing context.
 
 #### Example:
 ```
@@ -125,7 +125,7 @@ obj.arrowFunction();
 ```
 
 ### What are some of the different ways to create classes in JavaScript?
-In JavaScript, you can create classes using function constructors, class declarations, or class expressions.
+In JavaScript, you can create classes using function ``constructors``, class ``declarations``, or class ``expressions``.
 
 #### Function Constructors:
 ```
@@ -160,7 +160,6 @@ console.log(animal1.getInfo());
 ```
 
 #### Class Expressions:
-
 ```
 const Car = class {
     constructor(brand, model) {
