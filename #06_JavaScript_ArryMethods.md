@@ -1,4 +1,4 @@
-<h1 align="center">JavaScript array methods' </h1>
+<h1 align="center">JavaScript Array methods' </h1>
 
 ### Overview of the Section
 * **[push](#push)**
