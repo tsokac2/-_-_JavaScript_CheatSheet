@@ -1,6 +1,7 @@
 <h1 align="center">Mastering the Fundamentals of JavaScript</h1>
 
 ### Overview of the Section
+* **[How Does Javascript Work?](#js-work)**
 * **[Regular expressions](#Regular-expressions)**
 * **[return statement](#return-statement)**
 * **[Enhanced Object Properties](#enhanced-object-properties)**
@@ -20,6 +21,61 @@
 * **[Bounds check in coding](#bounds-check-in-coding)**
 
 #
+### <a name="js-work">How Does Javascript Work?</a>
+
+JavaScript is a versatile and powerful programming language primarily used for creating dynamic content on the web. 
+
+It's often employed to enhance the interactivity of websites by allowing developers to manipulate the ``Document Object Model (DOM)`` and respond to user actions in real-time.
+
+#### Memory Heap
+In computer science, a memory heap is a portion of a computer's main memory **(RAM)** that is used as a staging area for dynamic memory allocation. 
+
+Dynamic memory allocation is when memory is allocated and deallocated during program execution, as opposed to static memory allocation, where memory is allocated at compile time.
+
+Here are some of the key characteristics of a memory heap:
+
+- **Dynamic**: Memory is allocated and deallocated as needed.
+- **Unordered**: Memory blocks can be allocated and deallocated in any order.
+- **Global**: Memory can be accessed from anywhere in the program.
+- **Pointer-based**: Memory blocks are accessed using pointers.
+
+#### Memory Leaks 
+While garbage collection helps manage memory efficiently, developers need to be mindful of potential memory leaks. 
+
+A memory leak occurs when objects that are no longer needed are not properly released, causing the program to consume more memory over time. 
+This can lead to performance issues.
+
+#### FILO and LIFO
+
+**FILO** stands for ``"First In, Last Out,"`` while **LIFO** stands for ``"Last In, First Out."`` 
+
+These terms refer to the order in which elements are added and removed from a data structure. 
+
+In a **FILO** data structure, the first element added is the last element to be removed. In a **LIFO** data structure, the last element added is the first element to be removed.
+
+#### Synchronous programming 
+- Executes code line by line in a sequential manner. 
+- Each instruction must complete before the next one can begin. 
+- This means that if a synchronous task takes a long time to run, it can prevent other tasks from executing, potentially leading to a slow and unresponsive user experience.
+
+#### Asynchronous programming
+- Allows tasks to be executed out of order. 
+- This means that the execution of a task does not block the execution of other tasks. 
+- This can make JavaScript applications more responsive and user-friendly, as it allows the browser to continue responding to user input while other tasks are being handled in the background.
+
+**Examples of synchronous operations in JavaScript**:
+- Reading or writing to a file
+- Performing network requests
+- Converting between data types
+
+**Examples of asynchronous operations in JavaScript**:
+- Fetching data from an API
+- Animating elements on a webpage
+- Listening for user events
+
+**[Back To The Top](#Overview-of-the-Section)**
+#
+
 ### Regular expressions
 
 Regular expressions (RegExp) in JavaScript are powerful tools for pattern matching within strings. One of the most common use cases is to validate and manipulate strings based on a specific pattern. Let me explain a simple example:
