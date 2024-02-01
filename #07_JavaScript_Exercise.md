@@ -133,6 +133,58 @@ An educated answer to this question would simply be:
 #
 ### 8. In what order will the numbers 1-4 be logged to the console when the code below is executed? Why?
 
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+
+#### Answer
+```
+1
+4
+3
+2
+```
+Let’s first explain the parts of this that are presumably more obvious:
+
+- ``1`` and ``4`` are displayed first since they are logged by simple calls to ``console.log()`` without any delay
+
+- ``2`` is displayed after ``3`` because ``2`` is being logged after a delay of ``1000 msecs (i.e., 1 second)`` whereas ``3`` is being logged after a delay of ``0 msecs``.
+
+OK, fine. But if ``3`` is being logged after a delay of ``0 msecs``, doesn’t that mean that it is being logged right away? And, if so, shouldn’t it be logged before ``4``, since ``4`` is being logged by a later line of code?
+
+The answer has to do with properly understanding **[JavaScript events and timing](https://javascript.info/settimeout-setinterval)**.
+
+#
+### 9. Write a simple function (less than 160 characters) that returns a boolean indicating whether or not a string is a [palindrome](https://www.palindromelist.net/).
+
+**Palindrome**: a word, phrase, number, or other sequence of symbols or elements, whose meaning may be interpreted the same way in either forward or reverse direction.
+- checks if the modified string is equal to its reverse.
+
+#### Answer
+```
+const isPalindrome = str => {
+  str = str.replace(/\W/g, '').toLowerCase();
+  return (str == str.split('').reverse().join(''));
+};
+
+console.log(isPalindrome("ana")); //true
+console.log(isPalindrome("Anas")); // false
+console.log(isPalindrome("levels")); // levels
+console.log(isPalindrome("level")); // level
+```
+
+#
+### 10. Write a ``sum`` method which will work properly when invoked using either syntax below.
+```
+console.log(sum(2,3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
+```
+
+#### Answer
+
 
 
 # -----------------
