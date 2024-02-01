@@ -3,7 +3,6 @@
 ### 1. What is a potential pitfall with using ``typeof bar === "object"`` to determine if ``bar`` is an object? How can this pitfall be avoided?
 
 #### Answer
-
 Although typeof ``bar === "object"`` is a reliable way of checking if bar is an object, the surprising gotcha in JavaScript is that ``null`` is also considered an object!
 
 Therefore, the following code will, to the surprise of most developers, log ``true (not false)`` to the console:
@@ -11,10 +10,8 @@ Therefore, the following code will, to the surprise of most developers, log ``tr
 var bar = null;
 console.log(typeof bar === "object");  // logs true!
 ```
-
 #
 ### 2. What will the code below output to the console and why?
-
 ```
 (function(){
   var a = b = 3;
@@ -23,16 +20,27 @@ console.log(typeof bar === "object");  // logs true!
 console.log("a defined? " + (typeof a !== 'undefined'));
 console.log("b defined? " + (typeof b !== 'undefined'));
 ```
-
 #### Answer
-
+In fact, ``var a = b = 3;`` is actually shorthand for:
 ```
+b = 3;
+var a = b;
+```
+**But how can b be defined outside of the scope of the enclosing function?** Well, since the statement ``var a = b = 3;`` is shorthand for the statements ``b = 3;`` and ``var a = b;``, ``b`` ends up being a global variable (since it is not preceded by the ``var`` keyword) and is therefore still in scope even outside of the enclosing function.
 
+``use strict`` - Declared inside a function, it has local scope (only the code inside the function is in strict mode):
+```
+x = 3.14;       // This will not cause an error.
+myFunction();
+
+function myFunction() {
+  "use strict";
+  y = 3.14;   // This will cause an error
+}
 ```
 
 #
 ### 3. What will the code below output to the console and why?
-
 ```
 var myObject = {
     foo: "bar",
@@ -48,21 +56,82 @@ var myObject = {
 };
 myObject.func();
 ```
-
 #### Answer
-
 ```
 outer func:  this.foo = bar
 outer func:  self.foo = bar
 inner func:  this.foo = undefined
 inner func:  self.foo = bar
 ```
-
 In the outer function, both ``this`` and ``self`` refer to ``myObject`` and therefore both can properly reference and access ``foo``.
 
 In the inner function, though, ``this`` no longer refers to ``myObject``. As a result, ``this.foo`` is undefined in the inner function, whereas the reference to the local variable ``self`` remains in scope and is accessible there.
 
+#
+### 4. What is the significance of, and reason for, wrapping the entire content of a JavaScript source file in a function block?
 
+This is an increasingly common practice, employed by many popular JavaScript libraries (jQuery, Node.js, etc.). 
+
+This technique creates a **closure** around the entire contents of the file which, perhaps most importantly, creates a private namespace and thereby helps avoid **potential name clashes between different JavaScript modules** and libraries.
+
+#
+### 5. What is the significance, and what are the benefits, of including ``'use strict'`` at the beginning of a JavaScript source file?
+
+The short and most important answer here is that use strict is a way to voluntarily enforce stricter parsing and error handling on your JavaScript code at runtime. 
+
+Code errors that would otherwise have been ignored or would have failed silently will now generate errors or throw exceptions. In general, it is a good practice.
+
+
+#
+### 6. Consider the two functions below. Will they both return the same thing? Why or why not?
+
+```
+function foo1()
+{
+  return {
+      bar: "hello"
+  };
+}
+
+function foo2()
+{
+  return
+  {
+      bar: "hello"
+  };
+}
+```
+#### Answer
+```
+foo1 returns:
+Object {bar: "hello"}
+foo2 returns:
+undefined 
+```
+Not only is this surprising, but what makes this particularly gnarly is that ``foo2()`` returns undefined without any error being thrown.
+
+The reason for this has to do with the fact that semicolons are technically optional in JavaScript (although omitting them is generally really bad form).
+
+As a result, when the line containing the return statement (with nothing else on the line) is encountered in ``foo2()``, a semicolon is automatically inserted immediately after the return statement.
+#
+### 7. What will the code below output? Explain your answer.
+```
+console.log(0.1 + 0.2);
+console.log(0.1 + 0.2 == 0.3);
+```
+
+#### Answer
+
+```
+0.30000000000000004
+false
+```
+An educated answer to this question would simply be:
+
+“You can’t be sure. it might print out ``0.3`` and ``true``, or it might not. Numbers in JavaScript are all treated with floating point precision, and as such, may not always yield the expected results.”
+
+#
+### 8. In what order will the numbers 1-4 be logged to the console when the code below is executed? Why?
 
 
 
