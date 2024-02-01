@@ -184,10 +184,47 @@ console.log(sum(2)(3));  // Outputs 5
 ```
 
 #### Answer
+```
+function sum(x,y) {
+  if( y !== undefined){
+    return x + y;
+    
+  } else {
+    
+    return function(y) {return x + y;};
+  }
+}
+console.log(sum(2,3));   // Outputs 5
+console.log(sum(2)(3));  // Outputs 5
+```
+
+1. **Binary Addition (if y is provided)**:
+- When both ``x`` and ``y`` are provided as arguments, the function returns the sum of the two values ``(x + y)``.
+- Example: ``sum(2, 3)`` would return ``5``.
+
+2. **Curried Addition (if y is not provided)**:
+- If only one argument ``(x)`` is provided, it returns a new function that expects the second argument ``(y)``.
+- This is known as currying, a technique where a function with multiple arguments is transformed into a series of functions, each taking a single argument.
+- Example: ``sum(2)(3)`` would also return ``5``. The first invocation returns a function that adds ``3`` to its argument, and the second invocation supplies ``4`` as that argument.
+
+
+#
+### 11. Consider the following code snippet:
+```
+for (var i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', function(){ console.log(i); });
+  document.body.appendChild(btn);
+}
+```
+- **(a)** What gets logged to the console when the user clicks on ``“Button 4”`` and why?
+
+- **(b)** Provide one or more alternate implementations that will work as expected.
 
 
 
-# -----------------
+# ----------------- 
 
 ### Old stuff
 
