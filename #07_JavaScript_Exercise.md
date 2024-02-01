@@ -1,3 +1,75 @@
+
+
+### 1. What is a potential pitfall with using ``typeof bar === "object"`` to determine if ``bar`` is an object? How can this pitfall be avoided?
+
+#### Answer
+
+Although typeof ``bar === "object"`` is a reliable way of checking if bar is an object, the surprising gotcha in JavaScript is that ``null`` is also considered an object!
+
+Therefore, the following code will, to the surprise of most developers, log ``true (not false)`` to the console:
+```
+var bar = null;
+console.log(typeof bar === "object");  // logs true!
+```
+
+#
+### 2. What will the code below output to the console and why?
+
+```
+(function(){
+  var a = b = 3;
+})();
+
+console.log("a defined? " + (typeof a !== 'undefined'));
+console.log("b defined? " + (typeof b !== 'undefined'));
+```
+
+#### Answer
+
+```
+
+```
+
+#
+### 3. What will the code below output to the console and why?
+
+```
+var myObject = {
+    foo: "bar",
+    func: function() {
+        var self = this;
+        console.log("outer func:  this.foo = " + this.foo);
+        console.log("outer func:  self.foo = " + self.foo);
+        (function() {
+            console.log("inner func:  this.foo = " + this.foo);
+            console.log("inner func:  self.foo = " + self.foo);
+        }());
+    }
+};
+myObject.func();
+```
+
+#### Answer
+
+```
+outer func:  this.foo = bar
+outer func:  self.foo = bar
+inner func:  this.foo = undefined
+inner func:  self.foo = bar
+```
+
+In the outer function, both ``this`` and ``self`` refer to ``myObject`` and therefore both can properly reference and access ``foo``.
+
+In the inner function, though, ``this`` no longer refers to ``myObject``. As a result, ``this.foo`` is undefined in the inner function, whereas the reference to the local variable ``self`` remains in scope and is accessible there.
+
+
+
+
+
+# -----------------
+
+### Old stuff
+
 // #1. 99 Bottles of beer on the wall
 
 // # SOLUTION 1
