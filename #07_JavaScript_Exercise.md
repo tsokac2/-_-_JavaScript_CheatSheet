@@ -334,6 +334,149 @@ Accordingly, the method is processed from start to finish without a direct recur
 #
 ### 16. What is a “closure” in JavaScript? Provide an example.
 
+A closure is an **inner function** that has access to the variables in the outer (enclosing) function’s scope chain. 
+
+The closure has access to variables in three scopes; specifically: (1) variable in its own scope, (2) variables in the enclosing function’s scope, and (3) global variables.
+
+Here is an example:
+
+```
+var globalVar = "xyz";
+
+(function outerFunc(outerArg) {
+    var outerVar = 'a';
+    
+    (function innerFunc(innerArg) {
+    var innerVar = 'b';
+    
+    console.log(
+        "outerArg = " + outerArg + "\n" +
+        "innerArg = " + innerArg + "\n" +
+        "outerVar = " + outerVar + "\n" +
+        "innerVar = " + innerVar + "\n" +
+        "globalVar = " + globalVar);
+    
+    })(456);
+})(123);
+```
+
+In the above example, variables from ``innerFunc``, ``outerFunc``, and the global namespace are all in scope in the ``innerFunc``. The above code will therefore produce the following output:
+
+```
+outerArg = 123
+innerArg = 456
+outerVar = a
+innerVar = b
+globalVar = xyz
+```
+#
+### 17. What would the following lines of code output to the console?
+
+```
+console.log("0 || 1 = "+(0 || 1));
+console.log("1 || 2 = "+(1 || 2));
+console.log("0 && 1 = "+(0 && 1));
+console.log("1 && 2 = "+(1 && 2));
+```
+#### Explain your answer.
+```
+0 || 1 = 1
+1 || 2 = 1
+0 && 1 = 0
+1 && 2 = 2
+```
+**Key Points**:
+
+- **|| (OR) operator**: Returns the first truthy operand or the last operand if both are falsy.
+- **&& (AND) operator**: Returns the first falsy operand or the last operand if both are truthy.
+- **JavaScript considers ``0``, ``"" (empty string)``, ``null``, ``undefined``, ``NaN``, and ``false`` as **falsy** values. All other values are considered truthy.
+- **The right operand in ``||`` and ``&&`` might not be evaluated depending on the first operand's truthiness, a concept called short-circuiting.
+
+#
+### 18.What will be the output when the following code is executed? Explain.
+```
+console.log(false == '0')
+console.log(false === '0')
+```
+#### Answer
+```
+true
+false
+```
+1. ``console.log(false == '0')`` will output true.
+
+- The ``==`` operator performs loose equality comparison.
+- It attempts to coerce values to a common type before comparison.
+- In this case, it coerces ``false`` to ``0`` (because ``false`` is considered a "falsy" value in JavaScript) and ``'0'`` to the number 0.
+- Since both values become ``0`` after coercion, they are considered equal, resulting in ``true``
+.
+2. ``console.log(false === '0')`` will output false.
+
+- The ``===`` operator performs strict equality comparison.
+- It checks for both value and type equality.
+- In this case, ``false`` is a boolean, and ``'0'`` is a string, so they have different types, resulting in ``false``.
+#
+### 19. What is the output out of the following code? Explain your answer.
+
+```
+var a={},
+    b={key:'b'},
+    c={key:'c'};
+
+a[b]=123;
+a[c]=456;
+
+console.log(a[b]);
+```
+#### Answer
+The output of this code will be ``456 (not 123)``.
+
+Here's a breakdown of why this happens:
+
+1. **Object Property Names**: In JavaScript, object property names must be strings or Symbols. When you try to use an object like ``b`` or ``c`` as a key, JavaScript implicitly converts it to a string using the ``toString()`` method.
+
+2. **Object toString()**: The default ``toString()`` method for objects returns ``[object Object]``. So, when you assign ``a[b] = 123 and a[c] = 456``, both assignments are essentially using the same key, ``[object Object]``.
+
+3. **Overwriting**: Therefore, the second assignment ``(a[c] = 456)`` overwrites the value of the first assignment ``(a[b] = 123)`` because they both use the same string key.
+
+4. **Final Output**: When you ``console.log(a[b])``, you're essentially retrieving the value associated with the ``key [object Object]``, which is ``456`` after the last assignment.
+
+**Key Points**:
+- **Implicit Conversion**: JavaScript automatically converts non-string keys to strings when used in object property assignments.
+- **toString() Behavior**: The default ``toString()`` method for objects typically returns ``[object Object]``.
+- **Overwriting Values**: Assigning values to the same key (even if using different objects that stringify to the same value) overwrites the existing value.
+
+**To avoid this behavior**:
+
+- **Use Strings as Keys**: If you want to use distinct keys, it's better to use actual strings or Symbols as property names.
+- **Consider Maps**: If you need to use objects as keys, you can use a ``Map`` object, which is designed to handle arbitrary keys, including objects.
+
+#
+### 20. What will the following code output to the console:
+``console.log((function f(n){return ((n > 1) ? n * f(n-1) : n)})(10));``
+
+#### Answer
+
+The code will output the value of 10 factorial ``(i.e., 10!, or 3,628,800)``.
+
+Here’s why:
+
+The named function ``f()`` calls itself recursively, until it gets down to calling ``f(1)`` which simply returns ``1``. 
+
+Here, therefore, is what this does:
+```
+f(1): returns n, which is 1
+f(2): returns 2 * f(1), which is 2
+f(3): returns 3 * f(2), which is 6
+f(4): returns 4 * f(3), which is 24
+f(5): returns 5 * f(4), which is 120
+f(6): returns 6 * f(5), which is 720
+f(7): returns 7 * f(6), which is 5040
+f(8): returns 8 * f(7), which is 40320
+f(9): returns 9 * f(8), which is 362880
+f(10): returns 10 * f(9), which is 3628800
+```
+
 
 
 # ----------------- 
