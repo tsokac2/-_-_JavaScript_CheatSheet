@@ -207,7 +207,6 @@ console.log(sum(2)(3));  // Outputs 5
 - This is known as currying, a technique where a function with multiple arguments is transformed into a series of functions, each taking a single argument.
 - Example: ``sum(2)(3)`` would also return ``5``. The first invocation returns a function that adds ``3`` to its argument, and the second invocation supplies ``4`` as that argument.
 
-
 #
 ### 11. Consider the following code snippet:
 ```
@@ -222,7 +221,52 @@ for (var i = 0; i < 5; i++) {
 
 - **(b)** Provide one or more alternate implementations that will work as expected.
 
+#### Answer
+**(a)**
 
+- No matter what button the user clicks the number 5 will always be logged to the console. 
+- This is because, at the point that the ``onclick`` method is invoked (for any of the buttons), the for loop has already completed and the variable ``i`` already has a value of 5.
+
+**(b)**
+
+The simplest solution, if you’re in an ``ES6/ES2015`` context, is to use ``let i`` instead of ``var i``:
+```
+for (let i = 0; i < 5; i++) {
+  var btn = document.createElement('button');
+  btn.appendChild(document.createTextNode('Button ' + i));
+  btn.addEventListener('click', function(){ console.log(i); });
+  document.body.appendChild(btn);
+}
+```
+#
+### 12. Assuming d is an “empty” object in scope, say:
+``var d = {};``
+
+### …what is accomplished using the following code?
+```
+['zebra', 'horse'].forEach(function(k) {
+	d[k] = undefined;
+});
+```
+
+#### Answer
+The snippet of code shown above sets two properties on the object ``d``. Ideally, any lookup performed on a JavaScript object with an unset key evaluates to ``undefined``. But running this code marks those properties as “own properties” of the object.
+
+```
+console.log(d.zebar); // undefined
+console.log(d.horse); // undefined
+```
+
+#
+### 13. What will the code below output to the console and why?
+```
+var arr1 = "john".split('');
+var arr2 = arr1.reverse();
+var arr3 = "jones".split('');
+arr2.push(arr3);
+console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
+console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
+```
 
 # ----------------- 
 
