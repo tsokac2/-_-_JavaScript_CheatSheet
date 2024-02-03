@@ -256,7 +256,6 @@ The snippet of code shown above sets two properties on the object ``d``. Ideally
 console.log(d.zebar); // undefined
 console.log(d.horse); // undefined
 ```
-
 #
 ### 13. What will the code below output to the console and why?
 ```
@@ -267,6 +266,75 @@ arr2.push(arr3);
 console.log("array 1: length=" + arr1.length + " last=" + arr1.slice(-1));
 console.log("array 2: length=" + arr2.length + " last=" + arr2.slice(-1));
 ```
+#### Answer
+The logged output will be:
+```
+"array 1: length=5 last=j,o,n,e,s"
+"array 2: length=5 last=j,o,n,e,s"
+```
+#
+### 14. What will the code below output to the console and why?
+```
+console.log(1 +  "2" + "2");
+console.log(1 +  +"2" + "2");
+console.log(1 +  -"1" + "2");
+console.log(+"1" +  "1" + "2");
+console.log( "A" - "B" + "2");
+console.log( "A" - "B" + 2);
+```
+
+#### Answer
+```
+console.log(1 + "2" + "2"); // "122"
+console.log(1 +  +"2" + "2"); // "32":  "+2" converting to a integer, 1 + 2 + "2" = 32
+console.log(1 +  -"1" + "2"); // "02"
+console.log(+"1" +  "1" + "2"); // "112"
+console.log( "A" - "B" + "2"); // "NaN2"
+console.log( "A" - "B" + 2); // NaN
+```
+
+#
+### 15. The following recursive code will cause a stack overflow if the array list is too large. How can you fix this and still retain the recursive pattern?
+
+```
+var list = readHugeList();
+
+var nextListItem = function() {
+    var item = list.pop();
+
+    if (item) {
+        // process the list item...
+        nextListItem();
+    }
+};
+```
+
+#### Answer
+```
+var list = readHugeList();
+
+var nextListItem = function() {
+    var item = list.pop();
+
+    if (item) {
+        // process the list item...
+        setTimeout( nextListItem, 0);
+    }
+};
+```
+The stack overflow is eliminated because the event loop handles the recursion, not the call stack. 
+
+When ``nextListItem`` runs, if ``item`` is not null, the timeout function ``(nextListItem)`` is pushed to the event queue and the function exits, thereby leaving the call stack clear. 
+
+When the event queue runs its timed-out event, the next ``item`` is processed and a timer is set to again invoke ``nextListItem``. 
+
+Accordingly, the method is processed from start to finish without a direct recursive call, so the call stack remains clear, regardless of the number of iterations.
+
+
+#
+### 16. What is a “closure” in JavaScript? Provide an example.
+
+
 
 # ----------------- 
 
