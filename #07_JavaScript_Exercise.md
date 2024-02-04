@@ -745,15 +745,155 @@ b[2] = 1;
 console.log(b);             // (3) [undefined, empty × 1, 1]
 console.log(b.map(e => 7)); // (3) [7,         empty × 1, 7]
 ```
-
 #
 ### 31. What is the value of typeof ``undefined == typeof NULL``?
 
+#### Answer
+
+``true``
+
+The expression will be evaluated to true, since NULL will be treated as any other undefined variable.
+
+Note: JavaScript is case-sensitive and here we are using NULL instead of null.
 
 #
-### 32.
+### 32. What would following code return?
+``console.log(typeof typeof 1);``
 
-# ----------------- 
+#### Answer
+``string``
+
+``typeof 1`` will return ``"number"`` and ``typeof "number"`` will return ``string``.
+
+#
+### 33. What will be the output of the following code:
+
+```
+for (var i = 0; i < 5; i++) {
+	setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+
+#### Explain your answer. How could the use of closures help here?
+
+##### Answer
+```
+5
+5
+5
+5
+5
+```
+
+The code sample shown will **not** display the values ``0, 1, 2, 3, and 4`` as might be expected; rather, it will display ``5, 5, 5, 5, and 5``.
+
+The reason for this is that each function executed within the loop will be executed after the entire loop has completed and all will therefore reference the last value stored in ``i``, which was 5.
+
+Closures can be used to prevent this problem by creating a unique scope for each iteration, storing each unique value of the variable within its scope, as follows:
+
+```
+for (var i = 0; i < 5; i++) {
+    (function(x) {
+        setTimeout(function() { console.log(x); }, x * 1000 );
+    })(i);
+}
+```
+
+This will produce the presumably desired result of logging ``0, 1, 2, 3, and 4`` to the console.
+
+In an **ES2015 context**, you can simply use ``let`` instead of ``var`` in the original code:
+
+```
+for (let i = 0; i < 5; i++) {
+	setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+#
+### 34. What is NaN? What is its type? How can you reliably test if a value is equal to NaN?
+
+The ``NaN`` property represents a value that is “not a number”. This special value results from an operation that could not be performed either because one of the operands was non-numeric (e.g., ``"abc" / 4``), or because the result of the operation is non-numeric.
+
+While this seems straightforward enough, there are a couple of somewhat surprising characteristics of ``NaN`` that can result in hair-pulling bugs if one is not aware of them.
+
+For one thing, although ``NaN`` means “not a number”, its type is, believe it or not, ``Number``:
+
+``console.log(typeof NaN === "number");  // logs "true"``
+
+Additionally, ``NaN`` compared to anything – even itself! – is false:
+
+``console.log(NaN === NaN);  // logs "false"``
+
+A semi-reliable way to test whether a number is equal to NaN is with the built-in function isNaN(), but even using ``isNaN()`` is an imperfect solution.
+
+A better solution would either be to use ``value !== value``, which would only produce true if the value is equal to NaN. Also, ES6 offers a new ``Number.isNaN()`` function, which is a different and more reliable than the old global ``isNaN()`` function.
+
+#
+### 35. What will the following code output and why?
+
+```
+var b = 1;
+function outer(){
+   	var b = 2
+    function inner(){
+        b++;
+        var b = 3;
+        console.log(b)
+    }
+    inner();
+}
+outer();
+```
+
+#### Answer
+
+Output to the console will be ``3``.
+
+There are three closures in the example, each with it’s own ``var b`` declaration. When a variable is invoked closures will be checked in order from local to global until an instance is found. Since the inner closure has a ``b`` variable of its own, that is what will be output.
+
+Furthermore, due to hoisting the code in inner will be interpreted as follows:
+
+```
+function inner () {
+    var b; // b is undefined
+    b++; // b is NaN
+    b = 3; // b is 3
+    console.log(b); // output "3"
+}
+```
+
+#
+### 36. Discuss possible ways to write a function ``isInteger(x)`` that determines if ``x`` is an integer.
+
+This may sound trivial and, in fact, it is trivial with ECMAscript 6 which introduces a new ``Number.isInteger()`` function for precisely this purpose. However, prior to ECMAScript 6, this is a bit more complicated, since no equivalent of the ``Number.isInteger()`` method is provided.
+
+#
+### 37. How do you clone an object?
+```
+var obj = {a: 1 ,b: 2}
+var objclone = Object.assign({},obj);
+```
+Now the value of ``objclone`` is ``{a: 1 ,b: 2}`` but points to a different object than ``obj``.
+
+Note the potential pitfall, though: ``Object.assign()`` will just do a shallow copy, not a deep copy. This means that nested objects aren’t copied. They still refer to the same nested objects as the original:
+
+```
+let obj = {
+    a: 1,
+    b: 2,
+    c: {
+        age: 30
+    }
+};
+
+var objclone = Object.assign({},obj);
+console.log('objclone: ', objclone);
+
+obj.c.age = 45;
+console.log('After Change - obj: ', obj);           // 45 - This also changes
+console.log('After Change - objclone: ', objclone); // 45
+```
+
+#
 
 ### Old stuff
 
