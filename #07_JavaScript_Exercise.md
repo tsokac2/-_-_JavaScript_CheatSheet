@@ -531,7 +531,121 @@ One way to fix the ``stoleSecretIdentity()`` function is as follows:
 
 ``var stoleSecretIdentity = hero.getSecretIdentity.bind(hero);``
 #
-### 23. 
+### 23. Create a function that, given a DOM Element on the page, will visit the element itself and all of its descendents (not just its immediate children). For each element visited, the function should pass that element to a provided callback function.
+
+### The arguments to the function should be:
+
+- a DOM element
+- a callback function (that takes a DOM element as its argument)
+
+
+#### Answer
+Here’s an example solution:
+
+```
+function Traverse(p_element,p_callback) {
+   p_callback(p_element);
+   var list = p_element.children;
+   for (var i = 0; i < list.length; i++) {
+       Traverse(list[i],p_callback);  // recursive call
+   }
+}
+```
+**Function Overview**:
+
+- **Name**: ``Traverse``
+- **Purpose**: Performs a depth-first traversal of a tree-like structure, visiting each node and executing a specified callback function on it.
+
+**Parameters**:
+
+- ``p_element``: The starting node (element) of the traversal.
+- ``p_callback``: A function that will be called on each visited node during the traversal.
+
+**Function Logic**:
+
+1. **Call the Callback Function on the Current Node**:
+
+- ``p_callback(p_element);``
+- Executes the callback function immediately on the current node, allowing for actions to be performed before exploring its children.
+
+2. **Process Children Recursively**:
+
+- ``var list = p_element.children;``
+  - Retrieves a list of child nodes associated with the current node.
+- ``for (var i = 0; i < list.length; i++) { ... }``
+  - Iterates through each child node in the list:
+    - ``Traverse(list[i], p_callback);``
+      - Recursively calls the ``Traverse`` function on the child node, effectively visiting its children before continuing with other siblings.
+
+
+**Key Points**:
+
+- **Depth-First Traversal**: The function explores a node's children fully before moving on to its siblings, ensuring a deep exploration of each branch before backtracking.
+- **Callback Function**: The p_callback function provides flexibility in terms of the actions performed on each node, enabling various operations during traversal.
+- **Recursive Approach**: The function calls itself on child nodes, creating a recursive structure that systematically visits all nodes in the tree.
+
+**Common Use Cases**:
+
+- Tree traversal for tasks like searching, printing, or modifying nodes.
+- Processing hierarchical data structures (e.g., file systems, HTML DOM trees).
+- Implementing algorithms that rely on tree exploration (e.g., graph algorithms).
+
+#
+### 24. Testing your this knowledge in JavaScript: What is the output of the following code?
+```
+var length = 10;
+function fn() {
+	console.log(this.length);
+}
+
+var obj = {
+  length: 5,
+  method: function(fn) {
+    fn();
+    arguments[0]();
+  }
+};
+
+obj.method(fn, 1);
+```
+#### Answer
+```
+10
+2
+```
+
+Why isn’t it ``10`` and ``5``?
+
+
+In the first place, as ``fn`` is passed as a parameter to the function ``method``, the scope (``this``) of the function ``fn`` is window. 
+
+``var length = 10;`` is declared at the window level. It also can be accessed as ``window.length`` or ``length`` or ``this.length`` (when ``this === window``.)
+
+
+``method`` is bound to ``Object obj``, and ``obj.method`` is called with parameters ``fn`` and ``1``. Though ``method`` is accepting only one parameter, while invoking it has passed two parameters; the first is a function callback and other is just a number.
+
+When ``fn()`` is called inside ``method``, which was passed the function as a parameter at the global level, ``this.length`` will have access to ``var length = 10`` (declared globally) not ``length = 5 as`` defined in ``Object obj``.
+
+Now, we know that we can access any number of arguments in a JavaScript function using the    ``arguments[]`` array.
+
+Hence ``arguments[0]()`` is nothing but calling ``fn()``. Inside ``fn`` now, the scope of this function becomes the ``arguments`` array, and logging the length of ``arguments[]`` will return ``2``.
+
+#
+### 25. Consider the following code. What will the output be, and why?
+```
+(function () {
+    try {
+        throw new Error();
+    } catch (x) {
+        var x = 1, y = 2;
+        console.log(x);
+    }
+    console.log(x);
+    console.log(y);
+})();
+```
+
+#### Answer
 
 
 
