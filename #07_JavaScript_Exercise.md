@@ -644,10 +644,54 @@ Hence ``arguments[0]()`` is nothing but calling ``fn()``. Inside ``fn`` now, the
     console.log(y);
 })();
 ```
+#### Answer
+
+```
+1
+undefined
+2
+```
+
+**Now, let's understand the output**:
+
+- The first ``console.log(x);`` inside the catch block prints the local variable ``x``, which is 1. So, the output is "1".
+
+- The second ``console.log(x);`` outside the catch block prints the global variable ``x``. However, at this point, the global variable ``x`` is undefined, as the local variable ``x`` inside the catch block shadows it. Therefore, the output is ``"undefined"``.
+
+- The third ``console.log(y);`` prints the value of the global variable ``y``, which is 2. So, the output is "2".
+
+#
+### 26. What will be the output of this code?
+```
+var x = 21;
+var girl = function () {
+    console.log(x);
+    var x = 20;
+};
+girl ();
+```
 
 #### Answer
 
+Neither ``21``, nor ``20``, the result is ``undefined``
 
+It’s because JavaScript initialization is not hoisted.
+
+(Why doesn’t it show the global value of 21? The reason is that when the function is executed, it checks that there’s a local ``x`` variable present but doesn’t yet declare it, so it won’t look for global one.)
+
+#
+### 27. What will this code print?
+
+```
+for (let i = 0; i < 5; i++) {
+  setTimeout(function() { console.log(i); }, i * 1000 );
+}
+```
+#### Answer
+
+It will print ``0 1 2 3 4``, because we use let instead of var here. The variable ``i`` is only seen in the ``for`` loop’s block scope.
+#
+### 28. 
 
 # ----------------- 
 
