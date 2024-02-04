@@ -477,6 +477,62 @@ f(9): returns 9 * f(8), which is 362880
 f(10): returns 10 * f(9), which is 3628800
 ```
 
+#
+### 21. Consider the code snippet below. What will the console output be and why?
+```
+(function(x) {
+    return (function(y) {
+        console.log(x);
+    })(2)
+})(1);
+```
+
+#### Answer
+
+The output will be ``1``, even though the value of ``x`` is never set in the inner function.
+
+**Here’s why**:
+A closure is a function, along with all variables or functions that were in-scope at the time that the closure was created. 
+
+In JavaScript, a closure is implemented as an “inner function”; i.e., a function defined within the body of another function. An important feature of closures is that an inner function still has access to the outer function’s variables.
+
+Therefore, in this example, since ``x`` is not defined in the inner function, the scope of the outer function is searched for a defined variable ``x``, which is found to have a value of ``1``.
+
+#
+### 22. What will the following code output to the console and why:
+
+```
+var hero = {
+    _name: 'John Doe',
+    getSecretIdentity: function (){
+        return this._name;
+    }
+};
+
+var stoleSecretIdentity = hero.getSecretIdentity;
+
+console.log(stoleSecretIdentity());
+console.log(hero.getSecretIdentity());
+```
+
+### What is the issue with this code and how can it be fixed?
+
+#### Answer
+
+The code will output:
+```
+undefined
+John Doe
+```
+
+The first ``console.log`` prints ``undefined`` because we are extracting the method from the ``hero`` object, so ``stoleSecretIdentity()`` is being invoked in the global context (i.e., the window object) where the ``_name`` property does not exist.
+
+One way to fix the ``stoleSecretIdentity()`` function is as follows:
+
+``var stoleSecretIdentity = hero.getSecretIdentity.bind(hero);``
+#
+### 23. 
+
 
 
 # ----------------- 
