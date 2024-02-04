@@ -691,7 +691,67 @@ for (let i = 0; i < 5; i++) {
 
 It will print ``0 1 2 3 4``, because we use let instead of var here. The variable ``i`` is only seen in the ``for`` loop’s block scope.
 #
-### 28. 
+### 28. What do the following lines output, and why?
+```
+console.log(1 < 2 < 3);
+console.log(3 > 2 > 1);
+```
+#### Answer
+The first statement returns ``true`` which is as expected.
+
+The second returns ``false`` because of how the engine works regarding operator associativity for ``<`` and ``>``. It compares left to right, so ``3 > 2 > 1`` JavaScript translates to ``true > 1``. ``true`` has value ``1``, so it then compares ``1 > 1``, which is false.
+
+#
+### 29. How do you add an element at the begining of an array? How do you add one at the end?
+
+```
+var myArray = ['a', 'b', 'c', 'd'];
+myArray.push('end');
+myArray.unshift('start');
+console.log(myArray); // ["start", "a", "b", "c", "d", "end"]
+```
+
+**With ES6, one can use the spread operator**:
+
+```
+myArray = ['start', ...myArray];
+myArray = [...myArray, 'end'];
+```
+
+**Or, in short**:
+
+``myArray = ['start', ...myArray, 'end'];``
+#
+### 30. Imagine you have this code:
+
+``var a = [1, 2, 3];```
+
+### (a) Will this result in a crash?
+``a[10] = 99;``
+
+### (b)  What will this output?
+``console.log(a[6]);``
+
+#### Answer
+
+- a) It will not crash. The JavaScript engine will make array slots 3 through 9 be “empty slots.”
+
+- b) Here, ``a[6]`` will output undefined, but the slot still remains empty rather than filled with undefined. 
+This may be an important nuance in some cases. For example, when using ``map()``, empty slots will remain empty in ``map()``’s output, but ``undefined`` slots will be remapped using the function passed to it:
+
+```
+var b = [undefined];
+b[2] = 1;
+console.log(b);             // (3) [undefined, empty × 1, 1]
+console.log(b.map(e => 7)); // (3) [7,         empty × 1, 7]
+```
+
+#
+### 31. What is the value of typeof ``undefined == typeof NULL``?
+
+
+#
+### 32.
 
 # ----------------- 
 
